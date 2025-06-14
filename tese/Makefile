@@ -47,8 +47,8 @@ USUAL_TMP_EXTENSIONS := $(USUAL_TMP_EXTENSIONS) bbl blg ilg ind fls fdb_latexmk
 # Nao eh necessario neste modelo, mas pode ser util.
 # Veja a secao 5 de "textoc kpathsea" e
 # https://www.overleaf.com/learn/latex/Articles/An_introduction_to_Kpathsea_and_how_TeX_engines_search_for_files
-#export TEXINPUTS := .;extras//;conteudo//;
-#export BSTINPUTS := .;extras//;
+export TEXINPUTS := .:configuracao:conteudo:
+export BSTINPUTS := .:configuracao:
 
 
 ###############################################################################
@@ -124,6 +124,10 @@ $(ALL_TARGETS): % : %.pdf
 %.pdf: FORCE
 	@$(COMPILE)
 	@$(SHOW_PDF)
+	@if [ $$? -eq 0 ]; then \
+		echo "      " Executando make clean...; \
+		$(MAKE) clean; \
+	fi
 
 clean: realclean
 	@echo; \
@@ -142,6 +146,7 @@ distclean: $(addsuffix -distclean,$(ALL_TARGETS))
 	@ echo '       removendo arquivos temporarios ($*: aux, bbl, idx...)'
 	-@rm -f missfont.log '$*.synctex(busy)' '$*.synctex.gz(busy)' \
 		mkidxhead.ist hyperxindy.xdy $(TEX_TEMP_FILES) \
+		$*.synctex.gz \
 		$(foreach ext,$(USUAL_TMP_EXTENSIONS),$*.$(ext))
 
 .PHONY: all clean realclean distclean DEFAULT_TARGET FORCE $(ALL_TARGETS)
