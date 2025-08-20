@@ -8,12 +8,51 @@
 % cria um capítulo sem número e não o coloca no sumário. A introdução não
 % deve ser numerada, mas deve aparecer no sumário. Por conta disso, este
 % modelo define o comando "\chapter**".
-\chapter**{Introdução}
-\label{cap:introducao}
+\chapter**{Introdução}\label{cap:introducao}
 
-\section**{Contextualização do tema}
-O contexto do trabalho
-\section**{Justificativa}
-A justificativa do trabalho
+\section**{Contexto}
+
+A engenharia de \textit{software} é um campo da computação que surgiu e se
+desenvolveu através da crescente demanda da sociedade do fim do século XX até a
+atualidade por sistemas computacionais cada vez mais complexos. Neste contexto,
+ferramentas, métodos e processos foram criados para possibilitar o atendimento
+dessa demanda.
+
+Nas últimas décadas, os estudos em inteligência artificial (IA) avançaram
+rapidamente, de modo que um novo paradigma em IA surgiu, a IA generativa.
+Diferentemente da IA tradicional, a IA generativa tem a capacidade de criar
+conteúdos novos e originais baseados no que aprendeu, em vez de apenas copiar,
+imitar e reproduzir algo que já existe.
+
+Dada a flexibilidade e a abertura de diversas possibilidades com essa nova
+tecnologia, é natural que uma de suas aplicações fosse a engenharia de
+\textit{software}. Nos últimos anos, diversos estudos foram publicados a fim de
+analisar essas aplicações, suas consequências e propor diferentes abordagens
+para tais aplicações. (~\cite{10705752} e~\cite{10.1145/3715003})
+
+Desta forma, este projeto se propõe a levantar os resultados observados
+em diversos artigos que tratam do estudo do impacto da IA generativa na
+engenharia de \textit{software}. Além de realizar um estudo de caso sobre a aplicação da IA
+generativa ao longo das fases do desenvolvimento de \textit{software},
+avaliando sua utilidade, limitações e impacto na qualidade e produtividade.
+
+Como estudo de caso, foi realizado o desenvolvimento de uma aplicação web na
+área de investimentos, com banco de dados, \textit{backend} em \textit{Java
+    Spring Boot} e \textit{frontend} em \textit{Angular}, utilizando ferramentas de
+IA generativa nas diferentes fases do desenvolvimento de um sistema. As fases
+analisadas foram: coleta e análise de requisitos, estudo de viabilidade,
+\textit{design} de \textit{software}, codificação e testes.
+
+\section**{Motivação}
+Este trabalho se faz relevante no contexto em que o uso de ferramentas de IA generativa vem crescendo com o passar dos anos, desde o surgimento de ferramentas como ChatGPT e GitHub Copilot. Segundo dados da \textit{Stack Overflow 2024 Developer Survey}~\citep{StackOverflow2024}, 63,2\% dos desenvolvedores profissionais já utilizam ferramentas de IA no seu processo de desenvolvimento, enquanto que 13.5\% desse mesmo grupo planeja utilizá-las em breve. Além disso, entre os desenvolvedores que responderam usar inteligência artificial, 82\% a utiliza para escrever código.
+
+Desta maneira, é evidente que uma nova tecnologia com amplo uso no mercado de \textit{software} e que abre possibilidade para diversas aplicações, terá impactos sobre como os desenvolvedores escrevem seus códigos. Assim, é de suma importância buscar avaliar e compreender melhor de que maneira esses impactos vêm ocorrendo nas bases de código, inclusive através de um estudo de caso. 
 \section**{Objetivos}
-Os objetivos do trabalho
+Os principais objetivos do trabalho são:
+
+\begin{itemize}
+  \item Compreender de que maneira a IA generativa tem impactado na produção de código das empresas de \textit{software}, através de um levantamento de dados disponíveis em outros artigos;
+  \item Desenvolver um sistema com todo seu processo voltado ao uso de ferramentas de IA generativa ao longo das suas diferentes fases;
+  \item Documentar os resultados gerados pela IA durante o processo de desenvolvimento do sistema, incluindo os prompts utilizados;
+  \item Analisar os resultados obtidos, a fim de mensurar a qualidade das respostas geradas.
+\end{itemize}
