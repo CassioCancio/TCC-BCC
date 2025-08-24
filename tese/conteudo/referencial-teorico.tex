@@ -1,16 +1,81 @@
-%!TeX root=../tese.tex
+% !TeX root=../tese.tex
 %("dica" para o editor de texto: este arquivo é parte de um documento maior)
 % para saber mais: https://tex.stackexchange.com/q/78101
 
 %% ------------------------------------------------------------------------- %%
 
-\chapter{Referencial Teórico}
-\label{cap:fundamentacao}
+\chapter{Referencial Teórico}\label{cap:fundamentacao}
 
 \section{Engenharia de Software}
-\subsection{Processos de Desenvolvimento de Software}
-\subsection{Metodologias Ágeis}
-\subsection{Práticas de Desenvolvimento}
+Segundo a definição do \textit{Institute of Electrical and Electronics Engineers} (IEEE) (\citeyear{159342}), a engenharia de \textit{software} é a aplicação de uma sistemática, disciplinada e quantificável abordagem para o desenvolvimento, operação e manutenção de um \textit{software}. Para que a engenharia de \textit{software} seja viável, dada a complexidade dos sistemas demandados na atualidade, foram desenvolvidas etapas, metodologias e ferramentas que dessem suporte aos atores envolvidos no projeto, como desenvolvedores, analistas, investidores, clientes, entre outros.
+
+\subsection{Etapas do Desenvolvimento de Software}
+O Ciclo de Vida de Desenvolvimento de Software (SDLC) consiste numa sequência de processos pelos quais o desenvolvimento de um \textit{software} ocorre, de modo a produzir um resultado eficaz e de alta qualidade. Existe alguma variação no número de passos descritos por diferentes fontes, mas, em geral, há sete fases essenciais: planejamento, análise de requisitos, \textit{design}, codificação, testes, implantação e manutenção.
+
+\subsubsection{Planejamento}
+
+A fase inicial envolve definir o propósito e o escopo do \textit{software}. Durante esta etapa, a equipe de desenvolvimento deve levantar as tarefas necessárias, elaborar estratégias para cumpri-las e colaborar de modo a compreender as necessidades dos usuários finais. Neste processo, os objetivos do \textit{software} e qual problema ele se propõe a resolver precisam ficar claros a todos os envolvidos.
+
+Além disso, nesta fase também ocorre o estudo de viabilidade, ou seja, desenvolvedores e outros atores do projeto avaliam desafios técnicos e financeiros que possam impactar a evolução ou o sucesso do \textit{software}. Ao fim desta fase, um plano de projeto é criado, com o intuito de detalhar as funções do sistema, os recursos necessários, possíveis riscos e o cronograma do projeto. Ao definir papéis, responsabilidades e expectativas claras, o planejamento estabelece uma base sólida para um processo eficiente de desenvolvimento.
+
+\subsubsection{Análise de Requisitos}
+
+A segunda fase do SDLC visa identificar e registrar os requisitos dos usuários finais. Nesta etapa, a equipe de projeto realiza o levantamento dos requisitos, por meio da coleta de informações das partes interessadas, como analistas, usuários e clientes. São empregadas técnicas como entrevistas, pesquisas e grupos de foco para compreender as necessidades e expectativas dos usuários.
+
+Após a coleta, os dados são analisados, diferenciando os requisitos essenciais dos desejáveis. Essa análise possibilita a definição das funcionalidades, desempenho, segurança e interfaces do \textit{software}. Neste momento, são definidos os requisitos funcionais e não funcionais. Os requisitos funcionais especificam as funções que o \textit{software} deve realizar, ou seja, o que o sistema deve fazer. Já os requisitos não funcionais tratam de como o sistema deve se comportar, incluindo aspectos como desempenho, segurança, usabilidade e escalabilidade.
+
+O resultado desse processo é o Documento de Especificação de Requisitos (DER), que descreve o propósito, as funcionalidades e características do \textit{software}, servindo como guia para a equipe de desenvolvimento e fornecendo estimativas de custo, quando necessário. O êxito desta fase é crucial para o sucesso do projeto, pois assegura que a solução desenvolvida atenda às expectativas dos usuários.
+
+\subsubsection{Design}
+
+A fase de \textit{design} é responsável pela definição da estrutura do \textit{software}, abrangendo sua funcionalidade e aparência. A equipe de desenvolvimento detalha a arquitetura do sistema, a navegação, as interfaces de usuário e a modelagem do banco de dados, assegurando que o \textit{software} tenha boa usabilidade e seja eficiente.
+
+Entre as atividades desta fase, destaca-se a elaboração de diagramas de fluxo de dados, de entidade-relacionamento, de classes, protótipos de interface e diagramas arquiteturais. O objetivo é garantir que as estruturas projetadas sejam suficientes para dar suporte a todas as funcionalidades do sistema. Também são identificadas dependências, pontos de integração e eventuais restrições, como limitações do equipamento físico e requisitos de desempenho.
+
+O resultado desta fase é o Documento de \textit{Design} de Software (DDS) que estrutura formalmente as informações do projeto e trata preocupações de \textit{design}. Neste documento, são adicionados os artefatos produzidos, servindo como guia estável para coordenar equipes grandes e garantir que todos os componentes do sistema funcionem de maneira integrada.
+
+\subsubsection{Codificação}
+
+Na fase de codificação, os engenheiros e desenvolvedores transformam o \textit{design} do \textit{software} em código executável. O objetivo é produzir um \textit{software} funcional, eficiente e com boa usabilidade. Para isso, utilizam-se linguagens de programação adequadas, seguindo o DDS e diretrizes de codificação estabelecidas pela organização e pela legislação local.
+
+Durante esta fase, são realizadas revisões de código, nas quais os membros da equipe examinam o trabalho uns dos outros para identificar erros ou inconsistências, garantindo elevados padrões de qualidade. Além disso, testes preliminares internos são conduzidos para garantir que as funcionalidades básicas do sistema foram atendidas.
+
+Ao final da fase de codificação, o \textit{software} passa a existir como um produto funcional, representando a materialização dos esforços das etapas anteriores, mesmo que ainda sejam necessários refinamentos e ajustes subsequentes. O resultado desta fase é o código-fonte.
+
+\subsubsection{Testes}
+
+A fase de testes consiste em verificar a qualidade e a confiabilidade do \textit{software} antes de sua entrega aos usuários finais. Seu objetivo é identificar falhas, erros e vulnerabilidades, assegurando que o sistema atenda aos requisitos especificados.
+
+Inicialmente, são definidos parâmetros de teste alinhados aos requisitos do \textit{software} e casos de teste que contemplem diferentes cenários de uso. Em seguida, são conduzidos testes de diversos níveis e tipos, incluindo testes de unidade, de integração, de sistema, de segurança e de aceitação, permitindo a avaliação tanto de componentes individuais quanto da operação do sistema na sua totalidade.
+
+Quando um erro é identificado, ele é registrado detalhadamente, incluindo seu comportamento, métodos de reprodução e impacto sobre o sistema. As falhas são encaminhadas para correção e o \textit{software} retorna à fase de testes para validação. Este ciclo de teste e correção se repete até que o sistema esteja conforme os critérios previamente estabelecidos. O resultado desta fase é um código-fonte mais robusto e menos propenso a falhas.
+
+\subsubsection{Implantação}
+
+A fase de implantação ou \textit{deployment} consiste em disponibilizar o \textit{software} aos usuários finais, garantindo sua operacionalidade no ambiente de produção. Este processo ocorre tanto no primeiro lançamento do sistema, quanto quando ele já está em uso pelos usuários e passando por atualizações. Por isso, o processo deve minimizar interrupções e impactos negativos nos acessos dos usuários.
+
+A escolha da estratégia de implantação é feita conforme as características do sistema e de seus usuários. As estratégias mais comuns são:
+
+\begin{itemize}
+    \item \textit{Rolling}: a atualização ocorre de forma gradual, substituindo instâncias antigas por novas até que todo o sistema esteja atualizado;
+    \item \textit{Blue-Green}: dois ambientes paralelos são mantidos, um em produção e outro em preparação, permitindo a troca imediata entre eles;
+    \item \textit{Canary}: a nova versão é liberada primeiramente para um grupo de usuários, monitorando o comportamento do sistema antes de expandir a implantação para todos.
+\end{itemize}
+
+Além de colocar o \textit{software} em operação, esta fase envolve assegurar que os usuários compreendam seu funcionamento. Para isso, podem ser fornecidos manuais, treinamentos e suporte técnico. Desta maneira, a fase de implantação marca a transição do \textit{software} de projeto para produto, iniciando efetivamente o cumprimento de seus objetivos e a entrega de valor ao usuário.
+
+\subsubsection{Manutenção}
+
+A fase de manutenção é caracterizada por suporte contínuo e por melhorias incrementais, de modo a garantir que o \textit{software} mantenha seu funcionamento adequado, acompanhe as necessidades dos usuários e as demandas de mercado. Nesta fase, são realizadas atualizações, correções de falhas e suporte ao usuário.
+
+Considerando o horizonte de longo prazo, a manutenção inclui estratégias de modernização ou substituição do \textit{software}, buscando manter sua relevância e adequação às evoluções tecnológicas.
+
+\subsection{Metodologias de Desenvolvimento}
+
+Continuous Deployment (CD):
+Um processo automatizado onde cada alteração aprovada no código é automaticamente disponibilizada para os utilizadores.
+
+\subsection{Ferramentas de Desenvolvimento}
 
 \section{Inteligência Artificial}
 \subsection{Conceitos Básicos}
@@ -20,4 +85,4 @@
 \section{IA Generativa}
 \subsection{Modelos de Linguagem}
 \subsection{Transformers}
-\subsection{LLMs (Large Language Models)} 
+\subsection{LLMs (Large Language Models)}
