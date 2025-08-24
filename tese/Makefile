@@ -124,10 +124,6 @@ $(ALL_TARGETS): % : %.pdf
 %.pdf: FORCE
 	@$(COMPILE)
 	@$(SHOW_PDF)
-	@if [ $$? -eq 0 ]; then \
-		echo "      " Executando make clean...; \
-		$(MAKE) clean; \
-	fi
 
 clean: realclean
 	@echo; \
