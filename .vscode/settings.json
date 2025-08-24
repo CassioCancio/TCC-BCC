@@ -16,5 +16,33 @@
   ],
 
   // Define que receita usar por padrão
-  "latex-workshop.latex.recipe.default": "make"
+  "latex-workshop.latex.recipe.default": "make",
+
+  "files.exclude": {
+    "**/*.aux": true,
+    "**/*.log": true,
+    "**/*.out": true,
+    "**/*.toc": true,
+    "**/*.lof": true,
+    "**/*.lot": true,
+    "**/*.lop": true,
+    "**/*.ist": true,
+    "**/*.fls": true,
+    "**/*.fdb_latexmk": true,
+    "**/*.synctex.gz": true,
+    "**/*.bbl*": true,
+    "**/*.blg": true,
+    "**/*.run.xml": true,
+    "**/*.bcf": true,
+    "**/*.idx": true,
+    "**/*.ilg": true,
+    "**/*.ind": true,
+    "**/*.nav": true,
+    "**/*.snm": true,
+    "**/*.vrb": true,
+    "**/*~": true,
+    "**/*.bak": true,
+    "**/*configuracao": true,
+    "**/*.backup": true
+  }
 }
