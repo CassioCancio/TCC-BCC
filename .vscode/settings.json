@@ -1,0 +1,20 @@
+{
+  "cSpell.language": "pt",
+  "latex-workshop.latex.tools": [
+    {
+      "name": "make",
+      "command": "make",
+      "args": []
+    }
+  ],
+
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "make",
+      "tools": ["make"]
+    }
+  ],
+
+  // Define que receita usar por padrão
+  "latex-workshop.latex.recipe.default": "make"
+}
