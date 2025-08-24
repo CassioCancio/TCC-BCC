@@ -100,21 +100,12 @@
 \def\dra{Dr\kern-.04em.\kern-.11emª\kern.07em}
 
 % Para TCCs, este comando define o supervisor
-\orientador{Prof. Dr. Paulo Roberto Miranda Meirelles}
+\orientador{Prof.\ Dr.\ Paulo Roberto Miranda Meirelles}
 
 % Se não houver, remova; se houver mais de um, basta
 % repetir o comando quantas vezes forem necessárias
 \coorientador{Arthur Pilone Maia da Silva}
 \coorientador{Carlos Eduardo Santos}
-
-% TODO - remover esse trecho?
-\banca{
-  \profa{} \dra{} Fulana de Tal (orientadora) -- IME-USP [sem ponto final],
-  % Em inglês, não há o "ª"
-  %Prof. Dr. Fulana de Tal (advisor) -- IME-USP [sem ponto final],
-  Prof. Dr. Ciclano de Tal -- IME-USP [sem ponto final],
-  \profa{} \dra{} Convidada de Tal -- IMPA [sem ponto final],
-}
 
 % A página de rosto da versão para depósito (ou seja, a versão final
 % antes da defesa) deve ser diferente da página de rosto da versão
@@ -127,11 +118,6 @@
   %definitiva, % É a versão para defesa ou a versão definitiva?
   %quali, % É qualificação?
   programa={Ciência da Computação},
-}
-% TODO - remover esse trecho?
-\defesa{
-  local={São Paulo},
-  data=2025-06-17, % YYYY-MM-DD
 }
 
 % A licença do seu trabalho. Use CC-BY, CC-BY-NC, CC-BY-ND, CC-BY-SA,
@@ -177,15 +163,15 @@
 
 \pagestyle{plain}
 
-\onehalfspacing % Espaçamento 1,5 na capa e páginas iniciais
+\onehalfspacing% Espaçamento 1,5 na capa e páginas iniciais
 
 \maketitle % capa e folha de rosto
 
 %%%%%%%%%%%%%%%% DEDICATÓRIA, AGRADECIMENTOS, RESUMO/ABSTRACT %%%%%%%%%%%%%%%%%%
 
 \begin{dedicatoria}
-Aos meus pais, que sempre incentivaram meus estudos.
-Aos meus professores, que tornaram este trabalho possível.
+  Aos meus pais, que sempre incentivaram meus estudos.
+  Aos meus professores, que tornaram este trabalho possível.
 \end{dedicatoria}
 
 % Reinicia o contador de páginas (a próxima página recebe o número "i") para
@@ -207,12 +193,11 @@ Aos meus professores, que tornaram este trabalho possível.
 
 \input{template/resumoabstract}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%% LISTAS DE FIGURAS ETC. %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Como as listas que se seguem podem não incluir uma quebra de página
 % obrigatória, inserimos uma quebra manualmente aqui.
-\cleardoublepage
+\cleardoublepage%
 
 % Todas as listas são opcionais; Usando "\chapter*" elas não são incluídas
 % no sumário. As listas geradas automaticamente também não são incluídas por
@@ -231,8 +216,8 @@ Aos meus professores, que tornaram este trabalho possível.
 % Nestas listas, é melhor usar "raggedbottom" (veja basics.tex). Colocamos
 % a opção correspondente e as listas dentro de um grupo para ativar
 % raggedbottom apenas temporariamente.
-\bgroup
-\raggedbottom
+\bgroup%
+\raggedbottom%
 
 %%%%% Listas criadas manualmente
 
@@ -240,10 +225,10 @@ Aos meus professores, que tornaram este trabalho possível.
 \disablenewpage{\chapter*{Lista de abreviaturas}}
 
 \begin{tabular}{rl}
-   IA & Inteligência Artificial (\emph{Artificial Intelligence})\\
-   IME & Instituto de Matemática e Estatística\\
-   LLM & Modelo de Linguagem de Grande Escala (\emph{Large Language Model})\\
-   USP & Universidade de São Paulo
+  IA  & Inteligência Artificial (\emph{Artificial Intelligence})           \\
+  IME & Instituto de Matemática e Estatística                              \\
+  LLM & Modelo de Linguagem de Grande Escala (\emph{Large Language Model}) \\
+  USP & Universidade de São Paulo
 \end{tabular}
 
 %\chapter*{Lista de símbolos}
@@ -277,40 +262,39 @@ Aos meus professores, que tornaram este trabalho possível.
 % Sumário (obrigatório)
 \tableofcontents
 
-\egroup % Final de "raggedbottom"
-
+\egroup%
+%
 % Referências indiretas ("x", veja "y") para o índice remissivo (opcionais,
 % pois o índice é opcional). É comum colocar esses itens no final do documento,
 % junto com o comando \printindex, mas em alguns casos isso torna necessário
 % executar texindy (ou makeindex) mais de uma vez, então colocar aqui é melhor.
 % TODO - mudar esses índices remissivos
-\index{Inglês|see{Língua estrangeira}}
-\index{Figuras|see{Floats}}
-\index{Tabelas|see{Floats}}
-\index{Código-fonte|see{Floats}}
-\index{Subcaptions|see{Subfiguras}}
-\index{Sublegendas|see{Subfiguras}}
-\index{Equações|see{Modo matemático}}
-\index{Fórmulas|see{Modo matemático}}
-\index{Rodapé, notas|see{Notas de rodapé}}
-\index{Captions|see{Legendas}}
-\index{Versão original|see{Tese/Dissertação, versões}}
-\index{Versão corrigida|see{Tese/Dissertação, versões}}
-\index{Palavras estrangeiras|see{Língua estrangeira}}
+%
+\index{Inglês|see{Língua estrangeira}}%
+\index{Figuras|see{Floats}}%
+\index{Tabelas|see{Floats}}%
+\index{Código-fonte|see{Floats}}%
+\index{Subcaptions|see{Subfiguras}}%
+\index{Sublegendas|see{Subfiguras}}%
+\index{Equações|see{Modo matemático}}%
+\index{Fórmulas|see{Modo matemático}}%
+\index{Rodapé, notas|see{Notas de rodapé}}%
+\index{Captions|see{Legendas}}%
+\index{Versão original|see{Tese/Dissertação, versões}}%
+\index{Versão corrigida|see{Tese/Dissertação, versões}}%
+\index{Palavras estrangeiras|see{Língua estrangeira}}%
 \index{Floats!Algoritmo|see{Floats, ordem}}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CAPÍTULOS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Aqui vai o conteúdo principal do trabalho, ou seja, os capítulos que compõem
 % a dissertação/tese. O comando mainmatter reinicia a contagem de páginas,
 % modifica a numeração para números arábicos e ativa a contagem de capítulos.
-\mainmatter
-
+\mainmatter%
 \pagestyle{mainmatter}
 
 % Espaçamento simples
-\singlespacing
+\singlespacing%
 
 % A introdução não tem número de capítulo, então os cabeçalhos também não
 \pagestyle{unnumberedchapter}
@@ -346,7 +330,7 @@ Aos meus professores, que tornaram este trabalho possível.
 
 %%%% Apêndices %%%%
 
-\cleardoublepage
+\cleardoublepage%
 
 \pagestyle{appendix}
 
@@ -354,39 +338,37 @@ Aos meus professores, que tornaram este trabalho possível.
 
 % \addappheadtotoc acrescenta a palavra "Apêndice" ao sumário; se
 % só há apêndices, sem anexos, provavelmente não é necessário.
-\addappheadtotoc
+\addappheadtotoc%
 
 % \input{template/apendice-exemplo-faq}
 \par
 
 %%%% Anexos %%%%
 
-\cleardoublepage
+\cleardoublepage%
 
 \pagestyle{appendix} % repete o anterior, caso você não use apêndices
 
-\annex
+\annex%
 
 % \addappheadtotoc acrescenta a palavra "Anexo" ao sumário; se
 % só há anexos, sem apêndices, provavelmente não é necessário.
-\addappheadtotoc
+\addappheadtotoc%
 
 % \input{template/anexo-exemplo-imegoodies}
 \par
 % \input{template/anexo-exemplo-pseudocodigo}
 \par
 
-
 %%%%%%%%%%%%%%% SEÇÕES FINAIS (BIBLIOGRAFIA E ÍNDICE REMISSIVO) %%%%%%%%%%%%%%%%
 
 % O comando backmatter desabilita a numeração de capítulos.
-\backmatter
+\backmatter%
 
 \pagestyle{backmatter}
 
 % Espaço adicional no sumário antes das referências / índice remissivo
 \addtocontents{toc}{\vspace{2\baselineskip plus .5\baselineskip minus .5\baselineskip}}
-
 % A bibliografia é obrigatória
 
 \printbibliography[
