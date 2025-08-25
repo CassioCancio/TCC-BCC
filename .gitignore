@@ -21,7 +21,7 @@
 *.nav
 *.snm
 *.vrb
-*.synctex.gz
+*.synctex*
 *~
 *.bak
 *.backup

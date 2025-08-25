@@ -72,17 +72,84 @@ Considerando o horizonte de longo prazo, a manutenção inclui estratégias de m
 
 \subsection{Metodologias de Desenvolvimento}
 
-Continuous Deployment (CD):
-Um processo automatizado onde cada alteração aprovada no código é automaticamente disponibilizada para os utilizadores.
+As metodologias de desenvolvimento de \textit{software} consistem em abordagens sistemáticas para organizar, planejar e executar projetos de engenharia de \textit{software}. Cada metodologia apresenta vantagens e limitações, sendo a escolha dependente do tamanho do projeto, grau de complexidade, maturidade da equipe e expectativa de mudanças nos requisitos.
+
+\subsubsection{Método de Cascata}
+
+A metodologia cascata é uma abordagem sequencial em que cada fase do desenvolvimento de \textit{software} deve ser concluída antes de iniciar a seguinte. Ela é adequada para projetos com requisitos muito definidos e pouca probabilidade de mudanças durante o desenvolvimento. O modelo enfatiza documentação detalhada e planejamento prévio, garantindo controle rígido sobre prazos e entregas. Embora simples de aplicar, pode se mostrar inflexível diante de alterações nos requisitos ou no ambiente de negócios.
+
+\subsubsection{Metodologias Ágeis}
+
+As metodologias ágeis consistem em práticas iterativas e incrementais, voltadas à entrega contínua de valor ao usuário e à adaptação rápida às mudanças nos requisitos. As abordagens ágeis valorizam colaboração, flexibilidade e melhoria contínua, sendo especialmente adequada para projetos dinâmicos e de alta complexidade. 
+
+Além disso, elas são geralmente complementadas por práticas de Integração Contínua e Entrega Contínua (CI/CD), que automatizam a construção, teste e implantação do \textit{software}. Desta maneira, a utilização de CI/CD permite que novas funcionalidades e correções sejam disponibilizadas rapidamente, mantendo a qualidade do sistema e reduzindo o tempo de reposta entre a equipe de desenvolvimento e os usuários.
+
+Alguns exemplos de métodos ágeis incluem:
+\begin{itemize}
+    \item \textbf{Extreme Programming (XP)}: enfatiza práticas de programação colaborativa, como \textit{pair programming}, integração contínua, testes automatizados e feedback constante do cliente.
+    \item \textbf{Lean Software Development}: baseado nos princípios de eliminação de desperdício, entrega rápida e melhoria contínua, priorizando valor para o cliente.
+\end{itemize}
+
+
+
+\begin{itemize}
+    \item \textit{Scrum}: método iterativo que organiza o trabalho em ciclos curtos, denominados \textit{sprints} (iterações), com duração de uma a quatro semanas. Define papéis específicos, como o responsável pelo produto (\textit{product owner}), o facilitador do processo (\textit{scrum master}) e a equipe de desenvolvimento. Inclui ainda reuniões regulares, como o planejamento da iteração (\textit{sprint planning}), reuniões diárias de acompanhamento (\textit{daily}), a revisão da iteração e a retrospectiva, que garantem planejamento, monitoramento e melhoria contínua do processo.
+    
+    \item \textit{Kanban}: método visual de gestão do fluxo de trabalho, baseado na utilização de quadros divididos em colunas que representam etapas do processo (por exemplo, ``A Fazer'', ``Em Progresso'' e ``Concluído''). Cada atividade é representada por um cartão que se movimenta conforme avança nas etapas, promovendo transparência, fluxo contínuo e foco na identificação e eliminação de gargalos.
+    
+    \item Programação extrema (\textit{extreme programming} — XP): metodologia ágil que enfatiza práticas de desenvolvimento colaborativo e de qualidade, como programação em par, integração contínua, desenvolvimento orientado a testes e refatoração frequente. Valoriza o envolvimento próximo do cliente, a simplicidade do código e a adaptação rápida às mudanças de requisitos.
+    
+    \item Desenvolvimento enxuto (\textit{lean software development}): abordagem inspirada nos princípios da produção enxuta, que busca eliminar desperdícios, reduzir custos e acelerar entregas. Essa metodologia prioriza a criação de valor para o cliente, a melhoria contínua e a capacitação das equipes para tomadas de decisão mais eficientes.
+\end{itemize}
 
 \subsection{Ferramentas de Desenvolvimento}
 
+As ferramentas de desenvolvimento de software oferecem suporte às etapas do ciclo de vida, desde planejamento até manutenção. Elas incluem:
+
+\begin{itemize}
+    \item \textbf{Sistemas de Controle de Versão} (como Git e SVN): permitem gerenciar alterações no código-fonte, possibilitando colaboração entre desenvolvedores e rastreamento de histórico.
+    \item \textbf{Ambientes de Desenvolvimento Integrados (IDEs)} (como Visual Studio, IntelliJ IDEA e Eclipse): fornecem recursos como edição de código, depuração, testes e integração com sistemas de controle de versão.
+    \item \textbf{Ferramentas de Gerenciamento de Projeto} (como Jira, Trello e Asana): auxiliam na organização de tarefas, acompanhamento de progresso e comunicação entre equipes.
+    \item \textbf{Ferramentas de Integração e Entrega Contínua (CI/CD)} (como Jenkins, GitHub Actions e GitLab CI): automatizam testes, builds e implantações, promovendo qualidade e agilidade.
+    \item \textbf{Ferramentas de Teste} (como Selenium, JUnit e Postman): permitem a realização de testes automatizados e manuais para validar funcionalidades, desempenho e segurança do software.
+\end{itemize}
+
+O uso combinado dessas ferramentas contribui para maior produtividade, qualidade e confiabilidade no desenvolvimento de software.
+
 \section{Inteligência Artificial}
 \subsection{Conceitos Básicos}
+
+Inteligência Artificial (IA) é o campo da ciência da computação que se dedica a criar sistemas capazes de executar tarefas que normalmente exigem inteligência humana, como reconhecimento de padrões, tomada de decisão e aprendizado a partir de dados. A IA pode ser classificada em:
+
+\begin{itemize}
+    \item \textbf{IA Fraca (Narrow AI)}: sistemas projetados para executar tarefas específicas, sem consciência ou compreensão geral do mundo.
+    \item \textbf{IA Forte (General AI)}: hipotéticos sistemas capazes de realizar qualquer tarefa cognitiva que um humano consegue executar.
+    \item \textbf{IA Baseada em Aprendizado de Máquina}: sistemas que melhoram seu desempenho por meio da análise de grandes volumes de dados e ajuste de parâmetros internos.
+\end{itemize}
+
 \subsection{Redes Neurais}
+
+Redes neurais artificiais são modelos computacionais inspirados na estrutura do cérebro humano. Elas são compostas por camadas de nós (neurônios artificiais) interconectados, capazes de processar informações e aprender padrões a partir de exemplos. Redes neurais são amplamente utilizadas em tarefas como classificação, reconhecimento de imagens e processamento de linguagem natural.
+
 \subsection{Aprendizado de Máquina}
+
+Aprendizado de Máquina (Machine Learning) é um subcampo da IA que se concentra em criar algoritmos capazes de aprender e fazer previsões a partir de dados, sem serem explicitamente programados para cada tarefa. Os principais tipos de aprendizado incluem:
+
+\begin{itemize}
+    \item \textbf{Supervisionado}: o algoritmo aprende a partir de exemplos rotulados, tentando prever saídas corretas para novas entradas.
+    \item \textbf{Não Supervisionado}: o algoritmo identifica padrões ou estruturas em dados não rotulados.
+    \item \textbf{Por Reforço}: o algoritmo aprende tomando ações em um ambiente e recebendo recompensas ou penalidades, buscando maximizar o desempenho ao longo do tempo.
+\end{itemize}
 
 \section{IA Generativa}
 \subsection{Modelos de Linguagem}
+
+Modelos de linguagem são algoritmos capazes de compreender, gerar e manipular texto em linguagem natural. Eles aprendem padrões estatísticos e semânticos a partir de grandes corpora de texto e são a base para sistemas de tradução automática, assistentes virtuais e chatbots avançados.
+
 \subsection{Transformers}
-\subsection{LLMs (Large Language Models)}
+
+Transformers são uma arquitetura de redes neurais introduzida em 2017, projetada para lidar eficientemente com sequências de dados, como texto. Utilizam mecanismos de atenção que permitem processar relações entre palavras de forma paralela, superando limitações de modelos recorrentes tradicionais.
+
+\subsection{LLMs (\textit{Large Language Models})}
+
+Large Language Models (LLMs) são modelos de linguagem treinados com enormes volumes de dados textuais, contendo bilhões de parâmetros. Eles são capazes de gerar texto coerente, resumir informações, responder perguntas e realizar tarefas complexas de processamento de linguagem natural. Exemplos incluem GPT, BERT e T5.

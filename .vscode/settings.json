@@ -1,5 +1,5 @@
 {
-  "cSpell.language": "pt",
+  "cSpell.language": "pt, en",
   "latex-workshop.latex.tools": [
     {
       "name": "make",
@@ -29,7 +29,7 @@
     "**/*.ist": true,
     "**/*.fls": true,
     "**/*.fdb_latexmk": true,
-    "**/*.synctex.gz": true,
+    "**/*.synctex*": true,
     "**/*.bbl*": true,
     "**/*.blg": true,
     "**/*.run.xml": true,
