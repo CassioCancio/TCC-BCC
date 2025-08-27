@@ -10,7 +10,7 @@
 *.bbl*
 *.blg
 *.run.xml
-*.bcf
+*.bcf*
 *.idx
 *.ilg
 *.ind

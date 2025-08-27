@@ -33,7 +33,7 @@
     "**/*.bbl*": true,
     "**/*.blg": true,
     "**/*.run.xml": true,
-    "**/*.bcf": true,
+    "**/*.bcf*": true,
     "**/*.idx": true,
     "**/*.ilg": true,
     "**/*.ind": true,

@@ -97,60 +97,151 @@ Alguns exemplos de métodos ágeis incluem:
 
 \subsection{Ferramentas de Desenvolvimento}
 
-As ferramentas de desenvolvimento de software oferecem suporte às etapas do ciclo de vida, desde planejamento até manutenção. O uso combinado dessas ferramentas contribui para maior produtividade, qualidade e confiabilidade no desenvolvimento de software. Elas incluem:
+As ferramentas de desenvolvimento de software oferecem suporte às etapas do ciclo de vida, desde planejamento até manutenção. O uso combinado dessas ferramentas contribui para maior produtividade, qualidade e confiabilidade no desenvolvimento de software. Elas incluem ferramentas de:
 
 \begin{itemize}
-    \item \textbf{Sistemas de Controle de Versão (como \emph{Git} e \emph{SVN}):} permitem registrar e gerenciar alterações no código-fonte temporalmente, possibilitando a colaboração simultânea entre desenvolvedores, a recuperação de versões anteriores e o rastreamento completo do histórico de mudanças;
+    \item \textbf{Controle de Versão (como \emph{Git} e \emph{SVN}):} permitem registrar e gerenciar alterações no código-fonte temporalmente, possibilitando a colaboração simultânea entre desenvolvedores, a recuperação de versões anteriores e o rastreamento completo do histórico de mudanças;
 
     \item \textbf{Ambientes de Desenvolvimento Integrados (IDEs) (como \emph{Visual Studio}, \emph{IntelliJ IDEA} e \emph{Eclipse}):} oferecem um conjunto de ferramentas em um único ambiente, incluindo edição de código, depuração, testes, gerenciamento de dependências e integração com sistemas de controle de versão;
 
-    \item \textbf{Ferramentas de Gerenciamento de Projetos (como \emph{Jira}, \emph{Trello} e \emph{Asana}):} auxiliam na organização e priorização de tarefas, acompanhamento do progresso e comunicação entre membros da equipe, fornecendo transparência e facilitando a coordenação do trabalho;
+    \item \textbf{Gerenciamento de Projetos (como \emph{Jira}, \emph{Trello} e \emph{Asana}):} auxiliam na organização e priorização de tarefas, acompanhamento do progresso e comunicação entre membros da equipe, fornecendo transparência e facilitando a coordenação do trabalho;
 
-    \item \textbf{Ferramentas de Integração e Entrega Contínua (CI/CD) (como \emph{Jenkins}, \emph{GitHub Actions} e \emph{GitLab CI}):} automatizam processos de compilação, testes e implantação, promovendo maior qualidade e agilidade nas entregas de software;
+    \item \textbf{Integração e Entrega Contínua (CI/CD) (como \emph{Jenkins}, \emph{GitHub Actions} e \emph{GitLab CI}):} automatizam processos de compilação, testes e implantação, promovendo maior qualidade e agilidade nas entregas de software;
 
-    \item \textbf{Ferramentas de Teste (como \emph{Selenium}, \emph{JUnit} e \emph{Postman}):} permitem a execução de testes automatizados e manuais para validar funcionalidades, desempenho e segurança do sistema, contribuindo para a detecção precoce de falhas e a melhoria da qualidade do software.
+    \item \textbf{Teste (como \emph{Selenium}, \emph{JUnit} e \emph{Postman}):} permitem a execução de testes automatizados e manuais para validar funcionalidades, desempenho e segurança do sistema, contribuindo para a detecção precoce de falhas e a melhoria da qualidade do software.
+
+    \item \textbf{Virtualização e Monitoramento (como \emph{Docker}, \emph{Prometheus} e \emph{Grafana}):} permitem criar ambientes isolados e consistentes para execução do software, garantindo que ele funcione de maneira idêntica em diferentes máquinas. Além disso, possibilitam acompanhar o desempenho e a saúde dos sistemas em produção, auxiliando na detecção precoce de problemas e na manutenção da qualidade do software.
 \end{itemize}
 
 \section{Inteligência Artificial}
-Inteligência Artificial (IA) é o campo da ciência da computação que se dedica a criar sistemas capazes de executar tarefas que normalmente exigem inteligência humana, como reconhecimento de padrões, tomada de decisão e aprendizado a partir de dados. Segundo a posição da IEEE \citep{ieee2019ai}, a inteligência artificial envolve tecnologias computacionais inspiradas, mas funcionam de forma diferente, no modo como pessoas e outros organismos biológicos percebem, aprendem, raciocinam e agem.
+Inteligência Artificial (IA) é o campo da ciência da computação que se dedica a criar sistemas capazes de executar tarefas que normalmente exigem inteligência humana, como reconhecimento de padrões, raciocínio, tomada de decisão, resolução de problemas e aprendizado a partir de dados. Segundo a posição da IEEE \citep{ieee2019ai}, a inteligência artificial envolve tecnologias computacionais inspiradas, mas funcionam de forma diferente, no modo como pessoas e outros organismos biológicos percebem, aprendem, raciocinam e agem.
 
 As aplicações de IA afetam cada vez mais todos os aspectos da sociedade, incluindo defesa e segurança nacional, sistemas de justiça civil e criminal, comércio, finanças, manufatura, saúde, transporte, educação, entretenimento e interações sociais. Aplicações como essas estão se expandindo pela combinação de processadores avançados, grandes volumes de dados e novos algoritmos. Segundo um estudo da \citet{mckinsey2018-ai-impact}, a IA contribuirá com cerca de 13 trilhões de dólares para o PIB global até 2030.
 
-\subsection{Classificações}
+\subsection{Classificações por Funcionalidade}
 
-A IA pode ser classificada em:
+\subsubsection{Máquinas Reativas}
+As máquinas reativas representam o tipo mais rudimentar de inteligência artificial. Estes sistemas não possuem memória e não conseguem usar experiências passadas para influenciar decisões futuras, portanto, são projetados para executar uma tarefa muito específica e reagem apenas a um conjunto limitado de estímulos atuais, com base em sua configuração inicial. 
 
+Por consequência, não aprendem ou se adaptam às novas circunstâncias, operando com base em um conjunto de regras rígidas e pré-definidas. Um exemplo clássico de um sistema reativo é um programa de xadrez do século XX que, embora possa jogar uma partida inteira, reage apenas aos movimentos no tabuleiro e não tem capacidade de lembrar ou aprender com partidas anteriores para melhorar seu jogo. A principal limitação desta IA é a sua falta de contexto e a incapacidade de generalizar ou se adaptar.
+
+\subsubsection{IA de Memória Limitada}
+A IA de memória limitada marca um avanço significativo sobre as máquinas reativas. Estes sistemas armazenam dados históricos por um curto período e usam essas informações para tomar decisões futuras, no entanto, sua ``memória'' é transitória e específica para a tarefa em questão, sem formar uma compreensão completa ou duradoura do mundo.
+
+% TODO - corrigir a partir daqui
+
+As aplicações práticas desta IA são vastas, por exemplo, sistemas de recomendação em serviços de streaming ou redes sociais. Eles armazenam as escolhas e visualizações anteriores do usuário para oferecer conteúdos semelhantes, personalizando a experiência. Carros autônomos, como os da Tesla, também são um exemplo de IA de memória limitada, pois usam dados de sensores (como velocidade e distância) para tomar decisões imediatas de direção, mas não constroem um histórico de longo prazo para se adaptar a todas as estradas do mundo. Outros exemplos incluem assistentes virtuais como a Alexa e a Siri, e chatbots de atendimento ao cliente, que armazenam informações sobre interações recentes para personalizar suas respostas e fornecer suporte mais eficaz.
+
+\subsubsection{IA de Teoria da Mente}
+O conceito de IA da teoria da mente é puramente teórico e ainda não foi concretizado. Este tipo de sistema, em princípio, seria capaz de entender as emoções, crenças, intenções e estados mentais dos seres humanos com quem interage. A ideia é que, ao compreender o estado mental de uma pessoa, a IA poderia adaptar suas ações e respostas para permitir interações sociais mais naturais e fluidas. Por exemplo, um sistema desta categoria poderia, em teoria, entender por que uma pessoa está chateada e reagir de forma apropriada e empática, em vez de simplesmente fornecer uma resposta genérica. A complexidade de lidar com a subjetividade e as nuances do comportamento humano torna este um campo de pesquisa extraordinariamente desafiador, e não existem exemplos práticos desta tecnologia na atualidade.
+
+\subsubsection{IA Autoconsciente}
+A IA autoconsciente é o ápice da progressão da inteligência artificial, sendo a mais próxima de se assemelhar à mente humana em sua totalidade. A ideia é que um sistema autoconsciente teria consciência de si mesmo e do mundo ao seu redor, o que lhe permitiria entender e reagir a estímulos externos de forma análoga à consciência humana. O conceito de superinteligência (ASI), uma inteligência que supera a capacidade humana, está diretamente alinhado a esta categoria. A progressão desta classificação funcional reflete uma hierarquia de necessidades cognitivas, com cada etapa representando um avanço exponencial na capacidade de contextualização e generalização. O salto da IA de memória limitada para a Teoria da Mente, e finalmente para a autoconsciência, não é apenas um aumento no poder de processamento, mas uma mudança fundamental na capacidade da IA de lidar com a subjetividade e a complexidade da experiência humana. Esta categoria, no entanto, permanece firmemente no campo da pesquisa teórica e da ficção científica, sem exemplos práticos existentes no mundo real.
+
+\subsection{Classificações por Capacidade}
+
+\subsubsection{Inteligência Artificial Restrita (\emph{Narrow AI})}
+
+A Inteligência Artificial Restrita, também conhecida como \emph{IA Fraca}, refere-se a sistemas projetados para executar uma tarefa específica ou um conjunto limitado de tarefas. Esses sistemas de IA são altamente especializados, operam em um contexto restrito e apresentam desempenho de alto nível nas funções para as quais foram programados.
+
+\paragraph{Características Principais}
 \begin{itemize}
-    \item \textbf{IA Fraca (Narrow AI)}: sistemas projetados para executar tarefas específicas, sem consciência ou compreensão geral do mundo.
-    \item \textbf{IA Forte (General AI)}: hipotéticos sistemas capazes de realizar qualquer tarefa cognitiva que um humano consegue executar.
-    \item \textbf{IA Baseada em Aprendizado de Máquina}: sistemas que melhoram seu desempenho por meio da análise de grandes volumes de dados e ajuste de parâmetros internos.
+    \item \textbf{Foco em Tarefas Específicas:} a IA Restrita é desenvolvida para funções específicas, como reconhecimento facial, tradução automática de idiomas ou jogos de tabuleiro (ex.: xadrez).
+    \item \textbf{Sem Generalização:} esses sistemas não conseguem aplicar seus conhecimentos em tarefas fora da função para a qual foram criados.
+    \item \textbf{Desempenho Semelhante ao Humano:} em seus domínios especializados, podem atingir ou até superar a performance humana, mas não possuem compreensão ou consciência.
 \end{itemize}
+
+\paragraph{Exemplos}
+\begin{itemize}
+    \item \textbf{Assistentes de Voz:} como Siri ou Alexa, capazes de executar tarefas como definir lembretes, responder perguntas e controlar dispositivos domésticos inteligentes, mas sempre limitados às suas funcionalidades programadas.
+    \item \textbf{Sistemas de Recomendação:} utilizados em plataformas como Netflix e Amazon, que sugerem produtos ou conteúdos com base no comportamento e nas preferências do usuário, restritos, porém, a essa aplicação específica.
+\end{itemize}
+
+\subsubsection{Inteligência Artificial Geral (\emph{General AI})}
+
+A Inteligência Artificial Geral, também chamada de \emph{IA Forte}, refere-se a sistemas que possuiriam a capacidade de compreender, aprender e aplicar conhecimento em uma ampla variedade de tarefas, de forma semelhante às habilidades cognitivas humanas. Diferentemente da IA Restrita, a IA Geral teria a capacidade de generalizar seu conhecimento e aplicá-lo em diferentes contextos.
+
+\paragraph{Características Principais}
+\begin{itemize}
+    \item \textbf{Inteligência Ampla:} seria capaz de executar múltiplas tarefas, tornando-se versátil e adaptável.
+    \item \textbf{Raciocínio Semelhante ao Humano:} teria a habilidade de raciocinar, resolver problemas e tomar decisões de forma comparável a um ser humano.
+    \item \textbf{Aprendizado Autônomo:} seria capaz de aprender e melhorar continuamente, adaptando-se a novas situações e adquirindo novas habilidades sem intervenção humana.
+\end{itemize}
+
+Atualmente, a IA Geral permanece no campo teórico e ainda não foi alcançada. Pesquisadores trabalham para desenvolver sistemas que possam atingir esse nível de capacidade, mas trata-se de um objetivo de longo prazo no desenvolvimento da IA.
+
+\subsubsection{Inteligência Artificial Superinteligente (\emph{Superintelligent AI})}
+
+A Inteligência Artificial Superinteligente representa a forma mais avançada de IA, superando a inteligência humana em todos os aspectos, incluindo criatividade, resolução de problemas e inteligência emocional. Esse tipo de IA seria capaz de ultrapassar as mentes humanas mais brilhantes em qualquer área, desde a ciência até a arte e as habilidades sociais.
+
+\paragraph{Características Principais}
+\begin{itemize}
+    \item \textbf{Supera a Inteligência Humana:} possuiria habilidades cognitivas muito além das capacidades humanas, tornando-se potencialmente a ferramenta mais poderosa — ou a maior ameaça — já criada.
+    \item \textbf{Tomada de Decisão Autônoma:} teria capacidade de decidir sem intervenção humana, com processos de raciocínio possivelmente além da nossa compreensão.
+    \item \textbf{Questões Éticas e Existenciais:} o desenvolvimento de uma IA Superinteligente levanta preocupações éticas profundas, incluindo os riscos que poderia representar à humanidade se não for devidamente controlada.
+\end{itemize}
+
+Assim como a IA Geral, a IA Superinteligente ainda é um conceito teórico, explorado em discussões acadêmicas e obras de ficção científica. Seu possível desenvolvimento é tema de intensos debates entre pesquisadores, especialistas em ética e futuristas.
 
 \subsection{Aprendizado de Máquina}
 
-Aprendizado de Máquina (Machine Learning) é um subcampo da IA que se concentra em criar algoritmos capazes de aprender e fazer previsões a partir de dados, sem serem explicitamente programados para cada tarefa. Os principais tipos de aprendizado incluem:
+Aprendizado de máquina (Machine Learning) é um subcampo da IA que se concentra em criar algoritmos capazes de aprender e fazer previsões a partir de quantidades expressivas de dados, geralmente estruturados ou rotulados, sem serem explicitamente programados para cada tarefa. Um conceito essencial para o aprendizado de máquina são as redes neurais, modelos computacionais inspirados na estrutura do cérebro humano. Elas são compostas por camadas de nós (neurônios artificiais) interconectados, capazes de processar informações e aprender padrões a partir de exemplos. Redes neurais são amplamente utilizadas em tarefas como classificação, reconhecimento de imagens e processamento de linguagem natural.
 
-\begin{itemize}
-    \item \textbf{Supervisionado}: o algoritmo aprende a partir de exemplos rotulados, tentando prever saídas corretas para novas entradas.
-    \item \textbf{Não Supervisionado}: o algoritmo identifica padrões ou estruturas em dados não rotulados.
-    \item \textbf{Por Reforço}: o algoritmo aprende tomando ações em um ambiente e recebendo recompensas ou penalidades, buscando maximizar o desempenho ao longo do tempo.
-\end{itemize}
+\subsubsection{Aprendizado Supervisionado}
 
-\subsection{Redes Neurais}
+O aprendizado supervisionado opera com dados rotulados, onde cada entrada de dados é pareada com uma saída correta correspondente. O objetivo do modelo é aprender o mapeamento entre a entrada e a saída, para então ser capaz de fazer previsões ou classificações precisas em novos dados não vistos. Este paradigma é ideal para cenários onde a resposta correta é conhecida.
 
-Redes neurais artificiais são modelos computacionais inspirados na estrutura do cérebro humano. Elas são compostas por camadas de nós (neurônios artificiais) interconectados, capazes de processar informações e aprender padrões a partir de exemplos. Redes neurais são amplamente utilizadas em tarefas como classificação, reconhecimento de imagens e processamento de linguagem natural.
+Entre as aplicações práticas do aprendizado supervisionado, destacam-se a detecção de spam em e-mails e a análise de sentimentos do cliente, onde os modelos são treinados para classificar textos com base em categorias predefinidas. No campo da visão computacional, ele é utilizado no reconhecimento de imagens e objetos, permitindo que algoritmos localizem, isolem e classifiquem elementos em vídeos ou imagens. Um exemplo clássico e cotidiano é o teste CAPTCHA, que treina modelos a reconhecerem veículos em imagens para detectar bots. Outras aplicações incluem a criação de mecanismos de recomendação personalizados, que analisam o histórico de escolhas e compras de clientes para oferecer sugestões relevantes , e a análise de dados preditiva para estimar salários de funcionários ou prever necessidades de estoque.
 
-\subsection{Aprendizado Profundo}
+\subsubsection{Aprendizado Não Supervisionado}
+Diferentemente do aprendizado supervisionado, o aprendizado não supervisionado trabalha com dados não rotulados. Seu propósito é descobrir padrões, estruturas e agrupamentos ocultos nos dados sem qualquer intervenção humana prévia. Este modelo se destaca por sua capacidade de encontrar semelhanças e diferenças nas informações, o que o torna uma solução poderosa para a análise exploratória de dados.
+
+Entre as tarefas principais do aprendizado não supervisionado estão o clustering (agrupamento), a associação e a redução de dimensionalidade. O clustering é uma técnica de mineração de dados que agrupa informações com base em suas semelhanças. Um exemplo prático é a segmentação de clientes, onde o algoritmo agrupa automaticamente clientes com comportamentos de compra ou características semelhantes, permitindo que as empresas criem estratégias de marketing mais direcionadas. Outra aplicação é a categorização de feedback de clientes para grandes modelos de linguagem (LLMs), permitindo que o algoritmo identifique tópicos como "questão de cobrança" ou "feedback positivo" a partir de textos não estruturados. A análise de associação, por sua vez, é usada na detecção de fraude, examinando padrões de compras e relacionamentos entre contas para identificar comportamentos suspeitos. A capacidade de identificar padrões ocultos nos dados é a principal contribuição deste paradigma.
+
+\subsubsection{Aprendizado por Reforço}
+
+O Aprendizado por Reforço é um processo de aprendizado dinâmico em que um "agente" aprende a tomar decisões ao interagir com um ambiente. O objetivo do agente é maximizar uma recompensa cumulativa, tomando ações que geram feedback positivo e evitando aquelas que resultam em feedback negativo. O processo de aprendizado se dá por tentativa e erro, sem a necessidade de exemplos rotulados.
+
+Este paradigma é particularmente útil para resolver problemas complexos e sequenciais em ambientes incertos. Aplicações reais incluem a robótica e o desenvolvimento de carros autônomos, onde o agente aprende a navegar e interagir com o ambiente para realizar tarefas específicas. No universo dos jogos, algoritmos de aprendizado por reforço, como o AlphaGo Zero, alcançaram desempenho super-humano ao aprender a jogar contra si mesmos, aperfeiçoando suas estratégias através do feedback de cada movimento. Além disso, a técnica é aplicada em cenários de tomada de decisão, como no gerenciamento de recursos em clusters de computadores, no controle de semáforos para otimizar o fluxo de tráfego, na reconfiguração autônoma de sistemas web, e na otimização de reações químicas. O Aprendizado por Reforço representa uma mudança de paradigma da "aprendizagem passiva" (onde o modelo simplesmente processa dados estáticos) para a "aprendizagem ativa", na qual o agente interage com um ambiente dinâmico, aprendendo com as consequências de suas ações. Essa capacidade de aprender a agir é um pilar de uma IA mais sofisticada.
+
+\subsubsection{Aprendizado Profundo}
+
+O Aprendizado Profundo, como um subconjunto do Aprendizado de Máquina, distingue-se pelo uso de Redes Neurais Artificiais (RNAs), estruturas computacionais inspiradas no funcionamento do cérebro humano. Essas redes são compostas por camadas de nós interconectados, onde cada nó é responsável por aprender um atributo específico dos dados. O termo "profundo" se origina da utilização de múltiplas camadas ocultas entre a camada de entrada e a de saída, o que permite que a rede construa representações hierárquicas e complexas dos dados.
+
+O processo de treinamento de uma rede neural profunda envolve a alimentação de um grande conjunto de dados rotulados. Conforme a rede processa esses dados, ela ajusta os "pesos" nas conexões entre os nós, usando técnicas como o
+
+backpropagation, para que o algoritmo aprenda e melhore sua precisão na classificação de novos dados. A capacidade das redes neurais profundas de reter ou esquecer informações seletivamente, processar grandes volumes de dados e realizar tarefas complexas, como processamento de linguagem natural e reconhecimento de fala, as torna uma das tecnologias mais poderosas da IA contemporânea.
+
+Existem arquiteturas de redes neurais profundas especializadas para diferentes tipos de dados. As Redes Neurais Convolucionais (CNNs), por exemplo, são particularmente eficazes para processar imagens e vídeos. Elas utilizam camadas convolucionais para extrair informações dos dados de entrada, camadas de agrupamento para reduzir a dimensionalidade e camadas totalmente conectadas para fazer previsões de alto nível. As Redes Neurais Recorrentes (RNNs) são projetadas para dados sequenciais, como texto ou séries temporais. Sua arquitetura permite que a rede combine a entrada atual com um estado oculto anterior, conferindo-lhe uma forma de "memória" para capturar dependências e padrões ao longo do tempo. Uma forma avançada de RNN é a memória de curto prazo longa (LSTM), que aprimora a capacidade da rede de "lembrar" o que aconteceu em camadas anteriores, tornando-a ideal para tarefas de linguagem natural e análise de sentimentos.
 
 \subsection{IA Generativa}
+
+A Inteligência Artificial Generativa, ou IA Generativa, é um subconjunto da IA que desenvolveu a capacidade de criar conteúdos novos e originais, como texto, imagens, vídeos, áudio e código, em resposta a prompts de texto, que podem variar de simples a altamente complexos. Este campo emergiu como um dos mais proeminentes da IA nos últimos anos, marcando uma transição da capacidade da IA de apenas processar e classificar dados para a de criar ativamente.
+
+O avanço da IA Generativa está intimamente ligado à inovação arquitetural dos modelos de transformação, ou Transformers. Antes de sua ascensão, as Redes Neurais Recorrentes (RNNs) eram a tecnologia de ponta para processamento de dados sequenciais. No entanto, sua natureza sequencial impedia a paralelização e limitava o treinamento em grandes conjuntos de dados. A arquitetura Transformer, introduzida no artigo de 2017 "Attention is All You Need," revolucionou este processo ao permitir que a rede processasse uma sequência de dados inteira simultaneamente. Essa capacidade de paralelização foi a tecnologia fundamental que permitiu o treinamento de modelos em conjuntos de dados massivos, utilizando o poder de processamento das GPUs.
+
+Essa inovação arquitetural levou ao desenvolvimento dos Grandes Modelos de Linguagem (LLMs), que são modelos de linguagem pré-treinados em gigantescas quantidades de texto e que se tornaram a base da maioria das aplicações modernas de embedding de palavras. Exemplos notáveis de LLMs incluem o BERT do Google (que usa o codificador do Transformer) e a série GPT da OpenAI (que usa o decodificador). A capacidade dos LLMs de gerar texto coerente e de alta qualidade foi o que, de fato, catalisou a era moderna da IA Generativa.
+
+A explosão da IA Generativa que se observa hoje não é um evento isolado, mas um resultado direto de uma inovação arquitetural específica. A capacidade de paralelização (a causa) permitiu o treinamento em escala sem precedentes (o efeito imediato), que, por sua vez, desbloqueou a capacidade de gerar conteúdo novo e coerente (o efeito subsequente). Portanto, o sucesso da IA Generativa é um triunfo da engenharia e escalabilidade tanto quanto do algoritmo em si.
+
+As aplicações da IA Generativa se estendem por diversas modalidades. Na geração de texto, os LLMs impulsionam chatbots, assistentes virtuais e ferramentas de geração de código. Na geração de imagens e vídeos, ferramentas como o Adobe Firefly permitem aos usuários criar conteúdo visual a partir de comandos de texto. O processo é intuitivo: o usuário insere um comando de texto detalhado, e o modelo de IA, que utiliza Aprendizado de Máquina e Processamento de Linguagem Natural, converte a descrição em um clipe de vídeo profissional, geralmente com cinco segundos de duração.
+
 \subsubsection{Modelos de Linguagem}
 
-Modelos de linguagem são algoritmos capazes de compreender, gerar e manipular texto em linguagem natural. Eles aprendem padrões estatísticos e semânticos a partir de grandes corpora de texto e são a base para sistemas de tradução automática, assistentes virtuais e chatbots avançados.
+Modelos de linguagem são algoritmos estatísticos e computacionais projetados para compreender, gerar e manipular texto em linguagem natural. O objetivo central desses modelos é capturar padrões linguísticos, tanto de natureza sintática quanto semântica, a partir de grandes coleções de dados textuais (\emph{corpora}). A partir desses padrões, o modelo consegue prever a probabilidade de uma palavra ocorrer em determinada sequência, construir sentenças coerentes, interpretar perguntas e até mesmo inferir significados implícitos no discurso.
+
+Historicamente, os primeiros modelos de linguagem eram baseados em abordagens probabilísticas relativamente simples, como modelos de \emph{n-gramas}, que calculavam a probabilidade de uma palavra com base nas anteriores. Com o avanço da aprendizagem profunda (\emph{deep learning}), redes neurais recorrentes (RNNs) e arquiteturas como LSTMs (\emph{Long Short-Term Memory}) e GRUs (\emph{Gated Recurrent Units}) passaram a ser empregadas para capturar dependências de longo prazo em sequências textuais. Apesar disso, tais arquiteturas enfrentavam dificuldades em lidar com textos extensos devido a problemas como o desvanecimento do gradiente.
 
 \subsubsection{Transformers}
 
-Transformers são uma arquitetura de redes neurais introduzida em 2017, projetada para lidar eficientemente com sequências de dados, como texto. Utilizam mecanismos de atenção que permitem processar relações entre palavras de forma paralela, superando limitações de modelos recorrentes tradicionais.
+Introduzidos em 2017 por Vaswani et al. no artigo \emph{“Attention is All You Need”}, os \emph{Transformers} representam uma das arquiteturas mais influentes e transformadoras no campo do processamento de linguagem natural (PLN). Diferentemente de RNNs e LSTMs, os Transformers não processam o texto de forma sequencial; em vez disso, utilizam mecanismos de \emph{atenção} que permitem analisar todas as palavras de uma sequência em paralelo. Isso possibilita capturar relações contextuais entre termos que estão distantes no texto, algo que modelos anteriores realizavam de forma limitada e ineficiente.
 
-\subsection{Modelos de Linguagem de Grande Escala (\emph{Large Language Model})}
+O componente central dessa arquitetura é o mecanismo de \emph{self-attention}, que calcula pesos relacionando cada palavra da sequência com todas as outras, permitindo ao modelo focar seletivamente nas informações mais relevantes para determinada tarefa. Essa capacidade de processamento paralelo e contextualização eficiente revolucionou não apenas o PLN, mas também áreas como visão computacional e bioinformática, sendo hoje a base de modelos de ponta em inteligência artificial.
 
-Modelos de linguagem de grande escala (LLMs) são modelos de linguagem treinados com enormes volumes de dados textuais, contendo bilhões de parâmetros. Eles são capazes de gerar texto coerente, resumir informações, responder perguntas e realizar tarefas complexas de processamento de linguagem natural. Exemplos incluem GPT, BERT e T5.
+\subsubsection{Modelos de Linguagem de Grande Escala (\emph{Large Language Models -- LLMs})}
+
+Modelos de linguagem de grande escala (\emph{Large Language Models} – LLMs) são uma evolução direta da arquitetura Transformer, caracterizados pelo uso de quantidades massivas de dados de treinamento e pela presença de bilhões (ou até trilhões) de parâmetros ajustáveis. Essa escala permite que os modelos capturem nuances linguísticas extremamente sofisticadas, possibilitando não apenas a geração de texto coerente, mas também a realização de tarefas complexas como tradução automática, sumarização de documentos, resposta a perguntas, geração de código e até raciocínio lógico em determinados contextos.
+
+Entre os exemplos mais representativos de LLMs estão o \emph{GPT} (Generative Pre-trained Transformer), da OpenAI, o \emph{BERT} (Bidirectional Encoder Representations from Transformers), do Google, e o \emph{T5} (Text-to-Text Transfer Transformer). Cada um desses modelos introduziu contribuições significativas: o GPT popularizou a abordagem de pré-treinamento seguido de ajuste fino para múltiplas tarefas; o BERT trouxe o treinamento bidirecional, permitindo maior compreensão de contexto; e o T5 propôs unificar diferentes tarefas de PLN no paradigma \emph{text-to-text}.
+
+Devido ao seu poder e versatilidade, os LLMs vêm sendo amplamente aplicados em produtos tecnológicos, assistentes virtuais, motores de busca e sistemas de suporte à decisão. Entretanto, seu uso também levanta desafios importantes relacionados a viés nos dados, consumo energético elevado durante o treinamento e riscos de uso inadequado, tornando essencial a discussão ética e responsável sobre seu desenvolvimento e aplicação.
