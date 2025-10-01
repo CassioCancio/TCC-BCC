@@ -15,7 +15,6 @@
     }
   ],
 
-  // Define que receita usar por padrão
   "latex-workshop.latex.recipe.default": "make",
 
   "files.exclude": {
@@ -44,5 +43,6 @@
     "**/*.bak": true,
     "**/*configuracao": true,
     "**/*.backup": true
-  }
+  },
+  "cSpell.words": ["SDLC"]
 }
