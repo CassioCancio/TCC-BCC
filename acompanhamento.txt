@@ -1,0 +1,26 @@
+Reunião 01/10
+
+- Organizar os reports em um mapa mental
+- A metodologia de análise partindo de um artigo principal e indo em direção aos outros reports para pontos mais focais. 
+- Eventualmente não teria como ver todos os tópicos e focar em alguns pontos mais específicos, como 3 deles.
+- Um foco bom poderia ser principalmente o uso.
+- Eventualmente mostrar variações entre os resultados  
+- Discutir limitações e possíveis continuidades
+- Analisando o estado da prática de Ai assisted sftw development.
+- Explicar fontes, caracterizá-las e porque escolhi elas. Comparando anos diferentes. Mostrar o que cada relatório tem foco e descrever de maneira geral tudo que eles falam num mapa mental e dar um foco para o uso. 
+-  Como minerar os dados deles para poder fazer a análise de forma mais específica.
+- Primeira parte é a visão geral e no que eu vou focar, em termos de uso por exemplo.
+- Entregar esse panorama na próxima entrega (22/10), mapa mental dos focos e temas do artigos
+
+Reunião 22/10
+
+- Entreguei o mapa mental dos artigos
+- Comparar o que as referencias cinzas tem e o ELSEVIER
+- Traçar o amadurecimento da percepção do uso de IA no desenvolvimento de software
+- Estrutura para o projeto
+    - Introdução
+    - Capítulo 1 - Referencial Teórico
+    - Capítulo 2 - Dar um panorama geral dos 4 textos de baixo (os reports) tanto conteúdo quanto das organizações por trás deles, criar um ordem de foco
+    - Capítulo 3 - Análise dos assuntos em foco
+    - Capítulo 4 - Comparação entre os reports e a literatura (confirmações, gaps e contradições)
+- Entregar os capítulos 1 e 2 na próxima reunião (05/11) 
