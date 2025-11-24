@@ -52,3 +52,4 @@
 {"rule":"HUNSPELL_RULE","sentence":"^\\QAlguns exemplos de métodos ágeis incluem: Scrum: método iterativo que organiza o trabalho em ciclos curtos, denominados sprints (iterações), com duração de uma a quatro semanas.\\E$"}
 {"rule":"BARBARISMS","sentence":"^\\QAlguns exemplos de métodos ágeis incluem: Scrum: método iterativo que organiza o trabalho em ciclos curtos, as iterações (sprints), com duração de uma a quatro semanas.\\E$"}
 {"rule":"HUNSPELL_RULE","sentence":"^\\QAlguns exemplos de métodos ágeis incluem: Scrum: método iterativo que organiza o trabalho em ciclos curtos, as iterações (sprints), com duração de uma a quatro semanas.\\E$"}
+{"rule":"GENERAL_GENDER_AGREEMENT_ERRORS","sentence":"^\\QNeste capítulo, estão listados os relatórios de literatura cinzenta utilizados na pesquisa Este capítulo se propõe a apresentar os textos de literatura utilizados ao longo do trabalho\\E$"}

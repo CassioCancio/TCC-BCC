@@ -48,7 +48,12 @@
 % também define os comandos para capa, folha de rosto etc.
 \usepackage{configuracao/imegoodies}
 \usepackage[thesis]{configuracao/imelooks}
-
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usepackage{siunitx}
+\sisetup{
+  output-decimal-marker = {,},
+}
 %\nocolorlinks % para impressão em P&B
 
 % Diretórios onde estão as figuras; com isso, não é necessário (mas
