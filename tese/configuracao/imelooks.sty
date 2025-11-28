@@ -1899,16 +1899,21 @@
         valign=center,
         before upper = \evenRaggedRight,
         fonttitle = \large,
-        top=.7\baselineskip,
-        bottom=.7\baselineskip,
-        left=.9\baselineskip,
-        right=.9\baselineskip,
-        toptitle=.1\baselineskip,
-        bottomtitle=.05\baselineskip,
-        lefttitle=.4\baselineskip,
-        righttitle=.6\baselineskip,
-        colframe = IMEframe,
-        colback = IMEbg,
+    % reduzimos ainda mais o padding interno padrão das posterboxes
+    top=.3\baselineskip,
+    bottom=.3\baselineskip,
+    left=.4\baselineskip,
+    right=.4\baselineskip,
+    toptitle=.04\baselineskip,
+    bottomtitle=.02\baselineskip,
+    lefttitle=.4\baselineskip,
+    righttitle=.4\baselineskip,
+    boxsep=.15\baselineskip,
+    % alinhar cor do cabeçalho das posterboxes com o cabeçalho do poster
+    colbacktitle=IMEtitlebg,
+    coltitle=white,
+    colframe = IMEframe,
+    colback=imesoftblue!10!white,
     }
 
     \tcbset{
@@ -1927,7 +1932,7 @@
         },
         footerbox/.style = {
             before upper = \rmfamily\bfseries,
-            colback=IMEfooterbg, coltext=white, grow sidewards by = 1.5cm,
+            colback=IMEtitlebg, coltext=white, grow sidewards by = 1.5cm,
             sharp corners, boxsep=4mm, left=1.1cm, right=1.1cm,
             top=.3\baselineskip, bottom=0pt,
             borderline north={15pt}{-5pt}{IMEtitleBorder},

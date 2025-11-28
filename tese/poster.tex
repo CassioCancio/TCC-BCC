@@ -3,15 +3,19 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PREÂMBULO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 % A língua padrão é a última da lista
-\documentclass[a1paper,brazilian,english]{article}
+\documentclass[a1paper,english,brazilian]{article}
 
 % Vários pacotes e opções de configuração genéricos
 \usepackage{imegoodies}
 \usepackage[poster,hidelinks]{imelooks}
-% \tcbposterset{fontsize = 32pt} % default, mude se necessário
+\tcbposterset{fontsize = 28pt} % default, mude se necessário
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{pgf-pie}
+\usepackage{qrcode} 
 
 % Diretórios onde estão as figuras; com isso, não é necessário (mas
 % é permitido) colocar o caminho completo em \includegraphics. Note
@@ -33,8 +37,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% METADADOS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% O arquivo com os dados bibliográficos para biblatex; você pode usar
-% este comando mais de uma vez para acrescentar múltiplos arquivos
+% O arquivo com os dados bibliográficos para biblatex; você pode usar 
+% este comando mais de uma vez para acrescentar múltiplos arquivos 
 \addbibresource{bibliografia.bib}
 
 % Este comando permite acrescentar itens à lista de referências sem incluir
@@ -112,97 +116,112 @@
 % entre o conteúdo de uma posterbox e suas bordas. Use com parcimônia!
 
 \begin{document}
-
 % Em um poster não há \maketitle
 
 \begin{tcbposter}[
         poster = {
-                %showframe, % muito útil durante a preparação do poster
-                rows = 6,
+                % showframe, % muito útil durante a preparação do poster
+                rows = 5,
                 columns = 12,
-                colspacing = 1.2cm,
+                colspacing = 1cm,
                 rowspacing = .8cm,
             },
     ]
 
-\posterbox[titlebox]{name=titlebox, below=top, column=1, span=12}{
+    \posterbox[titlebox]{name=titlebox, below=top, column=1, span=12}{
 
-    \begin{minipage}{0.85\linewidth} % largura da coluna do texto
-        {\Large IA Generativa na Engenharia de Software \\}
-        \vspace{0.25cm}
-        \large Impactos da IA na produção de código e a evolução da percepção sobre a IA \\
-        \vspace{0.75cm}
-        \normalsize
+        \begin{minipage}{0.85\linewidth} % largura da coluna do texto
+            {\Large Percepções em Transformação \\}
+            \vspace{0.25cm}
+            \large Os Impactos da IA Generativa na Produção de Software \\
+            \vspace{0.75cm}
+            \normalsize
 
-        Autor: Cássio Cancio | Orientadores: Profº Paulo Meirelles e Arthur Pilone
-    \end{minipage}
-    \hfill
-    \begin{minipage}{0.1\linewidth} % largura da coluna da imagem
-        \includegraphics[width=\linewidth]{vertical-simplificada}
-    \end{minipage}
-
-}
-
+            Autor: Cássio Cancio | Orientadores: Prof. Paulo Meirelles e Arthur Pilone
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.1\linewidth} % largura da coluna da imagem
+            \includegraphics[width=\linewidth]{vertical-simplificada}
+        \end{minipage}
+    }
 
     \posterbox[footerbox]{name=footerbox, above=bottom, column=1, span=12}{
     }
 
-    \posterbox[adjusted title = Contexto e Motivação]
-    {name=intro, below=titlebox, column=1, span=12}{
+    \posterbox[adjusted title = Contexto]
+    {name=context, below=titlebox, column=1, span=6, rowspan=0.7}{
+        \begin{itemize}
+            \item A adoção de ferramentas de IA generativa para a engenharia\\ de software (ES) é uma das grandes tendências da indústria.
 
-        A adoção de assistentes de código baseados em IA (LLMs) transformou o desenvolvimento de software.
-        Segundo o Gartner, a previsão é que \textbf{90\% dos engenheiros de software} utilizem assistentes de IA até 2028.
-        No entanto, apesar do aumento na produtividade percebida, surgem evidências de impactos negativos na qualidade do código e novos vetores de risco.
-        Este trabalho analisa dados de 211 milhões de linhas de código e relatórios da indústria para traçar o cenário atual e futuro.
+            \item A \emph{Stack Overflow Developer Survey} aponta, desde 2023, o crescimento da adoção de ferramentas de IA para este fim na comunidade de desenvolvedores profissionais.
+        \end{itemize}
+    }
 
+    \posterbox[adjusted title = Objetivo]
+    {name=objective, below=titlebox, column=7, span=6}{
+        \begin{itemize}
+
+
+            \item Levantar dados sobre os impactos da IA generativa na \\ produção de software
+            \item Analisar a evolução da percepção dos desenvolvedores sobre \\ o uso destas ferramentas, de acordo com diversas pesquisas e \\ relatórios do mercado
+            \item Comparar resultados de diferentes fontes da literatura \\ cinza e formal
+        \end{itemize}
     }
 
     %%%%%%%% Quatro colunas com "equal height group" %%%%%%%%
 
-    \posterbox[adjusted title = Percepção (Stack Overflow),
-        smallmargins, equal height group = quartos]
-    {name=so, below=intro, column=1, span=3}{
+    \posterbox[adjusted title = Uso de IA,
+        smallmargins]
+    {name=so, below=context, column=1, span=6, rowspan=1.6}{
 
+    \begin{center}
+        \small
+        \textbf{Uso de IA no desenvolvimento de \emph{software} em 2025 por programadores profissionais (Stack Overflow)}
+        \includegraphics[width=11cm]{grafico-uso.png}
+    \end{center}
+
+ 
+    Segundo previsões da \emph{Gartner}:
         \begin{itemize}
-            \item \textbf{72\%} dos desenvolvedores são favoráveis ao uso de IA[cite: 14].
-            \item \textbf{Paradoxo da Confiança:} Apenas 43\% confiam na precisão da IA, enquanto 30\% são céticos[cite: 24].
-            \item 63\% já utilizam IA no processo de desenvolvimento[cite: 2161].
+            \item Em 2028, 90\% das empresas de \emph{software} usarão \emph{AI code} \\ \emph{assistants};
+            \item A IA passará de 5\% (2024) para 40\% (2027) em participação no \\ ciclo de desenvolvimento de \emph{software};
+            \item 25\% dos \emph{bugs} em produção virão de código de IA não revisado.
         \end{itemize}
-    }
+            
+            
 
-    \posterbox[adjusted title = Delegação de Tarefas (Elsevier),
-        smallmargins, equal height group = quartos]
-    {name=elsevier, below=intro, column=4, span=3}{
 
-        Desenvolvedores preferem delegar tarefas "chatas" e manter o controle sobre as criativas:
-        \begin{description}
-            \item[Alta Delegação:] Escrita de Testes (70\%), Documentação e Artefatos de Linguagem Natural.
-            \item[Baixa Delegação:] Implementação de novas \textit{features} (apenas 18\% delegariam totalmente).
-        \end{description}
 
     }
 
-    \posterbox[adjusted title = Futuro: IA Agêntica (Gartner),
-        smallmargins, equal height group = quartos]
-    {name=gartner, below=intro, column=7, span=3}{
+    \posterbox[adjusted title = Casos de uso da IA,
+        smallmargins]
+    {name=riscos, below=objective, column=7, span=6}{
+        Segundo uma pesquisa da Elsevier, os desenvolvedores entrevistados preferem delegar tarefas de que gostam \\ menos de fazer para ferramentas de IA e manter o controle das\\ mais prazerosas:
+\vspace{1cm}
 
-        Transição de "Chatbots" para \textbf{Agentes Autônomos}:
-        \begin{itemize}
-            \item \textbf{2028:} 33\% dos softwares empresariais terão IA agêntica (vs <1\% em 2024).
-            \item \textbf{Autonomia:} Agentes tomarão 15\% das decisões diárias de trabalho sem intervenção humana.
-        \end{itemize}
+
+    \begin{tabular}{p{11cm}p{7cm}p{7cm}}
+                Atividade  & Delegaria & Gosta de fazer \\
+                \toprule
+
+                Escrita de testes & \cellcolor{green!10} 70\% & \cellcolor{red!10} 30\%\\
+                Documentação técnica & \cellcolor{green!10} 66\% & \cellcolor{red!10} 26\%\\
+                Criar novas \emph{features}& \cellcolor{red!10} 27\% & \cellcolor{green!10} 86\%\\
+                
+            \end{tabular}
+
+\vspace{1cm}
+            
+    A Stack Overflow Developer Survey 2024 perguntou qual uso os usuários fazem das ferramentas de IA.
+    
+    \begin{itemize}
+        \item 82\% utiliza para escrever código;
+        \item 40,1\% utiliza para produzir documentação;
+        \item 27,2\% utiliza para testar código.
+    \end{itemize}
     }
 
-    \posterbox[adjusted title = Riscos de Segurança (ANSSI/BSI),
-        smallmargins, equal height group = dados]
-    {name=riscos, below=intro, column=10, span=3}{
-
-        \begin{itemize}
-            \item \textbf{Alucinação de Pacotes:} Recomendação de bibliotecas inexistentes que podem ser exploradas por atacantes.
-            \item \textbf{Shadow AI:} Uso de ferramentas não homologadas expondo dados sensíveis.
-            \item \textbf{Viés de Automação:} Excesso de confiança em código inseguro.
-        \end{itemize}
-    }
 
     %%%%%%%% Duas colunas %%%%%%%%
 
@@ -213,86 +232,90 @@
 
     %%% Esquerda
     \posterbox[adjusted title = Análise de Qualidade de Código (GitClear)]
-    {name=gitclearText, below=so,
-        column=1, span=6, rowspan=1.3}{
+    {name=gitclearText, below=riscos,
+        column=7, span=6, rowspan=1.51}{
 
-        Análise de \textbf{211 milhões de linhas de código} alteradas entre 2020 e 2024 revela tendências preocupantes na manutenibilidade 2172].
-
-        \textbf{1. Queda na Refatoração (Moved Lines):}
+        \textbf{1. Queda na refatoração}
         \begin{itemize}
-            \item Linhas movidas (indicador de refatoração/reuso) caíram de 24,1\% (2020) para \textbf{9,5\%} (2024).
-            \item Menos reuso implica em violação do princípio DRY (\textit{Don't Repeat Yourself}).
+            \item A proporção de linhas movidas, forte indicador de refatoração,\\ caiu de 24,1\% (2020) para 9,5\% (2024).
         \end{itemize}
 
-        \vspace{0.5cm}
-
-        \textbf{2. Aumento da Duplicação (Copy/Paste):}
+        \textbf{2. Aumento das duplicações de código:}
         \begin{itemize}
-            \item Em 2024, pela primeira vez, a % de linhas copiadas (\textbf{12,3\%}) superou as linhas movidas 2257].
-            \item Ocorrência de blocos de código duplicados cresceu de 0,7\% (2020) para \textbf{6,66\%} (2024).
+            \item Em 2024, pela primeira vez, a porcentagem de linhas copiadas (12,3\%) superou as linhas movidas (9,5\%).
+            \item A ocorrência de commits com blocos de código duplicados cresceu de 0,7\% (2020) para 6,66\% (2024).
         \end{itemize}
 
-        \vspace{0.5cm}
-
-        \textbf{3. Aumento do Churn (Retrabalho):}
+        \textbf{3. Aumento do Retrabalho:}
         \begin{itemize}
-            \item O \textit{Churn} (código revertido em <2 semanas) cresceu para 5,7\%, indicando código gerado rapidamente mas com baixa durabilidade.
+            \item O \textit{Churn} (proporção do código revertido em menos de 2\\ semanas) cresceu para 5,7\%.
+        \end{itemize}
+
+        \textbf{4. Redução da Durabilidade do Código:}
+        \begin{itemize}
+            \item A proporção de linhas que em menos de duas semanas foram alteradas aumentou de 60,4\% em 2020 para 69,7\% em 2024
+            \item Já as linhas que precisaram de alterações apenas entre 4 semanas e um ano, diminuiu de 24,7\% para 16,9\% no mesmo \\ período.
         \end{itemize}
     }
 
-    \posterbox[adjusted title = Visualização das Métricas (GitClear)]
+    \posterbox[adjusted title = Tabela das Métricas (GitClear)]
     {name=gitclearVisual, below=so,
-        column=7, span=6, rowspan=1.3}{
+        column=1, span=6, rowspan=1.25}{
 
-        \centering
-        \includegraphics[width=0.9\textwidth, height=9cm, keepaspectratio]{example-image-a}
+        A GitClear produziu uma análise de 211 milhões de linhas de \\ código alteradas entre 2020 e 2024. O código tem origem em\\  milhares de repositórios de empresas e repositórios de código aberto. 
 
         \vspace{0.5cm}
-        \textit{Figura 1: Interseção histórica em 2024 onde a taxa de código copiado (vermelho) ultrapassa a refatoração (azul), sugerindo débito técnico futuro.}
 
-        \vspace{1cm}
+        Os resultados das métricas foram:
+        
+        \vspace{0.5cm}
 
-        \begin{tcolorbox}[colback=imesoftblue!10!white, title=Conclusão da Análise]
-            O uso de IA incentiva a adição rápida de novo código ("Fire and Forget") em detrimento da manutenção e estruturação a longo prazo. Isso resulta em bases de código inchadas e mais propensas a bugs 2439].
-        \end{tcolorbox}
-    }
+        \begin{center}    
+            \footnotesize
+            \begin{tabular}{p{2cm}p{4.2cm}p{4.2cm}p{4.2cm}p{4.2cm}p{4.2cm}}
+                Ano  & Adicionado & Movido& Cópia  & Substituído & Churn \\
+                \toprule
+                2020 & 39,2\%     & 24,1\%& 8,3\%  & 2,9\%       & 3,1\% \\
+
+
+	2021 & 39,5\% & 24,8\% & 8,4\% & 3,4\% & 3,3\% \\
+
+    2022 & 40,9\% & \cellcolor{red!10} 20,5\%& 9,4\%  & 3,7\%       & 3,3\% \\
+	
+    2023 & \cellcolor{green!15} 42,3\% & \cellcolor{red!20} 15,8\% & \cellcolor{red!10} 10,6\% & \cellcolor{green!10} 3,6\% & \cellcolor{red!10} 4,5\% \\
+    
+    2024 & \cellcolor{green!30} 46,2\% & \cellcolor{red!40} 9,5\% & \cellcolor{red!20} 12,3\% & \cellcolor{green!20} 4,2\% & \cellcolor{red!20} 5,7\% \\
+                
+            \end{tabular}
+                    
+   
+        \end{center}
+            }
 
     %%% Direita
-    \posterbox[adjusted title = Referências Selecionadas, smallmargins]
-    {name=bibbox, between=gitclearText and footerbox, column=1, span=8}{
+    \posterbox[adjusted title = Referências, smallmargins]
+    {name=bibbox, between=gitclearVisual and footerbox, column=1, span=8}{
         \footnotesize
         \begin{itemize}
             \item \textbf{[GitClear 2025]} Harding, W. "AI Copilot Code Quality: Evaluating 2024's Increased Defect Rate".
             \item \textbf{[Gartner 2024]} "Principais Tendências Tecnológicas Estratégicas para 2025: IA Agêntica".
             \item \textbf{[Gartner MQ]} "Magic Quadrant for AI Code Assistants", 2024.
-            \item \textbf{[Stack Overflow]} "2024 Developer Survey".
+            \item \textbf{[Stack Overflow]} "Developer Survey 2023/2024/2025".
             \item \textbf{[Elsevier 2025]} Sergeyuk, A. et al. "Using AI-based coding assistants in practice".
             \item \textbf{[ANSSI/BSI]} "AI Coding Assistants - Security Recommendations", 2024.
-        \end{itemize}}
+        \end{itemize}
+    }
 
-    %%%%%%% Colunas assimétricas (2/3 + 1/3) %%%%%%%%
-
-    %%% Esquerda. Como usamos "between", a altura desta caixa
-    %             é definida pela posição das outras duas.
-    \posterbox[adjusted title = Resumo Estatístico 2024,
-        colframe = imeyellow, smallmargins]
+    \posterbox[adjusted title = Site do TCC, smallmargins]
     {between=gitclearVisual and footerbox, column=9, span=4}{
 
-        \centering
-        \small
-        \begin{tabular}{lcc}
-            \toprule
-            Métrica            & 2020   & 2024                        \\
-            \midrule
-            Linhas Movidas     & 24.1\% & \textbf{9.5\%} $\downarrow$ \\
-            Duplicação         & 0.7\%  & \textbf{6.6\%} $\uparrow$   \\
-            Churn (Retrabalho) & 3.1\%  & \textbf{5.7\%} $\uparrow$   \\
-            Adoção de IA       & <5\%   & \textbf{>60\%} $\uparrow$   \\
-            \bottomrule
-        \end{tabular}
+        \begin{center}
+            \qrcode[height=2.5in]{https://cassiocancio.github.io/TCC-BCC/}
 
-        \vspace{0.2cm}
-        \footnotesize{Fontes: GitClear  e Stack Overflow.}
+            \vspace{1cm}
+
+            Acesso à monografia completa.
+        \end{center}
 
     }
 \end{tcbposter}
