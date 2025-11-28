@@ -232,47 +232,51 @@
     %%% Esquerda
     \posterbox[adjusted title = Análise de Qualidade de Código (GitClear)]
     {name=gitclearText, below=riscos,
-        column=7, span=6, rowspan=1.55}{
+        column=7, span=6, rowspan=1.6}{
 
-        \textbf{1. Queda na refatoração}
+        \textbf{Queda na refatoração}
         \begin{itemize}
-            \item A proporção de linhas movidas, forte indicador de refatoração,\\ caiu de 24,1\% (2020) para 9,5\% (2024).
+            \item A proporção de \textbf{linhas movidas}, forte indicador de refatoração, caiu de 24,1\% (2020) para 9,5\% (2024).
         \end{itemize}
 
-        \textbf{2. Aumento das duplicações de código:}
+        \vspace{0.5cm}
+        
+        \textbf{Aumento das duplicações de código:}
         \begin{itemize}
-            \item Em 2024, pela primeira vez, a porcentagem de linhas copiadas (12,3\%) superou as linhas movidas (9,5\%).
-            \item A ocorrência de commits com blocos de código duplicados cresceu de 0,7\% (2020) para 6,66\% (2024).
+            \item Em 2024, pela primeira vez, a porcentagem de \textbf{linhas copiadas (12,3\%) superou as linhas movidas (9,5\%)}.
+            \item A ocorrência de commits com \textbf{blocos de código duplicados cresceu} de 0,7\% (2020) para 6,66\% (2024).
         \end{itemize}
-
-        \textbf{3. Aumento do retrabalho:}
+        \vspace{0.5cm}
+        
+        \textbf{Aumento do retrabalho:}
         \begin{itemize}
-            \item O \textit{Churn} (proporção do código revertido em menos de 2\\ semanas) cresceu para 5,7\%.
+            \item O \textit{churn}, \textbf{proporção do código revertido ou refeito} em \\ menos de 2 semanas, cresceu de 3,1\% em 2020 para 5,7\%\\ em 2024.
         \end{itemize}
-
-        \textbf{4. Redução da durabilidade do código:}
+        
+        \vspace{0.5cm}
+        \textbf{Redução da durabilidade do código:}
         \begin{itemize}
-            \item A proporção de linhas que em menos de duas semanas foram alteradas aumentou de 60,4\% em 2020 para 69,7\% em 2024
-            \item Já as linhas que precisaram de alterações apenas entre 4 semanas e um ano, diminuiu de 24,7\% para 16,9\% no mesmo \\ período.
+            \item A proporção de linhas que em \textbf{menos de duas semanas}\\ foram alteradas foi de 60,4\% em 2020 para 69,7\% em 2024
+            \item As linhas que precisaram de alterações entre \textbf{4 semanas e um \\ ano}, diminuiu de 24,7\% para 16,9\% no mesmo período.
         \end{itemize}
     }
 
     \posterbox[adjusted title = Tabela das Métricas (GitClear)]
     {name=gitclearVisual, below=so,
-        column=1, span=6, rowspan=1}{
+        column=1, span=6, rowspan=1.05}{
 
         A GitClear produziu uma análise de \textbf{211 milhões de linhas de} \\ \textbf{código} alteradas entre 2020 e 2024. O código tem origem em\\  milhares de \textbf{repositórios fechados e abertos}.
 
         \vspace{0.5cm}
 
-        Os resultados das métricas foram:
+        Os resultados das métricas das mudanças de linhas foram:
 
         \vspace{0.5cm}
 
         \begin{center}
             \footnotesize
             \begin{tabular}{p{2cm}p{4.2cm}p{4.2cm}p{4.2cm}p{4.2cm}p{4.2cm}}
-                Ano  & Adicionado                  & Movido                    & Cópia                     & Substituído                & Churn                    \\
+                Ano  & Adicionada                  & Movida                    & Copiada                     & Substituída                & Churn                    \\
                 \toprule
                 2020 & 39,2\%                      & 24,1\%                    & 8,3\%                     & 2,9\%                      & 3,1\%                    \\
 
@@ -309,7 +313,7 @@
         \begin{center}
             \qrcode[height=2.5in]{https://cassiocancio.github.io/TCC-BCC/}
 
-            \vspace{1cm}
+            \vspace{0.5cm}
             \small
             Texto completo.
         \end{center}
