@@ -1,7 +1,6 @@
 %!TeX root=../tese.tex
 
-\chapter{Literatura Cinzenta}
-\label{cap:literatura-cinzenta}
+\chapter{Literatura Cinzenta}\label{cap:literatura-cinzenta}
 
 Literatura cinzenta é o nome dado para publicações, textos e produções os quais não passaram pelo mesmo processo de revisão por pares que a chamada literatura branca, que inclui, por exemplo, publicações formais, artigos científicos e periódicos. Neste capítulo, estão listados os relatórios de literatura cinzenta utilizados na pesquisa 
 
@@ -65,6 +64,8 @@ Além disso, outra métrica relevante neste contexto é o \emph{churn}, que busc
 O relatório fez também uma análise de quanto tempo se passou entre o momento em que os códigos analisados foram criados e em quanto tempo eles receberam sua próxima mudança significativa. Na \autoref{fig:historico_tempo_mudanca}, observa-se que a proporção de linhas que em menos de duas semanas foram alteradas aumentou de 60,4\% em 2020 para 69,7\% em 2024, em contrapartida, o grupo das linhas que precisaram de alterações apenas depois de 4 semanas, mas antes de um ano, diminuiu de 24,7\% para 16,9\% no mesmo período.
 
 Desta maneira, o relatório conclui que houve aumento da duplicação de linhas nos repositórios, violando a boa prática DRY (\emph{Don't Repeat Yourself}), a diminuição da proporção de linhas movidas, que indicam refatoração, o aumento da instabilidade do código, já que o \emph{churn} aumentou, e uma redução da durabilidade do código, no sentido dele precisar ser reescrito ou modificado mais cedo. O relatório credita este cenário de piora da qualidade do código e de sua manutenibilidade no longo prazo à adoção de IA no desenvolvimento de \emph{software}.
+
+% TODO - explicar aumento de find/replace
 
 \begin{figure}[h!]
 \caption{Proporção anual das linhas modificadas classificadas pelo tempo que permaneceram no repositório antes de sofrerem uma nova modificação significativa entre 2020 e 2024 (\cite{gitclear2025}).}
@@ -144,6 +145,71 @@ Os resultados da pesquisa em 2024 incluem uma seção específica para tratar a 
 		Benefícios
 		Principais usos
 
+
+\begin{figure}[h!]
+\caption{Proporção anual dos desenvolvedores profissionais que utilizam ferramentas de IA em seu processo de desenvolvimento entre 2023 e 2025 (\cite{StackOverflow2023,StackOverflow2024,StackOverflow2025}).}
+\label{fig:historico_uso_ia}
+\centering
+\begin{tikzpicture}
+    \begin{axis}[
+		/pgf/number format/use comma,
+        width=16cm,
+        height=11cm,
+        title={Você atualmente utiliza ferramentas de IA em seu processo de desenvolvimento?},
+        xlabel={Ano},
+        ylabel={Percentual (\%)},
+        ymin=0, ymax=95,
+		symbolic x coords={2023,2024,2025},
+		xtick=data,
+        legend pos=south east,
+        legend cell align={left},
+		legend style={
+			font=\footnotesize,
+			at={(0.5,0.91)},
+			anchor=south,
+			legend columns=5,
+		},
+        grid=both,
+		nodes near coords={\pgfmathprintnumber{\pgfplotspointmeta}\%},
+		every axis plot/.style={ line width=1.5pt },
+    ]
+
+    % Yes (green)
+    \addplot[
+        thick,
+        color=blue!60!black
+    ] coordinates {
+        (2023,44.17)
+        (2024,63.2)
+        (2025,80.7)
+    };
+    \addlegendentry{Sim}
+
+    % No, but I plan to soon (orange)
+    \addplot[
+        thick,
+        color=green!60!black
+    ] coordinates {
+        (2023,25.88)
+        (2024,13.5)
+        (2025,4.6)
+    };
+    \addlegendentry{Não, mas pretendo em breve}
+
+    % No, and I don't plan to (red)
+    \addplot[
+        thick,
+        color=red
+    ] coordinates {
+        (2023,29.95)
+        (2024,23.4)
+        (2025,14.7)
+    };
+    \addlegendentry{Não e não pretendo}
+
+    \end{axis}
+\end{tikzpicture}
+\end{figure}
 
 
 \section{Gartner: Principais Tendências Tecnológicas Estratégicas para 2025: IA Agêntica}

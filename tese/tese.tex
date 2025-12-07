@@ -54,6 +54,12 @@
 \sisetup{
   output-decimal-marker = {,},
 }
+
+% TODO - remover estas linhas para voltar ao tema claro padrão
+\usepackage{xcolor}
+\pagecolor{gray}
+\color{black}
+
 %\nocolorlinks % para impressão em P&B
 
 % Diretórios onde estão as figuras; com isso, não é necessário (mas
@@ -96,8 +102,8 @@
 % Estes comandos definem o título e autoria do trabalho e devem sempre ser
 % definidos, pois além de serem utilizados para criar a capa, também são
 % armazenados nos metadados do PDF. O subtítulo é opcional.
-\title{IA Generativa na Engenharia de Software}[Impactos da IA na produção de código e a evolução da percepção sobre a IA.]
-\translatedtitle{Generative AI in Software Engineering}[Impacts of AI on code production and the evolving perception of AI.]
+\title{Percepções em Transformação}[Os Impactos da IA Generativa na Produção de Software.]
+\translatedtitle{Perceptions in Transformation}[Impacts of AI on Code Production.]
 
 \author{Cássio Azevedo Cancio}
 
@@ -110,7 +116,6 @@
 % Se não houver, remova; se houver mais de um, basta
 % repetir o comando quantas vezes forem necessárias
 \coorientador{Arthur Pilone Maia da Silva}
-\coorientador{Carlos Eduardo Santos}
 
 % A página de rosto da versão para depósito (ou seja, a versão final
 % antes da defesa) deve ser diferente da página de rosto da versão
@@ -183,19 +188,6 @@
 % que a página da dedicatória não seja contada.
 \pagenumbering{roman}
 
-% Agradecimentos:
-% Se o candidato não quer fazer agradecimentos, deve simplesmente eliminar
-% esta página. A epígrafe, obviamente, é opcional; é possível colocar
-% epígrafes em todos os capítulos. O comando "\chapter*" faz esta seção
-% não ser incluída no sumário.
-% \chapter*{Agradecimentos}
-% \epigrafe{Do. Or do not. There is no try.}{Mestre Yoda}
-
-% Texto texto texto texto texto texto texto texto texto texto texto texto texto
-% texto texto texto texto texto texto texto texto texto texto texto texto texto
-% texto texto texto texto texto texto texto texto texto texto texto texto texto
-% texto texto texto texto. Texto opcional.
-
 \input{template/resumoabstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%% LISTAS DE FIGURAS ETC. %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -226,33 +218,23 @@
 
 %%%%% Listas criadas manualmente
 
-%\chapter*{Lista de abreviaturas}
 \disablenewpage{\chapter*{Lista de abreviaturas}}
 
 \begin{tabular}{rl}
   IA  & Inteligência Artificial (\emph{Artificial Intelligence})           \\
   IME & Instituto de Matemática e Estatística                              \\
   LLM & Modelo de Linguagem de Grande Escala (\emph{Large Language Model}) \\
+  OTAN & Organização do Tratado do Atlântico Norte \\
   USP & Universidade de São Paulo
 \end{tabular}
 
-%\chapter*{Lista de símbolos}
-% \disablenewpage{\chapter*{Lista de símbolos}}
-
-% \begin{tabular}{rl}
-%   $\omega$ & Frequência angular\\
-%     $\psi$ & Função de análise \emph{wavelet}\\
-%     $\Psi$ & Transformada de Fourier de $\psi$\\
-% \end{tabular}
-
-% Quebra de página manual
 \clearpage
 
 %%%%% Listas criadas automaticamente
 
 % Você pode escolher se quer ou não permitir a quebra de página
-\listoffigures
-% \disablenewpage{\listoffigures}
+% \listoffigures
+\disablenewpage{\listoffigures}
 
 % Você pode escolher se quer ou não permitir a quebra de página
 \listoftables
@@ -261,7 +243,7 @@
 % Esta lista é criada "automaticamente" pela package float quando
 % definimos o novo tipo de float "program" (em utils.tex)
 % Você pode escolher se quer ou não permitir a quebra de página
-\listof{program}{\programlistname}
+% \listof{program}{\programlistname}
 % \disablenewpage{\listof{program}{\programlistname}}
 
 % Sumário (obrigatório)
@@ -308,8 +290,8 @@
 \input{conteudo/1-referencial-teorico}
 \input{conteudo/2-metodologia}
 \input{conteudo/3-literatura-cinzenta}
-\input{conteudo/4-analise}
-\input{conteudo/5-comparacao}
+\input{conteudo/4-literatura-formal}
+\input{conteudo/5-analise}
 \input{conteudo/6-conclusao}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% APÊNDICES E ANEXOS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

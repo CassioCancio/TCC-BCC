@@ -10,31 +10,12 @@
 % modelo define o comando "\chapter**".
 \chapter**{Introdução}\label{cap:introducao}
 
-\section**{Contexto}
+A engenharia de \emph{software} é campo da computação que se propõe a produzir e manter sistemas de \emph{software}. Esta definição foi criada em 1968 pela OTAN, direcionando esforços na resolução da chamada "crise do \emph{software}", um período em que o desenvolvimento de programas se tornava cada vez mais complexo e desorganizado. Desde então, diversas ferramentas, métodos e processos foram criados para possibilitar que programadores pudessem organizar a produção de \emph{software} e realizar projetos complexos.
 
-A engenharia de \emph{software} é um campo da computação que surgiu e se desenvolveu através da crescente demanda da sociedade do fim do século XX até a atualidade por sistemas computacionais cada vez mais complexos. Neste contexto, ferramentas, métodos e processos foram criados para possibilitar o atendimento dessa demanda.
+Neste mesmo período, a humanidade presenciou diversas avanços na tecnologia, como a produção de processadores cada vez mais potentes, o barateamento do \emph{hardware}, tornando computadores e celulares muito mais acessíveis, e a inclusão de bilhões de pessoas na \emph{internet}, gerando uma enorme quantidade de dados sobre os diversos aspectos da vida cotidiana e virtual. Com todo esse poder computacional e dados disponíveis, a inteligência artificial pôde se desenvolver a passos largos, até o surgimento da IA generativa. Diferentemente da IA tradicional, a IA generativa é capaz de "criar" conteúdos baseados no que aprendeu.
 
-Nas últimas décadas, os estudos em inteligência artificial (IA) avançaram rapidamente, de modo que um novo paradigma em IA surgiu, a IA generativa. Diferentemente da IA tradicional, a IA generativa pode criar conteúdos novos e originais baseados no que aprendeu, em vez de apenas copiar, imitar e reproduzir algo que já existe.
+Dada a sua flexibilidade, a IA generativa pode ser utilizada para diversos fins e era natural que uma de suas aplicações fosse a engenharia de \emph{software}. Nos últimos anos, diversos estudos foram publicados de modo a analisar essas aplicações, suas consequências e propor diferentes abordagens seguras e responsáveis para tais aplicações (~\cite{10705752} e~\cite{10.1145/3715003}).
 
-Dada a flexibilidade e a abertura de diversas possibilidades com essa nova tecnologia, é prevísivel que uma de suas aplicações fosse a engenharia de \emph{software}. Nos últimos anos, diversos estudos foram publicados de modo a analisar essas aplicações, suas consequências e propor diferentes abordagens para tais aplicações (~\cite{10705752} e~\cite{10.1145/3715003}).
+Segundo dados da \citet{StackOverflow2025}, 80,7\% dos desenvolvedores profissionais utilizam ferramentas de IA no seu processo de desenvolvimento de \emph{software} e 4.6\% deste grupo planeja utilizá-las em breve. É evidente que uma tecnologia com amplo uso dos desenvolvedores causaria impactos na produção de código e, neste contexto, faz-se relevante este trabalho, que tem como objetivos: reunir dados sobre os impactos das ferramentas de IA generativa na produção de \emph{software}, analisar a evolução da percepção dos desenvolvedores sobre o uso destas ferramentas e comparar resultados de diferentes fontes da literatura cinza e formal.
 
-Neste contexto, este projeto se propõe a levantar e estruturar os resultados observados em diversos artigos que tratam do estudo do impacto da IA generativa na engenharia de \emph{software}. As fases da engenharia em foco são: \emph{design} de \emph{software}, codificação e testes.
-
-\section**{Motivação}
-
-Este trabalho se faz relevante no contexto em que o uso de ferramentas de IA generativa vem crescendo com o passar dos anos, desde o surgimento de ferramentas como \emph{ChatGPT} e \emph{GitHub Copilot}. Segundo dados da \emph{Stack Overflow 2024 Developer Survey}~\citep{StackOverflow2024}, 63,2\% dos desenvolvedores profissionais já utilizam ferramentas de IA no seu processo de desenvolvimento, enquanto 13.5\% deste mesmo grupo de trabalhadores planeja utilizá-las em breve. Além disso, entre os desenvolvedores que afirmaram usar inteligência artificial, 82\% a utilizam para escrever código.
-
-Desta maneira, é evidente que uma nova tecnologia com amplo uso no mercado de \emph{software} e que abre possibilidade para diversas aplicações, terá impactos sobre como os desenvolvedores escrevem seus códigos. Assim, é de suma importância buscar avaliar e compreender de que maneira esses impactos vêm ocorrendo nas bases de código e na relação dos engenheiros de \emph{software} com o código.
-
-\section**{Objetivos}
-
-Os principais objetivos do trabalho são:
-
-\begin{itemize}
-  \item Investigar como a inteligência artificial generativa tem sido adotada por empresas de desenvolvimento de \emph{software};
-  \item Mapear a evolução temporal do uso de IA generativa por engenheiros de software;
-  \item Analisar os impactos da adoção de IA na qualidade e nas métricas do código;
-  \item Identificar percepções, práticas e sentimentos dos engenheiros em relação ao uso da IA generativa;
-  \item Investigar os principais desafios, riscos e limitações associados à adoção da IA generativa no ciclo de desenvolvimento de software;
-  \item Descrever em quais fases do processo de engenharia de software a IA generativa é mais utilizada.
-\end{itemize}=
+O \autoref{cap:fundamentacao} foca na apresentação dos conceitos fundamentais para o trabalho. O \autoref{cap:metodologia} descreve a metodologia e a escolha das fontes utilizadas. No \autoref{cap:literatura-cinzenta} é apresentada uma revisão da literatura cinza sobre o tema, já no \autoref{cap:literatura-formal}, a revisão foca na literatura formal. O \autoref{cap:analise} apresenta uma análise comparando e relacionando os trabalhos de literatura formal e cinzenta. Por fim, o \autoref{cap:conclusao} conclui o trabalho.
