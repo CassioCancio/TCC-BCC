@@ -8,7 +8,7 @@ Reunião 01/10
 - Discutir limitações e possíveis continuidades
 - Analisando o estado da prática de Ai assisted sftw development.
 - Explicar fontes, caracterizá-las e porque escolhi elas. Comparando anos diferentes. Mostrar o que cada relatório tem foco e descrever de maneira geral tudo que eles falam num mapa mental e dar um foco para o uso. 
--  Como minerar os dados deles para poder fazer a análise de forma mais específica.
+- Como minerar os dados deles para poder fazer a análise de forma mais específica.
 - Primeira parte é a visão geral e no que eu vou focar, em termos de uso por exemplo.
 - Entregar esse panorama na próxima entrega (22/10), mapa mental dos focos e temas do artigos
 
