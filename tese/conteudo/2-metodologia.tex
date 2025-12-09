@@ -21,16 +21,68 @@
 \chapter{Metodologia}%
 \label{cap:metodologia}
 
-\section{Abordagem de Pesquisa}
-\subsection{Tipo de Pesquisa}
-Esta pesquisa caracteriza-se como descritiva, dado que se fundamenta na análise de produções teóricas previamente publicadas sobre o tema. Para isso, foram utilizados livros, artigos científicos, relatórios técnicos e trabalhos acadêmicos que abordem o impacto da inteligência artificial generativa na engenharia de software, bem como suas aplicações nas fases de design, codificação e testes.
+Este capítulo descreve a abordagem metodológica adotada para condução da pesquisa, destacando os critérios utilizados para seleção das fontes, a forma de organização das análises e o método empregado para comparar literatura cinzenta e literatura formal. O trabalho segue um processo de análise partindo do artigo de literatura formal escrito por \citet{elsevier}. A partir deste artigo, outras fontes, de literatura cinzenta, foram selecionadas de modo a complementar a análise, oferecendo outras visões sobre o uso de ferramentas de IA generativa no desenvolvimento de software e seus impactos.
 
-\subsection{Procedimentos Metodológicos}
-Quanto à sua finalidade, trata-se de uma pesquisa \textbf{básica}, pois tem como objetivo aprofundar o conhecimento científico existente sobre o tema, explorando especificamente os efeitos e implicações do uso de ferramentas de IA generativa no desenvolvimento de software. Dessa forma, não se busca propor soluções práticas imediatas, mas compreender e organizar criticamente o conhecimento já produzido.
+As fontes utilizadas neste trabalho foram divididas em dois grupos:
 
-\section{Coleta de Dados}
-\subsection{Fontes de Dados}
-A seleção do material bibliográfico será feita em bases de dados científicas, como ACM Digital Library, IEEE Xplore, Scopus e Google Scholar, utilizando termos relacionados à inteligência artificial generativa, engenharia de software, ferramentas de apoio ao desenvolvimento e impactos na prática profissional.
+\begin{itemize}
+    \item \textbf{Literatura formal:} neste grupo há o artigo científico principal criado por \citet{elsevier}, que está indexado em bases reconhecidas, como a \emph{Elsevier}, e foi utilizado como ponto de partida da análise. Além dele, há o relatório, \citet{anssi_2024}, produzido por duas agências governamentais, a francesa, ANSSI, e a alemã, BSI, que compila diversos resultados de pesquisas acadêmicas referentes ao uso de assistentes de código com IA;
+    \item \textbf{Literatura cinzenta:} composta por quatro relatórios internacionais de organizações influentes na indústria de software e tecnologia. Esses reports foram escolhidos porque:
+    \begin{itemize}
+        \item apresentam dados atualizados sobre o uso de IA por desenvolvedores;
+        \item refletem tendências observadas no mercado;
+        \item oferecem recortes e metodologias distintas, permitindo observar convergências e discrepâncias;
+        \item possuem grande alcance e impacto na comunidade técnica.
+    \end{itemize}
+\end{itemize}
+    
+A análise das fontes foi estruturada em três etapas principais:
+(1) Panorama inicial dos reports
 
-\section{Métodos de Análise}
-No que se refere à abordagem, este trabalho adota uma pesquisa qualitativa. Os estudos selecionados serão analisados criticamente, considerando seus objetivos, métodos, resultados e conclusões. A interpretação dos dados terá caráter descritivo e analítico, buscando identificar padrões, benefícios, desafios e lacunas nas aplicações da IA generativa no contexto da engenharia de software.
+Cada uma das fontes é descrita no Capítulo 2, quanto ao seu conteúdo, escopo, metodologia empregada e perfil da organização responsável, permitindo compreender seus vieses e áreas de foco. 
+
+Primeiro, é apresentado um panorama geral dos quatro relatórios selecionados, destacando:
+	•	seus objetivos declarados,
+	•	tipos de dados coletados,
+	•	público-alvo,
+	•	principais temas abordados.
+
+Essa etapa permite estabelecer uma ordem de foco, evidenciando que cada documento enfatiza diferentes dimensões do uso de IA, como produtividade, riscos, experiência de desenvolvedores ou impactos organizacionais.
+
+(2) Análise dos assuntos em foco
+
+Com base nos temas recorrentes entre os reports e no artigo principal, foram identificados assuntos centrais para investigação, tais como:
+	•	produtividade e qualidade de código,
+	•	mudança no fluxo de trabalho do desenvolvedor,
+	•	confiança e percepção de precisão das ferramentas,
+	•	riscos de segurança e privacidade,
+	•	impactos educacionais e profissionais,
+	•	papel das ferramentas de geração de código.
+
+A análise procura destacar variações entre os resultados, evidenciando tanto consensos quanto divergências entre literatura formal e cinzenta.
+
+(3) Comparação entre literatura cinzenta e literatura formal
+
+Por fim, os achados dos reports da indústria são comparados com o artigo científico da Elsevier, buscando identificar:
+	•	confirmações (quando ambos os grupos de fontes apontam para as mesmas tendências);
+	•	gaps (temas presentes na literatura cinzenta, mas ainda pouco explorados academicamente, ou vice-versa);
+	•	contradições (resultados divergentes entre academia e indústria).
+
+Essa comparação permite avaliar em que medida a prática acompanha, complementa ou diverge da teoria apresentada na literatura formal.
+
+
+
+
+
+3.4. Análise da evolução da percepção sobre IA
+
+Um dos objetivos centrais do trabalho é traçar o amadurecimento da percepção sobre IA generativa no desenvolvimento de software. Para isso, são avaliadas mudanças no discurso, nas métricas e nas narrativas observadas nos relatórios ao longo dos últimos anos.
+
+São analisados:
+	•	variações de adoção entre anos consecutivos,
+	•	mudanças no grau de confiança dos desenvolvedores,
+	•	expectativas declaradas para o futuro,
+	•	evolução de preocupações (por exemplo: de produtividade → segurança → governança),
+	•	transformações no perfil de usuários e suas motivações.
+
+Essa análise longitudinal complementa o estudo comparativo entre fontes e permite compreender como a prática tem se transformado em resposta ao avanço das ferramentas generativas.
