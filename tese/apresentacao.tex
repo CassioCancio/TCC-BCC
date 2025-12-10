@@ -1,24 +1,50 @@
+% Authors: Nelson Lago and Fernanda Magano
+% This file is distributed under the MIT Licence
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PREÂMBULO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% aspectratio default é 4:3;
+% as mais úteis são 169 (16:9), 1610 (16:10) e 149 (14:9)
+% A língua padrão é a última citada
 \documentclass[
   xcolor={hyperref,svgnames,x11names,table},
   hyperref={pdfencoding=unicode,plainpages=false,pdfpagelabels=true,breaklinks=true},
   brazilian,english,12pt,aspectratio=149,
 ]{beamer}
 
+% Vários pacotes e opções de configuração genéricos
 \usepackage{imegoodies}
 \usepackage[slides,hidelinks]{imelooks}
 
+% Diretórios onde estão as figuras; com isso, não é necessário (mas
+% é permitido) colocar o caminho completo em \includegraphics. Note
+% que a extensão nunca é necessária (mas é permitida), ou seja, o
+% resultado é o mesmo com "\includegraphics{figuras/foto.jpeg}",
+% "\includegraphics{foto.jpeg}", "\includegraphics{figuras/foto}"
+% ou "\includegraphics{foto}".
 \graphicspath{{figuras/},{fig/},{logos/},{img/},{images/},{imagens/}}
 
+% Comandos rápidos para mudar de língua:
+% \en -> muda para o inglês
+% \br -> muda para o português
+% \texten{blah} -> o texto "blah" é em inglês
+% \textbr{blah} -> o texto "blah" é em português
 \babeltags{br = brazilian, en = english}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%% COMANDOS PARA O USUÁRIO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% A cada nova seção, recapitula o sumário.
+% Para desabilitar, é só comentar este trecho
 \AtBeginSection[]{
-  \begin{frame}<beamer>[t]{Sumário}
+  \begin{frame}<beamer>[t]{Overview}
     \intermezzo
   \end{frame}
 }
 
+% Blocos de cor personalizada
 \newenvironment{coloredblock}[2]%
   {
     \setbeamercolor{block title}{fg=white,bg=#1!80!white}
@@ -28,6 +54,13 @@
   }
   {\end{block}}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%% METADADOS E SLIDE TÍTULO %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% O arquivo com os dados bibliográficos para biblatex; você pode usar
+% este comando mais de uma vez para acrescentar múltiplos arquivos
 \addbibresource{bibliografia.bib}
 
 \title[Percepções em Transformação]{Percepções em Transformação}
@@ -40,21 +73,54 @@
 
 \date{10 de dezembro de 2025}
 
+% Coloca a imagem no fundo da página de título
 \titlebgimage{\includegraphics[width=\paperwidth,height=\paperheight]%
              {bg-ime}}
 
-
-\logos{
+% Logotipos no rodapé da página de título. Na verdade, qualquer coisa pode
+% ser colocada aqui para aparecer próximo ao final da página de título.
+% Esse material é colocado em uma minipage de largura .7\textwidth, porque
+% o pano de fundo tem um pedaço muito escuro à direita da página.
+%
+% De acordo com o manual de identidade visual, a altura do logo da USP deve
+% ser 2/3 da altura do logo do IME; o logo da USP deve ficar deslocado para
+% cima 1/6 da altura do logo do IME. As posições e tamanhos dos logos da
+% fapesp/capes/cnpq não seguem nenhuma lógica bem definida (na verdade,
+% nada está alinhado com nada!): eu (Nelson) fiz "a olho" da maneira que
+% me pareceu mais harmônica.
+\logos{%
   \includegraphics[height=.9\baselineskip]{ime-logo}%
   \quad\quad
   \raisebox{.15\baselineskip}{\includegraphics[height=.6\baselineskip]{usp-logo}}%
+  %\quad\quad
+  %\raisebox{.178\baselineskip}{\includegraphics[height=.515\baselineskip]{fapesp-logo}}%
+  %\quad\quad
+  %\raisebox{-.1732\baselineskip}{\includegraphics[height=1.2\baselineskip]{capes-logo}}%
+  %\quad\quad
+  %\raisebox{.124\baselineskip}{\includegraphics[height=.6\baselineskip]{cnpq-logo}}%
   \par
+  % Queremos que o logo cc-by fique próximo da margem direita da página, mas
+  % este material está dentro de uma minipage de largura .7\textwidth. Assim,
+  % usamos esse hspace, que "estoura" a largura da minipage para a direita.
   \hspace{.87\paperwidth}\includegraphics[width=.05\paperwidth]{cc-by}\par
 }
 
+% Usado para criar o qrcode com o endereço da apresentação
+\qrcodeurl{https://cassiocancio.github.io/TCC-BCC/}
+
+% Inclui ou não o qrcode no sumário da apresentação
+%\qrcodeintoc % default
+%\noqrcodeintoc
+
+% O slide de sumário pode ser dividido em colunas; o parâmetro
+% determina após qual o número da seção fazer a quebra de coluna
+% (use zero para uma coluna ou simplesmente omita este comando).
 \toccolumnsplit{5}
 
-\qrcodeurl{https://cassiocancio.github.io/TCC-BCC/}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% INÍCIO DA APRESENTAÇÃO %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
@@ -265,14 +331,20 @@
 \begin{frame}[allowframebreaks]{Referências}
   \nocite{anssi_2024,StackOverflow2023,StackOverflow2024,StackOverflow2025,elsevier,gitclear2025,gartner_ai_code_assistants_2024, gartner2024agenticAI}
   \printbibliography
-\end{frame} 
-    
+\end{frame}
+
+% Slides do tipo "Fim" ou "Perguntas?" não são muito úteis; ao invés
+% disso, é mais interessante definir um slide final recapitulando o
+% que foi visto.
 \begin{frame}[t]{\insertshorttitle}
   \overview
 
+  % \begin{center} acrescenta espaço vertical; como possivelmente temos
+  % pouco espaço aqui, vamos usar centering e adicionar o espaço manualmente
   \vspace{1\baselineskip}
   \bgroup
   \centering
+    \url{https://cassiocancio.github.io/TCC-BCC/}\par
   \egroup
 
 \end{frame}
