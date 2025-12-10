@@ -1,0 +1,318 @@
+% Authors: Nelson Lago and Fernanda Magano
+% This file is distributed under the MIT Licence
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PREÂMBULO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% aspectratio default é 4:3;
+% as mais úteis são 169 (16:9), 1610 (16:10) e 149 (14:9)
+% A língua padrão é a última citada
+\documentclass[
+  xcolor={hyperref,svgnames,x11names,table},
+  hyperref={pdfencoding=unicode,plainpages=false,pdfpagelabels=true,breaklinks=true},
+  brazilian,english,12pt,aspectratio=149,
+]{beamer}
+
+% Vários pacotes e opções de configuração genéricos
+\usepackage{imegoodies}
+\usepackage[slides,hidelinks]{imelooks}
+
+% Diretórios onde estão as figuras; com isso, não é necessário (mas
+% é permitido) colocar o caminho completo em \includegraphics. Note
+% que a extensão nunca é necessária (mas é permitida), ou seja, o
+% resultado é o mesmo com "\includegraphics{figuras/foto.jpeg}",
+% "\includegraphics{foto.jpeg}", "\includegraphics{figuras/foto}"
+% ou "\includegraphics{foto}".
+\graphicspath{{figuras/},{fig/},{logos/},{img/},{images/},{imagens/}}
+
+% Comandos rápidos para mudar de língua:
+% \en -> muda para o inglês
+% \br -> muda para o português
+% \texten{blah} -> o texto "blah" é em inglês
+% \textbr{blah} -> o texto "blah" é em português
+\babeltags{br = brazilian, en = english}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% COMANDOS PARA O USUÁRIO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% A cada nova seção, recapitula o sumário.
+% Para desabilitar, é só comentar este trecho
+\AtBeginSection[]{
+  \begin{frame}<beamer>[t]{Sumário}
+    \intermezzo
+  \end{frame}
+}
+
+% Blocos de cor personalizada
+\newenvironment{coloredblock}[2]%
+  {
+    \setbeamercolor{block title}{fg=white,bg=#1!80!white}
+    \setbeamercolor{block body}{fg=darkgray,bg=#1!20!white}
+    \setbeamercolor{local structure}{fg=darkgray,bg=#1!20!white}
+    \begin{block}{#2}
+  }
+  {\end{block}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%% METADADOS E SLIDE TÍTULO %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% O arquivo com os dados bibliográficos para biblatex; você pode usar
+% este comando mais de uma vez para acrescentar múltiplos arquivos
+\addbibresource{bibliografia.bib}
+
+% Este comando permite acrescentar itens à lista de referências sem incluir
+% uma referência de fato no texto (pode ser usado em qualquer lugar do texto)
+%\nocite{bronevetsky02,schmidt03:MSc, FSF:GNU-GPL, CORBA:spec, MenaChalco08}
+% Com este comando, todos os itens do arquivo .bib são incluídos na lista
+% de referências
+%\nocite{*}
+
+\title[Percepções em Transformação]{Percepções em Transformação}
+
+\subtitle{\normalsize Os impactos da IA generativa na produção de \emph{software}}
+
+\author[Shortened Author Names]{Cássio Azevedo Cancio}
+
+\institute{\textbf{Orientador:} Paulo Meirelles \\ \textbf{Coorientador:} Arthur Pilone}
+
+\date{10 de dezembro de 2025}
+
+% Coloca a imagem no fundo da página de título
+\titlebgimage{\includegraphics[width=\paperwidth,height=\paperheight]%
+             {bg-ime}}
+
+% Logotipos no rodapé da página de título. Na verdade, qualquer coisa pode
+% ser colocada aqui para aparecer próximo ao final da página de título.
+% Esse material é colocado em uma minipage de largura .7\textwidth, porque
+% o pano de fundo tem um pedaço muito escuro à direita da página.
+%
+% De acordo com o manual de identidade visual, a altura do logo da USP deve
+% ser 2/3 da altura do logo do IME; o logo da USP deve ficar deslocado para
+% cima 1/6 da altura do logo do IME. As posições e tamanhos dos logos da
+% fapesp/capes/cnpq não seguem nenhuma lógica bem definida (na verdade,
+% nada está alinhado com nada!): eu (Nelson) fiz "a olho" da maneira que
+% me pareceu mais harmônica.
+\logos{%
+  \includegraphics[height=.9\baselineskip]{ime-logo}%
+  \quad\quad
+  \raisebox{.15\baselineskip}{\includegraphics[height=.6\baselineskip]{usp-logo}}%
+  %\quad\quad
+  %\raisebox{.178\baselineskip}{\includegraphics[height=.515\baselineskip]{fapesp-logo}}%
+  %\quad\quad
+  %\raisebox{-.1732\baselineskip}{\includegraphics[height=1.2\baselineskip]{capes-logo}}%
+  %\quad\quad
+  %\raisebox{.124\baselineskip}{\includegraphics[height=.6\baselineskip]{cnpq-logo}}%
+  \par
+  % Queremos que o logo cc-by fique próximo da margem direita da página, mas
+  % este material está dentro de uma minipage de largura .7\textwidth. Assim,
+  % usamos esse hspace, que "estoura" a largura da minipage para a direita.
+  \hspace{.87\paperwidth}\includegraphics[width=.05\paperwidth]{cc-by}\par
+}
+
+% Inclui ou não o qrcode no sumário da apresentação
+%\qrcodeintoc % default
+%\noqrcodeintoc
+
+% O slide de sumário pode ser dividido em colunas; o parâmetro
+% determina após qual o número da seção fazer a quebra de coluna
+% (use zero para uma coluna ou simplesmente omita este comando).
+\toccolumnsplit{5}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% INÍCIO DA APRESENTAÇÃO %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\qrcodeurl{https://cassiocancio.github.io/TCC-BCC/}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}[t]{Sumário}
+  \overview
+\end{frame}
+
+\section{Introdução}
+
+\begin{frame}{Contexto}
+  \begin{itemize}
+    \item O compromisso de direitos autorais buscava equilibrar interesses públicos e privados
+    \item Hoje, mudanças na legislação e avanços tecnológicos praticamente destruíram esse equilíbrio
+    \item[]\strut % https://github.com/schlcht/microtype/issues/6
+    \item Em reação, surgiu o movimento do software livre
+          \begin{itemize}
+            \item Retorno ao compartilhamento (do código-fonte) e à colaboração (troca de ideias e trabalho em equipe)
+            \item Formalização com o projeto GNU
+            \item Só é realmente possível quando existem condições favoráveis para a troca de código-fonte
+                  \begin{itemize}
+                    \item conforme evidenciado pelo crescimento que acompanhou o boom da Internet
+                  \end{itemize}
+          \end{itemize}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}[plain]
+  % Em um poster ou apresentação, normalmente não é necessário usar
+  % \begin{figure} ou \begin{table}, basta usar \includegraphics ou
+  % \begin{tabular}. \begin{figure} e \begin{table} só são necessários
+  % se você quiser acrescentar legendas ou usar subfiguras. Nesses casos,
+  % [H] é obrigatório com beamer e com tcolorbox. Uma outra opção para
+  % inserir legendas é usar \captionof.
+  \begin{figure}[H]
+    \includegraphics[width=.7\textwidth]{ccsl-logo}
+    \caption*{Logo do CCSL} % Com "*", suprime a numeração
+  \end{figure}
+\end{frame}
+
+\begin{frame}[standout]
+  Isto é um problema!
+\end{frame}
+
+\section{Conceitos}
+
+\begin{frame}{Conceitos}
+
+  A Wikipedia não é uma boa fonte para pesquisa acadêmica,\\
+  mas, ainda assim, é útil. A entrada sobre pangramas afirma:
+
+  \vspace{\baselineskip}
+
+  \begin{block}{O que são pangramas?}
+    \begin{itemize}
+      \item Um \alert{pangrama} é uma frase que utiliza cada letra de um dado
+            alfabeto pelo menos uma vez.
+      \item Pangramas têm sido usados para exibir fontes, testar equipamentos,
+            e desenvolver habilidades em caligrafia, escrita à mão e digitação.
+    \end{itemize}
+  \end{block}
+
+  \vspace{\baselineskip}
+
+  (\url{https://en.wikipedia.org/wiki/Pangram})
+
+\end{frame}
+
+\begin{frame}{Pangramas -- exemplos}
+  \begin{columns}[t]
+
+    \column{.5\textwidth}
+    \begin{coloredblock}{red!90!black}{Alguns pangramas em inglês}
+      \begin{itemize}
+        \item A quick brown fox jumps over the lazy dog
+        \item Sphinx of black quartz, judge my vow
+        \item How vexingly quick daft zebras jump
+        \item Pack my box with five dozen liquor jugs
+      \end{itemize}
+    \end{coloredblock}
+
+    \column{.5\textwidth}
+    \begin{coloredblock}{red!90!black}{Alguns pangramas em português}
+      \begin{itemize}
+        \item Vejo xá gritando que fez show sem playback
+        \item Vi que ex-janota gordo fez show com playback
+        \item Já fiz vinho com toque de kiwi para belga sexy
+        \item Vejo galã sexy pôr quinze kiwis à força em baú achatado
+      \end{itemize}
+    \end{coloredblock}
+
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Teoremas e demonstrações}
+  \pause
+  \begin{theorem}[Um teorema de exemplo]
+    Teorema\dots
+  \end{theorem}
+
+  \pause
+  \begin{example}[Um exemplo de exemplo]
+    Exemplo\dots
+  \end{example}
+
+  \pause
+  \begin{proof}[Uma demonstração de exemplo]
+    Demonstração\dots
+  \end{proof}
+
+  \pause
+  \begin{definition}[Uma definição de exemplo]
+    Definição\dots
+  \end{definition}
+
+  \pause
+  \begin{proposition}[Uma proposição de exemplo]
+    Proposição\dots
+  \end{proposition}
+\end{frame}
+
+\section{Trabalhos Relacionados}
+
+\begin{frame}{Trabalhos Relacionados}
+
+  \begin{table}[H] % Veja comentário mais acima sobre [H]
+    \centering
+    \singlespacing\vspace{-\baselineskip}
+    \begin{tabular}{ccl}
+      \toprule
+      Code       & Abbreviation & \makecell{Full \\Name} \\
+      \midrule
+      \texttt{A} & Ala          & Alanine        \\
+      \texttt{C} & Cys          & Cysteine       \\
+      ...        & ...          & ...            \\
+      \texttt{W} & Trp          & Tryptophan     \\
+      \texttt{Y} & Tyr          & Tyrosine       \\
+      \bottomrule
+    \end{tabular}
+    \caption*{Uma tabela inútil.} % Com "*", suprime a numeração
+  \end{table}
+
+\end{frame}
+
+\section{Metodologia}
+
+\begin{frame}{Metodologia}
+\end{frame}
+
+\section{Resultados}
+
+\subsection{Validação e Análise}
+
+\begin{frame}{Validação}
+\end{frame}
+
+\begin{frame}{Estudo de Caso}
+\end{frame}
+
+\section{Conclusão e Trabalhos Futuros}
+
+\begin{frame}{Conclusão e Trabalhos Futuros}
+\end{frame}
+
+\section{Referências}
+
+\begin{frame}[allowframebreaks]{Referências}
+  \footnotesize % diminui o tamanho da fonte
+  \nocite{anssi_2024,StackOverflow2023,StackOverflow2024,StackOverflow2025,elsevier,gitclear2025,gartner_ai_code_assistants_2024, gartner2024agenticAI}
+  \printbibliography
+\end{frame} 
+    
+% Slides do tipo "Fim" ou "Perguntas?" não são muito úteis; ao invés
+% disso, é mais interessante definir um slide final recapitulando o
+% que foi visto.
+\begin{frame}[t]{\insertshorttitle}
+  \overview
+
+  % \begin{center} acrescenta espaço vertical; como possivelmente temos
+  % pouco espaço aqui, vamos usar centering e adicionar o espaço manualmente
+  \vspace{1\baselineskip}
+  \bgroup
+  \centering
+  \egroup
+
+\end{frame}
+
+\end{document}
