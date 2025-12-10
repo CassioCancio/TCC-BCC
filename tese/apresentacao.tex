@@ -126,210 +126,275 @@
 
 \maketitle
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\small
 
 \section{Introdução}
 
 \subsection{Contexto}
 
 \begin{frame}{Contexto}
-    \begin{itemize}
-        \item A adoção de ferramentas de IA generativa para a engenharia de software é uma das grandes tendências da indústria.
-        \item A pesquisa Stack Overflow Developer Survey aponta, desde 2023, o crescimento da adoção de ferramentas de IA na comunidade de desenvolvedores profissionais.
-    \end{itemize}
+  - Popularização dos computadores e celulares;
+
+  - Disparada no crescimento de sistemas de \emph{software} nas últimas décadas;
+
+  - Muitos dados gerados e disponíveis para treinamento de modelos de IA;
+
+  - GitHub Copilot e ChatGPT são lançados em 2022.
 \end{frame}
 
 \subsection{Objetivo}
 
 \begin{frame}{Objetivo}
-    \begin{itemize}
-        \item Levantar dados sobre os \textbf{impactos da IA generativa na produção de software}.
-        \item Analisar a evolução da \textbf{percepção dos desenvolvedores} de acordo com pesquisas e relatórios.
-        \item Comparar resultados de diferentes fontes da \textbf{literatura cinza e formal}.
-    \end{itemize}
+  - Levantar dados sobre os impactos da IA generativa na produção de \emph{software};
+
+  - Analisar a evolução da percepção dos desenvolvedores sobre IA;
+
+  - Comparar resultados de diferentes fontes da literatura cinza e formal.
 \end{frame}
-
-
-
 
 % -------------------------
-\section{Uso de IA em Engenharia de Software}
+\section{Ferramentas de IA}
+\subsection{Uso entre desenvolvedores}
+\begin{frame}{\insertsubsectionhead}
+  \vspace{0.1cm}
+  \centering
+  \begin{tikzpicture}
+    \scriptsize
+    \begin{axis}[
+        /pgf/number format/use comma,
+        width=12cm,
+        height=7cm,
+        title={Você atualmente utiliza ferramentas de IA em seu processo de desenvolvimento?},
+        xlabel={Ano},
+        ylabel={Percentual (\%)},
+        ymin=0, ymax=99,
+        symbolic x coords={2023,2024,2025},
+        xtick=data,
+        legend pos=south east,
+        legend cell align={left},
+        legend style={
+            font=\scriptsize,
+            at={(0.5,0.89)},
+            anchor=south,
+            legend columns=5,
+          },
+        grid=both,
+        nodes near coords={\pgfmathprintnumber{\pgfplotspointmeta}\%},
+        every axis plot/.style={ line width=1.5pt },
+      ]
 
-\begin{frame}{Uso de IA em 2025 (Stack Overflow)}
-    \begin{center}
-        \textbf{Uso de IA no desenvolvimento de software em 2025 por programadores profissionais}
+      % Yes (green)
+      \addplot[
+        thick,
+        color=blue!60!black
+      ] coordinates {
+          (2023,44.17)
+          (2024,63.2)
+          (2025,80.7)
+        };
+      \addlegendentry{Sim}
 
-        \vspace{0.5cm}
-        \includegraphics[width=0.9\linewidth]{grafico-uso.png}
-    \end{center}
+      % No, but I plan to soon (orange)
+      \addplot[
+        thick,
+        color=green!60!black
+      ] coordinates {
+          (2023,25.88)
+          (2024,13.5)
+          (2025,4.6)
+        };
+      \addlegendentry{Não, mas pretendo em breve}
 
-    \vspace{0.3cm}
-    Segundo previsões da Gartner:
-    \begin{itemize}
-        \item Em 2028, 90\% das empresas de software usarão \textbf{AI code assistants}.
-        \item A participação da IA no ciclo de desenvolvimento passará de 5\% (2024) para 40\% (2027).
-        \item Até 2027, 25\% dos bugs em produção virão de \textbf{código de IA não revisado}.
-    \end{itemize}
+      % No, and I don't plan to (red)
+      \addplot[
+        thick,
+        color=red
+      ] coordinates {
+          (2023,29.95)
+          (2024,23.4)
+          (2025,14.7)
+        };
+      \addlegendentry{Não e não pretendo}
+
+    \end{axis}
+  \end{tikzpicture}
+
+  \vspace{-0.25cm}
+
+  \footnotesize
+  \cite{StackOverflow2023,StackOverflow2024,StackOverflow2025}
 \end{frame}
 
-\begin{frame}{Casos de Uso da IA}
-    De acordo com Sergeyuk et al. (2025), desenvolvedores preferem:
-    \begin{itemize}
-        \item \textbf{Delegar tarefas menos prazerosas} para ferramentas de IA.
-        \item \textbf{Manter controle} das atividades mais interessantes.
-    \end{itemize}
+\subsection{Previsões sobre o uso}
+\begin{frame}{\insertsubsectionhead}
+  Segundo previsões da \emph{Gartner Research} (\cite{gartner_ai_code_assistants_2024}):
 
-    \vspace{0.4cm}
-    \scriptsize
-    \begin{tabular}{p{4cm}p{3cm}p{3cm}}
-        Atividade & Delegaria & Gosta de fazer \\
-        \hline
-        Escrita de testes           & 70\% & 30\% \\
-        Documentação técnica        & 66\% & 26\% \\
-        Criar novas features        & 27\% & 86\% \\
+  \vspace{0.5cm}
+
+  - Em 2028, 90\% das empresas de \emph{software} usarão \emph{AI code assistants}.
+
+  - O ciclo de desenvolvimento passará de 5\% (2024) para 40\% (2027) feito por IA.
+
+  - Até 2027, 25\% dos bugs em produção virão de \textbf{código de IA não revisado}.
+
+\end{frame}
+
+\subsection{Casos de uso}
+\begin{frame}{\insertsubsectionhead}
+  De acordo com \cite{elsevier}, desenvolvedores preferem:
+
+  - \textbf{Delegar tarefas menos prazerosas} para ferramentas de IA.
+
+  - \textbf{Manter controle} das atividades mais interessantes.
+
+  \vspace{0.4cm}
+  \centering
+  \begin{tabular}{p{5 cm}p{3cm}p{3cm}}
+    Atividade                   & Delegaria                 & Gosta de fazer            \\
+    \toprule
+
+    Escrita de testes           & \cellcolor{green!10} 70\% & \cellcolor{red!10} 30\%   \\
+    Documentação técnica        & \cellcolor{green!10} 66\% & \cellcolor{red!10} 26\%   \\
+    Criar novas \emph{features} & \cellcolor{red!10} 27\%   & \cellcolor{green!10} 86\% \\
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{\insertsubsectionhead}
+  Segundo \cite{StackOverflow2024}, dentre os profissionais que usam IA:
+
+  \vspace{0.5cm}
+
+  - 82\% usa IA para \textbf{escrever código}.
+
+  - 40,1\% para \textbf{produzir documentação}.
+
+  - 27,2\% para \textbf{testar código}.
+\end{frame}
+
+\section{Análise de métricas}
+
+\subsection{Tabela de métricas}
+\begin{frame}{\insertsubsectionhead}
+
+  \vspace{0.5cm}
+
+  - A \cite{gitclear2025} analisou \textbf{211 milhões de linhas de código} em 2025.
+
+  - O código tem origem em milhares de empresas e repositórios de código aberto.
+
+  - O relatório compila as métricas de 2020 a 2024.
+
+  \begin{center}
+    \footnotesize
+    \begin{tabular}{p{0.8cm}p{1.8cm}p{1.8cm}p{1.8cm}p{1.8cm}p{1.8cm}}
+      \toprule
+      Ano  & Adicionada                  & Movida                    & Copiada                   & Substituída                & Churn                    \\
+      \toprule
+      2020 & 39,2\%                      & 24,1\%                    & 8,3\%                     & 2,9\%                      & 3,1\%                    \\
+
+      2021 & 39,5\%                      & 24,8\%                    & 8,4\%                     & 3,4\%                      & 3,3\%                    \\
+
+      2022 & 40,9\%                      & \cellcolor{red!10} 20,5\% & 9,4\%                     & 3,7\%                      & 3,3\%                    \\
+
+      2023 & \cellcolor{green!15} 42,3\% & \cellcolor{red!20} 15,8\% & \cellcolor{red!10} 10,6\% & \cellcolor{green!10} 3,6\% & \cellcolor{red!10} 4,5\% \\
+
+      2024 & \cellcolor{green!30} 46,2\% & \cellcolor{red!40} 9,5\%  & \cellcolor{red!20} 12,3\% & \cellcolor{green!20} 4,2\% & \cellcolor{red!20} 5,7\% \\
+
     \end{tabular}
 
-    \vspace{0.4cm}
-    \normalsize
-    Segundo Stack Overflow 2024:
-    \begin{itemize}
-        \item 82\% usa IA para escrever código.
-        \item 40,1\% para produzir documentação.
-        \item 27,2\% para testar código.
-    \end{itemize}
+  \end{center}
+
 \end{frame}
 
-\section{Resultados da GitClear}
+\subsection{Principais resultados}
+\begin{frame}{\insertsubsectionhead}
+  \footnotesize
 
-\begin{frame}{Análise de Qualidade de Código (GitClear)}
-    \textbf{Queda na refatoração:}
-    \begin{itemize}
-        \item Linhas movidas caíram de 24,1\% (2020) para 9,5\% (2024).
-    \end{itemize}
+  \textbf{Queda na refatoração}
 
-    \vspace{0.3cm}
-    \textbf{Aumento de duplicações:}
-    \begin{itemize}
-        \item 2024: linhas copiadas (12,3\%) superam as movidas (9,5\%).
-        \item Commits com blocos duplicados cresceram de 0,7\% (2020) para 6,66\% (2024).
-    \end{itemize}
+  - A \% de \textbf{linhas movidas}, indicador de refatoração, caiu de 24,1\% (2020) para 9,5\% (2024).
 
-    \vspace{0.3cm}
-    \textbf{Aumento do retrabalho (churn):}
-    \begin{itemize}
-        \item Cresceu de 3,1\% (2020) para 5,7\% (2024).
-    \end{itemize}
+  \vspace{0.25cm}
+  
+  \textbf{Aumento de duplicações:}
+  
+  - Em 2024, pela 1ª vez, a \% de \textbf{linhas copiadas (12,3\%) superou as linhas movidas (9,5\%)}.
+  
+  - A ocorrência de commits com \textbf{código duplicados} foi de 0,7\% (2020) para 6,66\% (2024).
 
-    \vspace{0.3cm}
-    \textbf{Redução da durabilidade do código:}
-    \begin{itemize}
-        \item Linhas trocadas em <2 semanas: 60,4\% → 69,7\%.
-        \item Linhas alteradas entre 4 semanas e 1 ano: 24,7\% → 16,9\%.
-    \end{itemize}
+  \vspace{0.25cm}
+  
+  \textbf{Aumento do retrabalho (churn):}
+  
+  - O churn cresceu de 3,1\% em 2020 para 5,7\% em 2024.
 \end{frame}
 
-\begin{frame}{Tabela de Métricas (GitClear)}
-    A GitClear analisou \textbf{211 milhões de linhas de código} alteradas entre 2020 e 2024.
-
-    \vspace{0.4cm}
+\begin{frame}{\insertsubsectionhead}
+  \vspace{0.25cm}
+  \centering
+  \begin{tikzpicture}
     \scriptsize
-    \begin{center}
-    \begin{tabular}{c|c|c|c|c|c}
-        Ano & Adicionada & Movida & Copiada & Substituída & Churn \\
-        \hline
-        2020 & 39,2\% & 24,1\% & 8,3\% & 2,9\% & 3,1\% \\
-        2021 & 39,5\% & 24,8\% & 8,4\% & 3,4\% & 3,3\% \\
-        2022 & 40,9\% & 20,5\% & 9,4\% & 3,7\% & 3,3\% \\
-        2023 & 42,3\% & 15,8\% & 10,6\% & 3,6\% & 4,5\% \\
-        2024 & 46,2\% & 9,5\%  & 12,3\% & 4,2\% & 5,7\% \\
-    \end{tabular}
-    \end{center}
-    \normalsize
+    \begin{axis}[
+        /pgf/number format/use comma,
+        every axis plot/.style={ line width=1.5pt },
+        width=12cm,
+        height=7.5cm,
+        xlabel={Ano},
+        ylabel={Porcentagem},
+        title={Tempo de vida das linhas antes de uma nova modificação significativa (2020–2024)
+          },
+        ymin=0,
+        ymax=84,
+        legend style={
+            font=\tiny,
+            at={(0.5,0.91)},
+            anchor=south,
+            legend columns=5,
+          },
+        grid=both,
+        symbolic x coords={2020,2021,2022,2023,2024},
+        xtick=data,
+        nodes near coords={\pgfmathprintnumber{\pgfplotspointmeta}\%},
+        every node near coord/.append style={
+            font=\tiny,
+            anchor=south,
+          },
+      ]
+
+      \addplot[color=blue!60!black] coordinates {
+          (2020,60.4) (2021,61.1) (2022,57.5) (2023,60.6) (2024,69.7)
+        };
+      \addlegendentry{< 2 semanas}
+
+      \addplot[color=green!60!black] coordinates {
+          (2020,9.6) (2021,9.3) (2022,9.8) (2023,10.6) (2024,9.5)
+        };
+      \addlegendentry{2 - 4 semanas}
+
+      \addplot[color=purple] coordinates {
+          (2020,24.7) (2021,24.2) (2022,25.4) (2023,21.9) (2024,16.9)
+        };
+      \addlegendentry{4 semanas - 1 ano}
+
+      \addplot[color=orange] coordinates {
+          (2020,4.2) (2021,4.7) (2022,6.5) (2023,6.2) (2024,2.6)
+        };
+      \addlegendentry{1 - 2 anos}
+
+      \addplot[color=red] coordinates {
+          (2020,1.1) (2021,0.7) (2022,0.8) (2023,0.8) (2024,1.3)
+        };
+      \addlegendentry{> 2 anos}
+
+    \end{axis}
+  \end{tikzpicture}
+
 \end{frame}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 \section{Referências}
 
 \begin{frame}[allowframebreaks]{Referências}
-  \nocite{anssi_2024,StackOverflow2023,StackOverflow2024,StackOverflow2025,elsevier,gitclear2025,gartner_ai_code_assistants_2024, gartner2024agenticAI}
+  \nocite{anssi_2024,StackOverflow2023,StackOverflow2024,StackOverflow2025,elsevier,gitclear2025,gartner_ai_code_assistants_2024}
   \printbibliography
 \end{frame}
 
@@ -344,7 +409,7 @@
   \vspace{1\baselineskip}
   \bgroup
   \centering
-    \url{https://cassiocancio.github.io/TCC-BCC/}\par
+  \url{https://cassiocancio.github.io/TCC-BCC/}\par
   \egroup
 
 \end{frame}
