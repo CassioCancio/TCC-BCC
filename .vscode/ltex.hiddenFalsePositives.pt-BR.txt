@@ -54,3 +54,4 @@
 {"rule":"HUNSPELL_RULE","sentence":"^\\QAlguns exemplos de métodos ágeis incluem: Scrum: método iterativo que organiza o trabalho em ciclos curtos, as iterações (sprints), com duração de uma a quatro semanas.\\E$"}
 {"rule":"GENERAL_GENDER_AGREEMENT_ERRORS","sentence":"^\\QNeste capítulo, estão listados os relatórios de literatura cinzenta utilizados na pesquisa Este capítulo se propõe a apresentar os textos de literatura utilizados ao longo do trabalho\\E$"}
 {"rule":"SER_CAPAZ_DE_CONSEGUIR","sentence":"^\\QDiferentemente da IA tradicional, a IA generativa é capaz de criar conteúdos novos e originais baseados no que aprendeu, em vez de apenas copiar, imitar e reproduzir algo que já existe.\\E$"}
+{"rule":"ENUMERATIONS_AND_AND","sentence":"^\\QDesta forma, as fontes incluem perspectivas acadêmicas e de mercado, impressões de programadores e executivos e análises de métricas de código.\\E$"}

@@ -21,68 +21,23 @@
 \chapter{Metodologia}%
 \label{cap:metodologia}
 
-Este capítulo descreve a abordagem metodológica adotada para condução da pesquisa, destacando os critérios utilizados para seleção das fontes, a forma de organização das análises e o método empregado para comparar literatura cinzenta e literatura formal. O trabalho segue um processo de análise partindo do artigo de literatura formal escrito por \citet{elsevier}. A partir deste artigo, outras fontes, de literatura cinzenta, foram selecionadas de modo a complementar a análise, oferecendo outras visões sobre o uso de ferramentas de IA generativa no desenvolvimento de software e seus impactos.
+Este capítulo descreve a abordagem metodológica adotada para condução da pesquisa, destacando os critérios utilizados para seleção das fontes, a forma de organização das análises e o método empregado para comparar literatura cinzenta e literatura formal. O trabalho segue um processo de análise partindo do artigo de literatura formal escrito por \citet{elsevier}. A partir deste artigo, outras fontes, principalmente de literatura cinzenta, foram selecionadas de modo a complementar a análise. 
 
-As fontes utilizadas neste trabalho foram divididas em dois grupos:
+\section{Seleção das fontes}
 
-\begin{itemize}
-    \item \textbf{Literatura formal:} neste grupo há o artigo científico principal criado por \citet{elsevier}, que está indexado em bases reconhecidas, como a \emph{Elsevier}, e foi utilizado como ponto de partida da análise. Além dele, há o relatório, \citet{anssi_2024}, produzido por duas agências governamentais, a francesa, ANSSI, e a alemã, BSI, que compila diversos resultados de pesquisas acadêmicas referentes ao uso de assistentes de código com IA;
-    \item \textbf{Literatura cinzenta:} composta por quatro relatórios internacionais de organizações influentes na indústria de software e tecnologia. Esses reports foram escolhidos porque:
-    \begin{itemize}
-        \item apresentam dados atualizados sobre o uso de IA por desenvolvedores;
-        \item refletem tendências observadas no mercado;
-        \item oferecem recortes e metodologias distintas, permitindo observar convergências e discrepâncias;
-        \item possuem grande alcance e impacto na comunidade técnica.
-    \end{itemize}
-\end{itemize}
-    
-A análise das fontes foi estruturada em três etapas principais:
-(1) Panorama inicial dos reports
+A seleção das fontes foi feita buscando garantir a relevância, atualidade e diversidade de perspectivas. Desta forma, as fontes incluem perspectivas acadêmicas e de mercado, impressões de programadores e executivos e análises de métricas de código. As fontes foram divididas no grupo de literatura formal e literatura cinzenta.
 
-Cada uma das fontes é descrita no Capítulo 2, quanto ao seu conteúdo, escopo, metodologia empregada e perfil da organização responsável, permitindo compreender seus vieses e áreas de foco. 
+\subsection{Literatura formal}
 
-Primeiro, é apresentado um panorama geral dos quatro relatórios selecionados, destacando:
-	•	seus objetivos declarados,
-	•	tipos de dados coletados,
-	•	público-alvo,
-	•	principais temas abordados.
+Neste grupo, o artigo de \citet{elsevier}, indexado em bases reconhecidas, como a \emph{Elsevier}, foi utilizado como ponto de partida do trabalho. Também parte deste grupo, o artigo \citet{anssi_2024} foi produzido por duas agências governamentais, a francesa, ANSSI, e a alemã, BSI, e é um compilado de resultados de pesquisas acadêmicas referentes ao uso de assistentes de código com IA.
 
-Essa etapa permite estabelecer uma ordem de foco, evidenciando que cada documento enfatiza diferentes dimensões do uso de IA, como produtividade, riscos, experiência de desenvolvedores ou impactos organizacionais.
+\subsection{Literatura cinzenta}
 
-(2) Análise dos assuntos em foco
+Neste grupo, foram trazidos relatórios que pudessem complementar a análise. O artigo da \citet{gitclear2025} foca na análise de métricas de código em repositórios abertos e de empresas, criando um histórico dos resultados de 2020 a 2024. As pesquisas do \citeauthor{StackOverflow2023} \parencite*{StackOverflow2023,StackOverflow2024,StackOverflow2025} compilam tendências no perfil de uso de IA dos usuários da plataforma e, neste trabalho, foram organizados de modo a criar um comparativo entre os anos. Os artigos de \citet{gartner2024agenticAI} e \citet{gartner_ai_code_assistants_2024} da \emph{Gartner Research} trazem uma visão de mercado sobre o uso de IA generativa no desenvolvimento de software, focando em tendências, riscos e expectativas de executivos.
 
-Com base nos temas recorrentes entre os reports e no artigo principal, foram identificados assuntos centrais para investigação, tais como:
-	•	produtividade e qualidade de código,
-	•	mudança no fluxo de trabalho do desenvolvedor,
-	•	confiança e percepção de precisão das ferramentas,
-	•	riscos de segurança e privacidade,
-	•	impactos educacionais e profissionais,
-	•	papel das ferramentas de geração de código.
+\section{Organização das análises}
+No capítulo \autoref{cap:literatura-formal}, o foco é apresentar o texto de \citet{elsevier}, o ponto de partida do trabalho. O artigo aborda principais ferramentas de IA utilizadas pelos participantes da pesquisa, suas tendências de uso e impressões sobre o desempenho das ferramentas.
 
-A análise procura destacar variações entre os resultados, evidenciando tanto consensos quanto divergências entre literatura formal e cinzenta.
+O capítulo \autoref{cap:literatura-cinzenta} é dedicado às fontes de literatura cinzenta. Nele estão apresentados um resumo dos trabalhos, seus principais resultados relevantes para este trabalho e um breve contexto da organização por trás de cada fonte. 
 
-(3) Comparação entre literatura cinzenta e literatura formal
-
-Por fim, os achados dos reports da indústria são comparados com o artigo científico da Elsevier, buscando identificar:
-	•	confirmações (quando ambos os grupos de fontes apontam para as mesmas tendências);
-	•	gaps (temas presentes na literatura cinzenta, mas ainda pouco explorados academicamente, ou vice-versa);
-	•	contradições (resultados divergentes entre academia e indústria).
-
-Essa comparação permite avaliar em que medida a prática acompanha, complementa ou diverge da teoria apresentada na literatura formal.
-
-
-
-
-
-3.4. Análise da evolução da percepção sobre IA
-
-Um dos objetivos centrais do trabalho é traçar o amadurecimento da percepção sobre IA generativa no desenvolvimento de software. Para isso, são avaliadas mudanças no discurso, nas métricas e nas narrativas observadas nos relatórios ao longo dos últimos anos.
-
-São analisados:
-	•	variações de adoção entre anos consecutivos,
-	•	mudanças no grau de confiança dos desenvolvedores,
-	•	expectativas declaradas para o futuro,
-	•	evolução de preocupações (por exemplo: de produtividade → segurança → governança),
-	•	transformações no perfil de usuários e suas motivações.
-
-Essa análise longitudinal complementa o estudo comparativo entre fontes e permite compreender como a prática tem se transformado em resposta ao avanço das ferramentas generativas.
+Por fim, os conteúdos dos dois capítulos foram utilizados na análise realizada no \autoref{cap:analise}, cujo objetivo foi evidenciar consensos e divergências entre as fontes. Além disso, neste capítulo, o artigo \citet{anssi_2024} foi utilizado como arcabouço de fontes acadêmicas, ajudando a complementar e embasar a análise.
