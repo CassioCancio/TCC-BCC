@@ -29,7 +29,7 @@ Este relatório foi escrito pela empresa GitClear, que desenvolve ferramentas de
         \bottomrule
     \end{tabular}
 \end{table}
- 
+
 Na tabela \autoref{tab:historico_metricas}, são apresentados os resultados das análises entre 2020 e 2024. Observa-se que a porcentagem de linhas movidas, associada à refatoração, algo essencial para reduzir a dívida técnica e garantir a manutenibilidade do sistema a longo prazo, apresentou uma queda significativa, passando de 24,1\% em 2020 para apenas 9,5\% em 2024.
 
 \begin{table}[h!]
@@ -58,8 +58,6 @@ Na tabela \autoref{tab:historico_metricas}, são apresentados os resultados das 
 
 Por outro lado, a tendência para as linhas copiadas foi inversa, partindo de 8,3\% em 2020 para 12,3\% em 2024. Este aumento de duplicações também pode ser observado na \autoref{tab:duplicacao_codigo}, que mostra que, em 2020, apenas 0,7\% dos commits analisados continham blocos de código duplicados e, em 2024, esse número subiu para 6,66\%. A duplicação de código, além de violar o princípio DRY (\emph{Don't Repeat Yourself}), segundo \citet{duplication_problems}, aumenta a probabilidade de erros no código, já que as cópias tendem a evoluir de forma inconsistente.
 
-Observa-se também um aumento de 2,9\% para 4,2\% entre 2020 e 2024 na proporção de linhas substituídas. O relatório credita essa mudança ao uso de IDEs e assistentes de código de IA, que podem com facilidade reescrever trechos de código para conformar-se às regras de linting e às convenções do projeto.
-
 \begin{figure}[h!]
     \caption{Proporção anual das linhas modificadas classificadas pelo tempo que permaneceram no repositório antes de sofrerem uma nova modificação significativa entre 2020 e 2024 (\cite{gitclear2025}).}
     \centering
@@ -70,7 +68,7 @@ Observa-se também um aumento de 2,9\% para 4,2\% entre 2020 e 2024 na proporç�
                 /pgf/number format/use comma,
                 every axis plot/.style={ line width=1.5pt },
                 width=15cm,
-                height=10cm,
+                height=9cm,
                 xlabel={Ano},
                 ylabel={Porcentagem},
                 title={Tempo de vida das linhas antes de uma nova modificação significativa (2020–2024)
@@ -85,6 +83,7 @@ Observa-se também um aumento de 2,9\% para 4,2\% entre 2020 e 2024 na proporç�
                     },
                 grid=both,
                 symbolic x coords={2020,2021,2022,2023,2024},
+                ytick distance=10,
                 xtick=data,
                 nodes near coords={\pgfmathprintnumber{\pgfplotspointmeta}\%},
                 every node near coord/.append style={
@@ -123,6 +122,8 @@ Observa-se também um aumento de 2,9\% para 4,2\% entre 2020 e 2024 na proporç�
 
 \end{figure}
 
+Observa-se também um aumento de 2,9\% para 4,2\% entre 2020 e 2024 na proporção de linhas substituídas. O relatório credita essa mudança ao uso de IDEs e assistentes de código de IA, que podem com facilidade reescrever trechos de código para conformar-se às regras de linting e às convenções do projeto.
+
 Além disso, outra métrica relevante neste contexto é o \emph{churn}, que busca medir quanto retrabalho é efetuado em uma base de código. Neste relatório, o \emph{churn} é calculado medindo quanto das linhas escritas e enviadas ao repositório foram revertidas ou substancialmente revisadas nas duas semanas seguintes. A \autoref{tab:historico_metricas} mostra que o \emph{churn} passou de 3,1\% em 2020 para 5,7\% em 2024, evidenciando o aumento do retrabalho no código.
 
 O relatório fez também uma análise de quanto tempo se passou entre o momento em que os códigos analisados foram criados e em quanto tempo eles receberam sua próxima mudança significativa. Na \autoref{fig:historico_tempo_mudanca}, observa-se que a proporção de linhas que em menos de duas semanas foram alteradas aumentou de 60,4\% em 2020 para 69,7\% em 2024, em contrapartida, o grupo das linhas que precisaram de alterações apenas depois de 4 semanas, mas antes de um ano, diminuiu de 24,7\% para 16,9\% no mesmo período.
@@ -140,7 +141,8 @@ Descrição do uso
 Benefícios
 Principais usos
 
-\begin{figure}[h!]
+% TODO - mudar H para h!
+\begin{figure}[H]
     \caption{Proporção anual dos desenvolvedores profissionais que utilizam ferramentas de IA em seu processo de desenvolvimento entre 2023 e 2025 (\cite{StackOverflow2023,StackOverflow2024,StackOverflow2025}).}
     \label{fig:historico_uso_ia}
     \centering
@@ -148,18 +150,19 @@ Principais usos
         \begin{axis}[
                 /pgf/number format/use comma,
                 width=16cm,
-                height=11cm,
+                height=8cm,
                 title={Você atualmente utiliza ferramentas de IA em seu processo de desenvolvimento?},
                 xlabel={Ano},
                 ylabel={Percentual (\%)},
                 ymin=0, ymax=95,
                 symbolic x coords={2023,2024,2025},
                 xtick=data,
+                ytick distance=10,
                 legend pos=south east,
                 legend cell align={left},
                 legend style={
                         font=\footnotesize,
-                        at={(0.5,0.91)},
+                        at={(0.5,0.88)},
                         anchor=south,
                         legend columns=5,
                     },
@@ -205,8 +208,148 @@ Principais usos
     \end{tikzpicture}
 \end{figure}
 
-\section{\citetitle{gartner2024agenticAI} \parencite*{gartner2024agenticAI}}
-Este relatório
-
 \section{\citetitle{gartner_ai_code_assistants_2024} \parencite*{gartner_ai_code_assistants_2024}}
-Este relatório
+
+Este relatório foi produzido por pesquisadores da \emph{Gartner Research}. A \emph{Gartner} é uma empresa de pesquisa e consultoria especializada em tecnologia da informação e gestão empresarial, fundada em 1979. A organização é reconhecida pela produção de relatórios analíticos, previsões de mercado e estudos prospectivos sobre tendências tecnológicas, amplamente utilizados por empresas e organizações como suporte à tomada de decisão estratégica.
+
+Neste relatório, há uma análise de diferentes aspectos relativos aos assistentes de código baseados em IA. As previsões do relatório sobre essas ferramentas são:
+
+\begin{itemize}
+    \item De 2024 até 2027, o número de equipes de engenharia de plataforma que utilizarão IA para aprimorar todas as fases do SDLC aumentará de 5\% para 40\%;
+    \item Até 2027, 80\% das empresas integrarão ferramentas de teste com IA em sua cadeia de produção de \emph{software}, representando um aumento significativo em relação a cerca de 15\% no início de 2023;
+    \item Até 2027, 25\% dos defeitos de \emph{software} que chegarão ao ambiente de produção resultarão da falta de supervisão humana sobre código gerado por IA, um aumento expressivo em comparação com menos de 1\% em 2023;
+    \item Até 2028, 90\% dos engenheiros de \emph{software} em ambientes corporativos utilizarão assistentes de código baseados em IA, frente a menos de 14\% no início de 2024;
+    \item Até 2028, o uso de IA generativa reduzirá em 30\% os custos de modernização de aplicações legadas em relação aos níveis de 2023.
+\end{itemize}
+
+As previsões do relatório apontam para a continuidade da tendência de adoção de IA generativa na engenharia de \emph{software}. Além disso, o texto destaca vantagens dessas ferramentas, como poder aprimorar a experiência do desenvolvedor de \emph{software} ao impulsionar o desenvolvimento de aplicações, minimizar a sobrecarga cognitiva dos programadores, ampliar suas habilidades de resolução de problemas, acelerar o ritmo de aprendizado e fomentar a criatividade.
+
+Outro ponto levantado pelo relatório são as funcionalidades essenciais para que essas ferramentas atendam às necessidades de mercado, as funcionalidades são:
+
+\begin{itemize}
+    \item Completar código a partir de linguagem natural, como comentários.
+    \item Completar código multilinha, podendo gerar código no meio de um arquivo de forma coerente com o que veio antes e depois;
+    \item Capacidade de funcionar em diferentes editores de texto, IDEs, ambientes e plataformas de desenvolvimento;
+    \item Garantia de que os modelos não serão treinados com o conteúdo dos repositórios do cliente (exceto quando permitido).
+    \item Interface de \emph{chat} conversacional integrada ao ambiente de desenvolvimento.
+\end{itemize}
+
+\begin{figure}[h!]
+    \centering
+    \title{title}
+    \includegraphics[width=0.75\textwidth]{Gartner_MQ_AI_Code_Assistants.png}
+    \caption{Quadrante Mágico dos assistentes de código com IA \parencite{gartner_ai_code_assistants_2024}}
+    \label{fig:magic_quadrant}
+\end{figure}
+
+Na \autoref{fig:magic_quadrant}, a \emph{Gartner} classificou as empresas que atuam no mercado de assistentes de código de IA num gráfico formado pelos eixos, ``capacidade de execução'' e ``integralidade da visão''. No gráfico, é evidente a posição de destaque do \emph{GitHub} com o \emph{GitHub Copilot}, seu assistente de código lançado como prévia técnica em junho de 2021 e disponível para o público em geral no \emph{Visual Studio Code} a partir de junho de 2022.
+
+Segundo o relatório, o \emph{GitHub Copilot} tem como foco aumentar a produtividade dos desenvolvedores e a qualidade do código através de sugestões de código baseadas em IA e assistência contextual. Suas operações são geograficamente diversificadas e seus clientes tendem a ser grandes organizações de diversos setores.
+
+Uma estratégia destacada pelo relatório é o fato do \emph{GitHub} disponibilizar o \emph{GitHub Copilot Pro} gratuitamente para mantenedores ativos da comunidade de código aberto, professores e estudantes, fidelizando novos programadores desde seus estudos na faculdade. Além disso, o \emph{Copilot} teve novas funcionalidades adicionadas como o \emph{Copilot Workspace}, que oferece suporte a um ambiente colaborativo de desenvolvimento nativo em IA, e as \emph{Copilot Extensions}, apoiadas por um ecossistema crescente de parceiros de código aberto e comerciais, que permitem que desenvolvedores construam soluções integradas a seus ambientes de desenvolvimento preferidos.
+
+O relatório atribui o sucesso da ferramenta, entre outros fatores, ao fato do \emph{GitHub} ser uma subsidiária da \emph{Microsoft}, se beneficiando de uma ampla comunidade global de desenvolvedores. Desta maneira, a empresa de consultoria acredita que o \emph{GitHub Copilot} apresenta alto engajamento de usuários, o que permite à empresa coletar \emph{feedbacks} em larga escala, garantindo a melhora da ferramenta de forma contínua.
+
+De modo geral, neste relatório, a visão da \emph{Gartner} quanto ao mercado dos assistentes de código parece bastante positiva, tanto no sentido da continuidade da adoção destas ferramentas quanto em relação a sua capacidade de promover a melhora da produtividade nas empresas. Além disso, fica visível a posição de destaque do \emph{GitHub Copilot} neste mercado.
+
+\section{\citetitle{gartner2024agenticAI} \parencite*{gartner2024agenticAI}}
+
+Este relatório também foi produzido por pesquisadores da \emph{Gartner Research}. Nele, o foco é apresentar oportunidades, riscos, previsões e recomendações quanto ao uso de IA agêntica em empresas para executivos que contratam os serviços de consultoria da \emph{Gartner}. Além disso, também é trazida a perspectiva de CIOs sobre os resultados esperados com o uso de IA generativa.
+
+O termo IA agêntica se refere a entidades de \emph{software} que receberam direitos da organização para tomar decisões e agir em seu nome de forma autônoma. Diferentemente da automação robótica de processos, a IA agêntica não requer entradas explícitas e não produz saídas predeterminadas.
+
+Segundo o relatório, a IA agêntica será ``uma extensão da força de trabalho que não necessita de férias ou de outros benefícios'' e as previsões da empresa indicam que ela será capaz de:
+
+\begin{itemize}
+    \item Aumentar a produtividade nas empresas de forma expressiva;
+    \item Capacitar trabalhadores, permitindo que eles desenvolvam e gerenciem projetos técnicos complexos através de linguagem natural;
+    \item Mudar os processos decisórios nas empresas, já que conseguirá analisar conjuntos de dados complexos, identificando padrões e agindo. Isso evitará modelagens de dados trabalhosas, aperfeiçoará a resolução de problemas, reduzirá o tempo de ação e permitirá análises em maior escala.
+\end{itemize}
+
+Por outro lado, a empresa de consultoria destaca que a orquestração e a governança dessas entidades autônomas de \emph{software} requerem ferramentas avançadas e proteções rigorosas. Por isso, a \emph{Gartner} definiu recomendações de uso de IA agêntica e elas são:
+
+\begin{itemize}
+    \item Estabelecer diretrizes legais e éticas sobre autonomia, responsabilidade, segurança e privacidade de dados, garantindo que os recursos sejam robustos o suficiente para proteger a organização, funcionários e clientes;
+    \item Implementar proteções para assegurar que a IA agêntica se restrinja a uma função e um conjunto de recursos definidos, evitando que ela adote medidas incorretas ou prejudiciais;
+    \item Projetar soluções de IA agêntica para conectar diferentes aplicativos e dados, priorizando a experiência e a eficiência dos usuários;
+    \item Repensar fluxos de trabalho de áreas com demanda por escala e eficiência, automatizando o que for viável e adicionando pessoas de volta em pontos estratégicos;
+    \item Começar em pequena escala com casos de uso com dados de qualidade disponíveis;
+    \item Tratar agentes de IA como colegas digitais de Nível 1 ou como funcionários digitais aos quais se delega trabalho;
+    \item Dedicar a IA agêntica a tarefas como descobrir e fornecer percepções de eventos derivados que pessoas talvez não notem;
+\end{itemize}
+
+O relatório destaca que o ganho de desempenho dessas ferramentas aumentará gradativamente à medida que os sistemas evoluírem, deste modo, o número e o uso de agentes de IA aumentarão para atender às demandas de produtividade. O texto evidencia o risco de que as organizações criem milhares de bots, sem que ninguém se lembre do que esses bots fazem ou porque foram criados, e que os funcionários implantem suas próprias IAs sem atender aos padrões de segurança ou qualidade das empresas.
+
+Além disso, outra questão trazida no artigo é que a IA agêntica tomará decisões com base na análise dos dados da própria organização, o que poderá ser perigoso, pois estes dados podem ser de baixa qualidade. Este risco, além de piorar a qualidade dos resultados da IA, também pode inibir o seu desenvolvimento.
+
+\begin{figure}[ht]
+    \centering
+    \caption{Principais resultados esperados por CIOs nos negócios com a aplicação da IA generativa \parencite{gartner2024agenticAI}}
+    \label{fig:gartner_cios}
+    \begin{tikzpicture}
+        \footnotesize
+        \begin{axis}[
+                xbar,
+                width=8.25cm,
+                height=10cm,
+                title={Resultados esperados por CIOs quanto ao uso de IA generativa em suas empresas},
+                title style={at={(-0.1,1.05)}, anchor=center, font=\normalsize},
+                xmin=0,
+                xmax=85,
+                y dir=reverse,
+                bar width=6pt,
+                nodes near coords=\pgfmathprintnumber{\pgfplotspointmeta}\%,
+                nodes near coords align={horizontal},
+                enlarge y limits=0.03,
+                symbolic y coords={
+                        prod, clientes, digital, funcionarios, inovacao,
+                        custos, agilidade, lucro, diferencial, riscos,
+                        tempo, mercado, conformidade, cultura, parceiros, receita
+                    },
+                ytick=data,
+                yticklabels={
+                        Aumentar a produtividade,
+                        Aprimorar a experiência dos clientes,
+                        Promover transformação digital,
+                        Melhorar a experiência dos funcionários,
+                        Promover inovação,
+                        Reduzir custos,
+                        Aumentar a agilidade dos negócios,
+                        Aumentar a lucratividade,
+                        Melhorar o diferencial competitivo,
+                        Reduzir os riscos comerciais,
+                        Reduzir o tempo de lançamento no mercado,
+                        Aumentar a participação de mercado,
+                        Melhorar a conformidade regulatória,
+                        Transformar a cultura organizacional,
+                        {Coordenação com parceiros, vendedores e fornecedores},
+                        Aumentar a receita
+                    }
+            ]
+
+            \addplot coordinates {
+                    (74,prod)
+                    (49,clientes)
+                    (31,digital)
+                    (24,funcionarios)
+                    (18,inovacao)
+                    (18,custos)
+                    (17,agilidade)
+                    (12,lucro)
+                    (8,diferencial)
+                    (8,riscos)
+                    (8,tempo)
+                    (5,mercado)
+                    (5,conformidade)
+                    (5,cultura)
+                    (4,parceiros)
+                    (3,receita)
+                };
+
+        \end{axis}
+    \end{tikzpicture}
+\end{figure}
+
+Quanto às previsões de adoção, a \emph{Gartner} indica uma forte tendência de adoção da IA agêntica nos próximos anos. Segundo o relatório, até 2028, 33\% dos aplicativos de \emph{software} empresariais incluirão IA agêntica, em comparação com menos de 1\% em 2024 e que, até 2028, pelo menos 15\% das decisões cotidianas no trabalho serão tomadas de forma autônoma por IAs agênticas, em comparação com 0\% em 2024.
+
+Na figura \autoref{fig:gartner_cios}, o relatório compilou os resultados de uma pesquisa de opinião realizadas com 78 CIOs de empresas, os quais foram perguntados "Quais são os três principais tipos de valor de negócios que sua empresa busca com a aplicação de IA generativa?". Com este gráfico e com os pontos levantados ao longo do relatório fica claro que o investimento das empresas em ferramentas de IA, em especial a agêntica, está fundamentalmente atrelado à crença de que a IA aumentará a produtividade dos funcionários. Ao mesmo tempo que o texto parece otimista em relação à adoção de IAs, ele destaca que esse movimento possui diversos riscos, os quais são vistos como responsabilidade das empresas usuárias mitigar.

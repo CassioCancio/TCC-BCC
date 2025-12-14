@@ -14,7 +14,7 @@
       "tools": ["make"]
     }
   ],
-
+  "latex-workshop.latex.autoBuild.run": "onSave",
   "latex-workshop.latex.recipe.default": "make",
 
   "files.exclude": {
@@ -44,5 +44,8 @@
     "**/*configuracao": true,
     "**/*.backup": true
   },
-  "cSpell.words": ["SDLC"]
+  "cSpell.words": [
+    "agêntica",
+    "SDLC"
+  ]
 }
