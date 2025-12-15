@@ -5,128 +5,71 @@
 
 \section{\citetitle{elsevier} \parencite*{elsevier}}
 
-In particular, we studied the following five broad SE activities: (a)
-implementing new features, (b) writing tests, (c) bug triaging, (d)
-refactoring, and (e) writing natural-language artifacts, as well as their
-individual stages. Our survey included 38 main questions, of them 5
-being open-ended, which allowed the participants to freely express
-their thoughts. The survey attracted 547 complete responses, and after
-careful filtering, we study 481 responses. Our sample is experienced
-and diverse, with almost half of the respondents having more than
-10 years of professional experience covering all the major programming
-languages and types of developed software.
-Overall, the contributions of this work are the following:
-• Usage patterns. We find that 84.2% of the respondents occasion-
-ally or regularly use AI assistants, that Implementing new features
-is the most popular activity to use assistants, and that among
-individual stages, generating and summarizing code are the most
-widely used.
-• Areas of focus. Taking into account which activities the develop-
-ers find less enjoyable and want to delegate, as well as what stages
-AI assistants are used on, we highlight areas where the research
-needs to focus on to bring value to users right now. This includes
-Writing tests in general and generating data and resources for tests
-in particular, as well as Writing natural language artifacts.
-• Reasons for not using AI. We provide 20 distinct themes that
-represent different reasons why developers are not using AI assis-
-tants and report the main ones for all activities. The most popular
-ones are Lack of need for AI assistance, AI-generated output being
-inaccurate, User’s lack of trust and the desire to feel in control, and
-Lack of understanding context by AI assistant.
-• Areas of future improvement. Based on the prevalence of dif-
-ferent reasons, we formulate the main areas of future work that
-are needed to overcome the shortcomings that the respondents
-describe. This includes the improvement of base systems, better
-integration into developers’ workflow, and more actively edu-
-cating and informing users about the assistants’ capabilities and
-limitations.
+Esta fonte é uma pesquisa científica revisada por pares e publicada em revistas renomadas, como a \emph{Elsevier}. O objetivo desta pesquisa foi compreender melhor como os desenvolvedores estão utilizando assistentes de IA, porque eles não os usam em determinadas partes de seu fluxo de desenvolvimento e quais aspectos precisam ser aprimorados no futuro.
 
-Liang et al. [12] conducted an exploratory qualitative study on
-the usage of AI programming assistants, highlighting motivations for
-usage, usability challenges, and implications for creators and users of
-these tools. The study had 410 developers as participants. The authors
-concluded that while using AI to reduce keystrokes, finish programming
-tasks quickly, and recall syntax, developers sometimes struggle to
-receive AI outputs that align with their requirements and expectations.
-Wang et al. [13] present a study that aims to understand practi-
-tioners’ expectations on code completion, compare them with existing
-research, and highlight the need for researchers to develop techniques
-that meet practitioners’ demands. The methodology involves semi-
-structured interviews with 15 professionals and an exploratory survey
-with 599 professionals. The authors found that practitioners expect
-code completion tools to work for different granularities and scenarios.
-They also expect a tool to be accurate, display personalized completion,
-be available offline, and be relatively fast.
-Ziegler et al. [14] discuss the use of neural code synthesis in soft-
-ware development and study perceived productivity by investigating
-whether usage measurements of developer interactions with GitHub
-Copilot can predict perceived productivity as reported by developers
-in a survey. The authors found that the acceptance rate of shown
-suggestions is a better predictor of perceived productivity than more
-specific metrics regarding the persistence of completions in the code
-over time. This suggests that the rate at which suggestions are accepted
-drives developers’ perception of productivity.
+Para isso, a pesquisa foi realizada com uma quantidade expressiva de pessoas, a coleta de dados incluiu entrevistas com 481 programadores de 71 países diferentes. A amostra da pesquisa é composta principalmente por programadores experientes, dos quais 48,9\% possuem mais de 10 anos de experiência e 28,9\% possuem mais de 15 anos. Do total de participantes, 74,4\% estão empregados em tempo integral em empresas e organizações, enquanto outros atuam parcialmente, são autônomos ou \emph{freelancers}. A maioria (86,7\%) se identifica como desenvolvedor de \emph{software}, mas a amostra também inclui outras posições técnicas relevantes, como engenheiros \emph{DevOps}, arquitetos de \emph{software} e líderes de equipe.
 
-Pothukuchi et al. [15] examine the potential of generative AI to
-automate and enhance traditional software development practices,
-thereby improving efficiency and reducing costs. A total of 30 profes-
-sionals participated in the interview study and highlighted significant
-improvements in development speed and code quality. The authors
-indicate that generative AI can significantly transform the SDLC by
-automating repetitive tasks and providing intelligent code sugges-
-tions, and propose a new model called Generative AI-Assisted Software
-Development Lifecycle.
-Mozannar et al. [16] conducted a comprehensive study to inform
-the understanding of how developers interact with AI tools and how to
-improve this experience. They studied the impact of GitHub Copilot
-on programmers’ behavior during coding sessions. As a result, they
-identified 12 common programmer activities related to AI code comple-
-tion systems. The researchers found that developers spend more time
-reviewing code than writing it.
+Em particular, foram estudadas as seguintes cinco grandes atividades de engenharia de \emph{software}: implementação de novas funcionalidades, escrita de testes, triagem de erros, refatoração e produção de artefatos em linguagem natural, assim como suas etapas individuais. A pesquisa incluiu 38 perguntas principais, sendo 5 abertas, o que permitiu aos participantes expressarem livremente suas opiniões. A pesquisa obteve 547 respostas completas e, após uma filtragem cuidadosa, foram analisadas 481 respostas.
 
-Barke et al. [17] propose a grounded theory of the bimodal nature of
-programmers’ interactions with AI assistance that states that there are
-two main interaction modes between which developers fluidly switch
-while programming — exploration and acceleration. In acceleration
-mode, the programmer already knows what they want to do next, and AI helps them get there quicker; interactions in this mode are fast and
-do not break programmer’s flow. In exploration mode, the programmer
-is not sure how to proceed and uses Copilot to explore their options
-or get a starting point for the solution; interactions in this mode are
-slow and deliberate, and include explicit prompting and more extensive
-validation.
+As principais contribuições dessa pesquisa são:
 
-Moreover, several companies from industry conducted large-scale
-studies to form an understanding of the market of AI tooling for coding.
-A survey of 89,184 developers conducted in 2023 by Stack Over-
-flow [9] found that 70% are using or planning to use AI tools, with 77%
-expressing a favorable view. Respondents noted increased productivity
-with these tools, as well as their trust in their accuracy. The most recent
-Stack Overflow survey [18], conducted on 1700 people, revealed the
-continuation of the trend — users report more quality work time.
-A GitHub survey [19] of 500 non-manager developers found that
-67% have used AI tools both at work and in personal projects. 70%
-believe AI coding tools will benefit their work, primarily for upskilling
-and productivity gains. 81% expect these tools to enhance team collab-
-oration, particularly in security reviews, planning, and pair program-
-ming.
-The JetBrains Developer Ecosystem Survey [20] found that de-
-velopers are optimistic about AI advancements and actively use its
-capabilities despite security and ethical concerns. 59% have security
-concerns, 42% ethical concerns, yet 53% are willing to use generative
-AI services for work. Most commonly, developers use AI to ask gen-
-eral software development questions and generate code, comments, or
-documentation.
+\begin{itemize}
+    \item \textbf{Padrões de uso:} A pesquisa revela que 84,2\% dos participantes utilizam assistentes de IA ocasional ou regularmente, sendo a implementação de novas funcionalidades a atividade mais popular para o uso desses assistentes. Entre as etapas individuais, gerar e resumir código são as mais amplamente utilizadas;
+    \item \textbf{Áreas de foco:} Considerando as atividades que os desenvolvedores menos apreciam e desejam delegar, bem como as etapas em que os assistentes de IA são utilizados, destacam-se áreas que a pesquisa precisa explorar para gerar valor imediato aos usuários. Isso inclui a escrita de testes em geral e a geração de dados e recursos para testes em particular, além da produção de artefatos em linguagem natural;
+    \item \textbf{Razões para não usar IA:} Foram identificados 20 temas distintos que representam diferentes motivos pelos quais os desenvolvedores não utilizam assistentes de IA, com os principais motivos sendo: falta de necessidade de assistência de IA, saída gerada pela IA imprecisa, falta de confiança do usuário e desejo de manter controle, e compreensão insuficiente do contexto pelo assistente de IA. Os dados em detalhes estão na \autoref{tab:razoes_nao_usar};
+    \item \textbf{Áreas para melhorias futuras:} Com base na prevalência das diferentes razões, foram formuladas as principais áreas de trabalho futuro necessárias para superar as limitações apontadas pelos respondentes. Entre elas estão a melhoria dos sistemas base, melhor integração no fluxo de trabalho dos desenvolvedores e educação mais ativa dos usuários sobre as capacidades e limitações dos assistentes.
+\end{itemize}
+
+\begin{table}[h]
+    \centering
+    \caption{Temas resultantes nas respostas à pergunta "O que impede você de usar assistentes de IA nas etapas do fluxo de trabalho que você não os utiliza IA?" (\cite{elsevier}).}
+    \label{tab:razoes_nao_usar}
+    \renewcommand{\arraystretch}{1.2}
+    \small
+    \rowcolors{2}{gray!15}{white}
+    \begin{tabular}{m{12.5cm} c}
+        \toprule
+        Motivo & Resp. (\%) \\
+        \midrule
+        Falta de necessidade de assistência de IA & 22.5 \\
+        Saída gerada pela IA imprecisa & 17.7 \\
+        Falta de confiança do usuário e desejo de ter controle & 15.7 \\
+        Falta de compreensão do contexto pelo assistente de IA & 14.4 \\
+        Conhecimento limitado do usuário sobre assistentes de IA e suas capacidades & 10.2 \\
+        Desejo do usuário de realizar a tarefa sozinho e aprender & 7.3 \\
+        Ineficiência de tempo & 5.5 \\
+        Saída gerada pela IA não é útil & 4.6 \\
+        Políticas da empresa, NDA, etc. & 3.6 \\
+        Atitude negativa do usuário em relação à IA & 3.2 \\
+        Falta de conformidade com requisitos não funcionais na saída do assistente de IA & 3.2 \\
+        Considerações legais e éticas & 3.1 \\
+        Desafios de integração e usabilidade da IA em ambientes de desenvolvimento & 3.0 \\
+        Falta de acesso & 2.6 \\
+        Preocupações com segurança & 2.3 \\
+        Limitações na criatividade da IA & 2.2 \\
+        Interrupção do fluxo de trabalho & 2.1 \\
+        Limitações de conhecimento do modelo de IA & 1.9 \\
+        Ineficiência para tarefas específicas & 1.7 \\
+        Desafios na comunicação das intenções do usuário ao assistente de IA & 1.0 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
 
 \begin{figure}[h!]
     \caption{Ferramentas utilizadas pelos desenvolvedores (\cite{elsevier}; n = 481)}
+    \label{fig:ferramentas_elsevier}
     \begin{tikzpicture}
         \begin{axis}[
                 /pgf/number format/use comma,
                 enlargelimits=false,
                 axis on top,
                 scale only axis,
-                width=8cm,
-                height=10cm,
+                title={Ferramentas utilizadas pelos respondentes},
+                title style={
+                        yshift=50pt
+                    },
+                width=9cm,
+                height=7cm,
                 xmin=0, xmax=5,
                 ymin=0, ymax=12,
                 xtick={0.5, 1.5, 2.5, 3.5, 4.5},
@@ -143,32 +86,32 @@ documentation.
                         Codeium,
                         Replit Ghostwriter,
                         Tabnine,
-                        GitHub Copilot
+                        GitHub Copilot,
                     },
                 xticklabels={
-                        Don't know,
-                        Heard but never used,
-                        Tried but do not use,
-                        Use occasionally,
-                        Use regularly
+                        Não conheço,
+                        Só ouvi falar,
+                        Apenas testei,
+                        Uso às vezes,
+                        Uso regularmente
                     },
                 xticklabel style={
                         rotate=45,
                         anchor=west,
-                        font=\bfseries\small
+                        font=\footnotesize,
+                        yshift=7pt
                     },
                 yticklabel style={
-                        font=\bfseries\small,
-                        align=right
+                        font=\footnotesize,
+                        align=right,
+                        xshift=-7pt
                     },
                 axis x line*=top,
                 axis y line*=left,
                 colorbar,
                 colorbar style={
-                        title={Resp., \%},
-                        title style={font=\bfseries},
+                        title={\%},
                         ytick={0,20,40,60,80,100},
-                        yticklabel style={font=\bfseries}
                     },
                 colormap={redscale}{
                         rgb255(0cm)=(255, 250, 245);
@@ -181,7 +124,8 @@ documentation.
                     },
                 nodes near coords style={
                         font=\bfseries\small,
-                        color=black
+                        color=black,
+                        anchor=center
                     }
             ]
             \addplot [
@@ -218,6 +162,27 @@ documentation.
         \end{axis}
     \end{tikzpicture}
 \end{figure}
+
+O gráfico da \autoref{fig:ferramentas_elsevier} mostra as ferramentas que os respondentes utilizam em seu trabalho. De modo geral, 84,2\% dos participantes mencionaram utilizar ao menos uma ferramenta. Entre as ferramentas mais citadas, destacam-se \emph{ChatGPT} (72,1\%), \emph{GitHub Copilot} (37,9\%), \emph{JetBrains AI Assistant} (28,9\%) e \emph{Visual Studio IntelliCode} (17,5\%). Quanto às demais ferramentas, mais da metade dos respondentes não as conhece. Isso indica que o campo de assistentes de IA é dominado por algumas grandes companhias.
+
+\begin{figure}[h!]
+    \includegraphics[width=\textwidth]{delegaria_gosto.png}
+    \caption{Gráfico representando quais tarefas do desenvolvimento os desenvolvedores gostam de fazer, quais eles delegariam à IA e qual sua impressão de dificuldade sobre as atividades \parencite{elsevier}.}
+    \label{fig:grafico_gosto_delegacao}
+\end{figure}
+
+Como mostrado na \autoref{fig:grafico_gosto_delegacao}, implementar novas funcionalidades é a atividade mais agradável para os participantes, com até 86\% dos respondentes avaliando-a positivamente. Também é a atividade menos provável de ser delegada a um assistente de IA, com 48\% dos participantes respondendo negativamente. Por outro lado, escrever testes e produzir artefatos em linguagem natural são as atividades menos agradáveis (46\% de avaliações negativas para testes e 43\% para artefatos), sendo também as que os desenvolvedores mais desejam delegar, 70\% e 66\%, respectivamente.
+
+Refatoração é a segunda atividade mais agradável, com 64\% de avaliações positivas. Mesmo assim, 49\% dos participantes considerariam delegar essa atividade a um assistente de IA. Quanto à triagem de erros, as opiniões são mais divididas: 32\% dos respondentes a consideram desagradável e 36\% agradável, enquanto 34\% não a delegariam e 46\% estariam dispostos a delegá-la a uma IA.
+
+O artigo organiza seus principais resultados em quatro \emph{takeaways}, eles são:
+
+\begin{itemize}
+    \item A opinião geral sobre o código fornecido pelos assistentes de IA varia, sendo o aspecto mais positivo a sua usabilidade e o mais negativo a segurança;
+    \item Entre as principais atividades estudadas, implementar novas funcionalidades é a mais agradável e a menos propensa a ser delegada a um assistente pelos respondentes, enquanto escrever testes e produzir artefatos em linguagem natural são as mais desagradáveis e as mais propensas a serem delegadas;
+    \item Entre os diferentes estágios das atividades de desenvolvimento de software, os mais utilizados pelos desenvolvedores com assistentes de IA são aqueles relacionados à geração e resumo de código. Por outro lado, atividades como aplicar diretamente o código gerado na base de código existente e identificar manualmente os pontos onde novas funcionalidades devem ser inseridas são menos comuns. Apesar disso, ainda são utilizados por uma parcela relevante de desenvolvedores.
+    \item Os principais motivos pelos quais os desenvolvedores não usam assistentes de IA são: falta de necessidade, saída gerada pela IA imprecisa, falta de confiança e falta de compreensão do contexto pelo assistente.
+\end{itemize}
 
 \section{\citetitle{anssi_2024} \parencite*{anssi_2024}}
 
