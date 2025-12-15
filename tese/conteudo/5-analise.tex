@@ -1,34 +1,38 @@
 %!TeX root=../tese.tex
 
-\chapter{Análise comparativa}
+\chapter{Análise}
 \label{cap:analise}
 
+Neste capítulo, através de todos os dados levantados até então, foi feita uma análise compilando diferentes trabalhos e aumentando a interação entre eles, coisa que não ocorreu até então. Os diferentes artigos foram escolhidos porque trabalham diferentes aspectos do tema, desde um foco mais empresarial a um foco acadêmico.
+
+\section{Amadurecimento da percepção dos programadores}
+
+A mudança no sentimento dos desenvolvedores a respeito da IA ficou bastante visível na compilação dos resultados das pesquisas do \emph{Stack Overflow} (\cite*{StackOverflow2023,StackOverflow2024,StackOverflow2025}). Apesar de o uso de ferramentas de IA continuar crescendo (\autoref{fig:historico_uso_ia}), tanto a percepção dos desenvolvedores sobre a qualidade das respostas das ferramentas de IA para a engenharia de \emph{software} (\autoref{fig:percepcao_ia}) quanto a confiança dos profissionais em seus conteúdos gerados (\autoref{fig:confianca_ia}) pioraram significativamente nos últimos anos. 
+
+Isso talvez explique, o aumento na proporção de tarefas as quais os desenvolvedores se apresentam desinteressados a adotar (\autoref{tab:nao_interesse_ia}). Ano após ano, os programadores apresentaram mais resistência a usar IA para atividades de alta responsabilidade ou de complexidade sistêmica como \emph{deploy} e monitoramento ou planejamento de projetos (\autoref{tab:nao_interesse_ia}).
+
+\section{Indícios da adoção e extrapolação}
+
+Este trabalho reuniu diversos relatórios que estimam o uso de ferramentas de IA por parte dos desenvolvedores. Dado o tamanho das amostras destas pesquisas, não é possível afirmar com relevância estatística que de fato todos os programadores do mundo estão adotando estas ferramentas de IA nestas proporções, no entanto, há alguns indícios interessantes. 
+
+% A \emph{Stack Overflow} (\cite*{StackOverflow2023,StackOverflow2024,StackOverflow2025}) tem apresentado consistentemente um aumento nas declarações de programadores que utiliza IA (\autoref{fig:historico_uso_ia}). Outra evidência, também relacionada ao \emph{Stack Overflow}, foi documentada por \citet{del_Rio_Chanona_2024}, que analisou a forte queda nos acessos à plataforma, relacionando-o com o aumento do uso de ferramentas de IA para tirar dúvidas de código ou fazer triagem de erros. Essa redução expressiva também apareceu no número de respondentes das últimas \emph{Developer Surveys}, algo que pode ser visto nas legendas dos gráficos que comparam diferentes anos da pesquisa. 
+
+Além disso, a própria Gartner, através do relatório escrito por \citet{gartner2024agenticAI} e do escrito por \citet{gartner_ai_code_assistants_2024}, evidencia suas previsões de aumento tanto do uso de IA generativa em assistentes de código quanto através de ferramentas de IA agêntica. A pesquisa de \citet{elsevier} também corrobora com essa visão de aumento, já que 84,2\% dos participantes da pesquisa declarou utilizar assistentes de IA.
+
+% Relacionar os diferentes indicativos de que a adoção da AI continua, gartners e overflow, dando robustez à análise e sugerindo a continuidade da tendência. Comentar também redução expressiva do tráfego do Stack Overflow que apareceu inclusive na forte diminuição de respondentes da developer survey.
 
 
-	•	produtividade e qualidade de código,
-	•	mudança no fluxo de trabalho do desenvolvedor,
-	•	confiança e percepção de precisão das ferramentas,
-	•	riscos de segurança e privacidade,
-	•	impactos educacionais e profissionais,
-	•	papel das ferramentas de geração de código.
+\section{Desconexão entre discurso e prática}
+
+Como evidenciado no artigo de \cite{elsevier}, os programadores entrevistados se declararam mais propensos a delegar tarefas que gostam menos para as ferramentas de IA (\autoref{fig:grafico_gosto_delegacao}), no entanto, a própria pesquisa evidencia que o maior uso das ferramentas de IA entre os participantes é justamente a produção de código, a tarefa apontado na pesquisa como a mais proveitosa pelos programadores e a que eles menos delegariam a uma IA (\autoref{fig:grafico_gosto_delegacao}). Este é um ponto interessante a se avaliar em pesquisas futuras, no sentido do impacto dessa ação para a satisfação profissional da categoria.
+
+\section{Tendência de automatização}
+
+Como evidenciado pelo artigo de \cite{gartner2024agenticAI}, da Gartner, a tendência do mercado para é não apenas continuar o uso de ferramentas de IA nos diversos setores empresariais, incluindo a produção de \emph{software}, mas também intensificar a utilização de ferramentas de IA agêntica, que não apenas sugerem e geram códigos, como também agem diretamente sob o fluxo de trabalho, participando diretamente da manipulação do código, por exemplo. 
+
+Segundo \citet{10.1145/3520312.3534864}, os programadores tendem a se sentir mais produtivos quando conforme aceitam mais sugestões de seus assistentes de código. Essa informação somada à previsão da \emph{Gartner} apresentada por \cite{gartner_ai_code_assistants_2024} de que 25\% dos erros de produção serão advindos de código de IA não revisado, já indica o tom para o futuro e a necessidade de produção de mecanismo que impeçam os programadores de adicionarem linhas não revisadas às bases de código, um desafio, considerando o crescimento esperado a IA agêntica.
 
 
+\section{As métricas e o futuro}
 
-3.4. Análise da evolução da percepção sobre IA
-
-Um dos objetivos centrais do trabalho é traçar o amadurecimento da percepção sobre IA generativa no desenvolvimento de software. Para isso, são avaliadas mudanças no discurso, nas métricas e nas narrativas observadas nos relatórios ao longo dos últimos anos.
-
-São analisados:
-	•	variações de adoção entre anos consecutivos,
-	•	mudanças no grau de confiança dos desenvolvedores,
-	•	expectativas declaradas para o futuro,
-	•	evolução de preocupações (por exemplo: de produtividade → segurança → governança),
-	•	transformações no perfil de usuários e suas motivações.
-
-Diferença entre os usos que os desenvolvedores dizem que fariam com IA e o que fazem de fato relacionando isso com a satisfação (já que novas funcionalidades são a coisa preferida);
-
-Analisar resultados que mostram que programadores se sente produtivos aceitando sugestões de ia com gartner e ia agêntica e com gartner e os erros de código não revisado. 
-
-Relacionar os diferentes indicativos de que a adoção da AI continua, gartners e overflow, dando robustez à análise e sugerindo a continuidade da tendência. Comentar também redução expressiva do tráfego do Stack Overflow que apareceu inclusive na forte diminuição de respondentes da developer survey.
-
-Evidenciar o problema no longo prazo, que isso é só o começo da tendência.
+A queda na qualidade das métricas evidenciado pela \cite{gitclear2025} apresentaram não apenas um cenário negativo em relação ao aumento da duplicação de código, quanto da queda da refatoração. Vale a pena investigar como essa piora da qualidade impactará a sustentabilidade das empresas e de que maneira essas métricas seguirão, conforme a adoção de IA avançar.
