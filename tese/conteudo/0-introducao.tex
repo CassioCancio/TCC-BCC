@@ -1,36 +1,27 @@
 %!TeX root=../tese.tex
-%("dica" para o editor de texto: este arquivo é parte de um documento maior)
-% para saber mais: https://tex.stackexchange.com/q/78101
 
-%% ------------------------------------------------------------------------- %%
-
-% "\chapter" cria um capítulo com número e o coloca no sumário; "\chapter*"
-% cria um capítulo sem número e não o coloca no sumário. A introdução não
-% deve ser numerada, mas deve aparecer no sumário. Por conta disso, este
-% modelo define o comando "\chapter**".
 \chapter**{Introdução}\label{cap:introducao}
 
 \section**{Contexto}
 
-A engenharia de \emph{software} é um campo da computação que se propõe a produzir e manter sistemas de \emph{software}. Essa definição foi estabelecida em 1968 pela Organização do Tratado do Atlântico Norte (OTAN), direcionando esforços para resolver a chamada ``crise do \emph{software}'', um período em que o desenvolvimento de programas se tornava cada vez mais complexo e desorganizado. Desde então, diversas ferramentas, métodos e processos foram criados para possibilitar que programadores organizassem a produção de \emph{software} e realizassem projetos complexos com maior eficiência.
+A engenharia de \emph{software} é um campo da computação que se dedica à produção e à manutenção de sistemas de \emph{software}. O termo foi consolidado em 1968 pela Organização do Tratado do Atlântico Norte (OTAN), no contexto da chamada ``crise do \emph{software}'', período marcado pelo aumento da complexidade dos sistemas computacionais e pela dificuldade em desenvolver programas de forma previsível e organizada. Desde então, a área passou por um processo contínuo de amadurecimento, com o surgimento de ferramentas, métodos e processos voltados à organização do desenvolvimento de \emph{software} e à viabilização de projetos cada vez mais complexos.
 
-% TODO - Com todo esse poder computacional e a quantidade massiva de dados disponíveis, a inteligência artificial (IA) pôde se desenvolver a passos largos, culminando no surgimento da IA generativa. Diferentemente da IA tradicional, a IA generativa é capaz de “criar” conteúdos com base no que aprendeu.
-% -- Nina vai pegar no pé aqui… acho que ela não deve concordar com "IA tradicional", por exemplo. 
-% -- Não é melhor falarmos de modelos de linguagem? Aprendizado de máquina?
-% -- (não estou inspirado; não sei se vai entender; posso tentar explicar em voz via áudio no Telegram)
+Nas décadas seguintes, avanços tecnológicos significativos contribuíram para transformar o cenário computacional, incluindo o aumento da capacidade de processamento, o barateamento do \emph{hardware}, tornando computadores e dispositivos móveis mais acessíveis, e a expansão da \emph{internet}, que possibilitou a inclusão de bilhões de pessoas em ambientes digitais. Esse processo resultou na geração de grandes volumes de dados sobre diferentes aspectos da vida cotidiana e virtual. Nesse contexto, técnicas de aprendizado de máquina puderam evoluir de forma acelerada, culminando no desenvolvimento de modelos capazes de aprender padrões complexos a partir de grandes conjuntos de dados.
 
-Posteriormente, a humanidade presenciou diversos avanços tecnológicos, como a produção de processadores cada vez mais potentes, o barateamento do \emph{hardware}, tornando computadores e celulares muito mais acessíveis, e a inclusão de bilhões de pessoas na \emph{internet}, gerando uma enorme quantidade de dados sobre os diversos aspectos da vida cotidiana e virtual. Com todo esse poder computacional e a quantidade massiva de dados disponíveis, a inteligência artificial (IA) pôde se desenvolver a passos largos, culminando no surgimento da IA generativa. Diferentemente da IA tradicional, a IA generativa é capaz de ``criar'' conteúdos com base no que aprendeu.
+Entre esses avanços, destacam-se os modelos de inteligência artificial generativa, em especial os modelos de linguagem de grande porte (LLMs), capazes de gerar conteúdos novos, como texto e código a partir de padrões aprendidos durante seu treinamento. Com o tempo, a aplicação de modelos de IA generativa em ferramentas de engenharia de \emph{software} tornou-se cada vez mais popular. Nos últimos anos, diversos estudos passaram a investigar o uso dessas ferramentas no processo de desenvolvimento, analisando seus impactos, limitações e riscos, bem como propondo diretrizes para uma adoção segura e responsável (\cite{10705752} e \cite{10.1145/3715003}).
 
-Dada sua flexibilidade, a IA generativa pode ser utilizada para diversos fins, e era natural que uma de suas aplicações fosse a engenharia de \emph{software}. Nos últimos anos, vários estudos foram publicados com o objetivo de analisar essas aplicações, discutir suas consequências e propor abordagens seguras e responsáveis para seu uso (\cite{10705752} e \cite{10.1145/3715003}).
-
-Segundo dados da \citet{StackOverflow2025}, 80,7\% dos desenvolvedores profissionais que participaram da pesquisa utilizam ferramentas de IA em seu processo de desenvolvimento de \emph{software} e 4,6\% deste grupo planeja utilizá-las em breve. É evidente que uma tecnologia amplamente adotada entre desenvolvedores tende a causar impactos significativos na produção de código e, nesse contexto, este trabalho faz-se relevante. 
+Dados recentes indicam que a adoção dessas tecnologias já é expressiva entre desenvolvedores profissionais. Segundo uma pesquisa conduzida pela \citet{StackOverflow2025}, 80,7\% dos desenvolvedores profissionais participantes utilizam ferramentas de inteligência artificial em seu processo de desenvolvimento de \emph{software}, enquanto 4,6\% afirmam pretender adotá-las em breve. Considerando a ampla disseminação dessas ferramentas, é razoável supor que seu uso produza impactos relevantes na produção de código e nas práticas de desenvolvimento, o que reforça a relevância do presente trabalho.
 
 \section**{Objetivos}
+
+Os objetivos deste trabalho são:
+
 \begin{itemize}
-    \item Reunir dados sobre os impactos das ferramentas de IA generativa na produção de \emph{software};
-    \item Analisar a evolução da percepção dos programadores sobre o uso dessas ferramentas;
-    \item Comparar os resultados provenientes da literatura cinzenta e da literatura formal.
+    \item Reunir e sistematizar dados sobre os impactos do uso de ferramentas de IA generativa na produção de \emph{software}, considerando tanto evidências técnicas quanto percepções de profissionais da área;
+    \item Analisar a evolução da percepção dos programadores em relação ao uso dessas ferramentas ao longo do tempo, identificando tendências, benefícios percebidos e preocupações recorrentes;
+    \item Comparar e contrastar os resultados provenientes da literatura formal e da literatura cinzenta sobre o tema, com o objetivo de identificar convergências, divergências e lacunas entre pesquisas acadêmicas e evidências oriundas do mercado;
+    \item Sintetizar os principais achados da análise, discutindo suas implicações para a prática do desenvolvimento de \emph{software} e para pesquisas futuras na área.
 \end{itemize}
-% TODO - corrigir
+
 \section**{Estrutura do trabalho}
-% O \autoref{cap:fundamentacao} é uma fundamentação teórica, apresentando os conceitos essenciais para o trabalho. O \autoref{cap:selecao_estrategia} descreve a metodologia adotada e as fontes utilizadas. No \autoref{cap:literatura-formal}, é apresentada uma revisão da literatura formal sobre o tema, já no \autoref{cap:literatura-cinzenta}, a revisão foca na literatura cinzenta. O \autoref{cap:analise} traz uma análise que compara e relaciona os estudos das duas frentes. Por fim, o \autoref{cap:conclusao} conclui o trabalho.
+O \autoref{cap:fundamentacao} é uma fundamentação teórica, apresentando os conceitos essenciais para o trabalho. O \autoref{cap:selecao_estrategia} descreve a estratégia utilizada para a seleção das fontes e a organização das análises. No \autoref{cap:fontes}, são apresentadas análises de cada uma das fontes do trabalho, com um resumo dos resultados e da organização por trás das fontes. O \autoref{cap:analise} contém uma análise que compara e relaciona os estudos das duas frentes. Por fim, o \autoref{cap:conclusao} conclui o trabalho, apontando possíveis continuidades.
