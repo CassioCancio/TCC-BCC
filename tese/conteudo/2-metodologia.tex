@@ -1,43 +1,30 @@
 %!TeX root=../tese.tex
-%("dica" para o editor de texto: este arquivo é parte de um documento maior)
-% para saber mais: https://tex.stackexchange.com/q/78101
-
-% Vamos definir alguns comandos auxiliares para facilitar.
-
-% "textbackslash" é muito comprido.
-\newcommand{\sla}{\textbackslash}
-
-% Vamos escrever comandos (como "make" ou "itemize") com formatação especial.
-\newcommand{\cmd}[1]{\textsf{#1}}
-
-% Idem para packages; aqui estamos usando a mesma formatação de \cmd,
-% mas poderíamos escolher outra.
-\newcommand{\pkg}[1]{\textsf{#1}}
-
-% A maioria dos comandos LaTeX começa com "\"; vamos criar um
-% comando que já coloca essa barra e formata com "\cmd".
-\newcommand{\ltxcmd}[1]{\cmd{\sla{}#1}}
 
 \chapter{Estratégia e seleção das fontes}%
-\label{cap:metodologia}
+\label{cap:selecao_estrategia}
 
-% TODO - melhorar justificativa das escolhas
-% Na Engenharia de \emph{Software}, diferentemente de outras ciências, as conferências e congressos podem ter um peso quase igual ou superior aos jornais e revistas, devido à velocidade de evolução da área.
-
-Este capítulo descreve a abordagem metodológica adotada para a condução da pesquisa, destacando os critérios utilizados para seleção das fontes, a forma de organização das análises e o método empregado para comparar literatura cinzenta e literatura formal. O trabalho segue um processo de análise partindo do artigo de literatura formal escrito por \citet{elsevier}. A partir deste artigo, outras fontes, principalmente de literatura cinzenta, foram selecionadas de modo a complementar a análise. 
+Este capítulo descreve a abordagem metodológica adotada para a condução da pesquisa, destacando os critérios utilizados para seleção das fontes, a forma de organização das análises e o método empregado para comparar literatura cinzenta e literatura formal. O trabalho segue um processo de análise partindo do artigo de literatura formal escrito por \citet{elsevier}. A partir deste artigo outras fontes, de literatura cinzenta, foram selecionadas de modo a complementar a análise. 
 
 \section{Seleção das fontes}
 
-A seleção das fontes foi feita buscando garantir a relevância, atualidade e diversidade de perspectivas. Desta forma, as fontes incluem perspectivas acadêmicas e de mercado, impressões de programadores e executivos e análises de métricas de código. As fontes foram divididas no grupo de literatura formal e literatura cinzenta.
+A seleção das fontes foi feita buscando garantir a relevância, atualidade e diversidade de perspectivas. Desta forma, as fontes incluem perspectivas acadêmicas e de mercado, impressões de programadores e executivos e análises de métricas de código. 
+
+Na engenharia de \emph{software}, diferentemente de muitas outras ciências, as conferências e congressos podem ter um peso quase igual ou superior aos jornais e revistas, devido à velocidade de evolução da área. Por isso, a seleção das fontes não se restringiu apenas a artigos de periódicos acadêmicos, mas também incluiu relatórios técnicos e pesquisas de mercado. 
+Elas foram divididas nos grupos de literatura formal e literatura cinzenta.
 
 % TODO - ajustar metodologia após junção dos capítulos de literatura cinzenta e formal
 \subsection{Literatura formal}
 
-Neste grupo, o artigo de \citet{elsevier}, indexado em bases reconhecidas, como a \emph{Elsevier}, foi utilizado como ponto de partida do trabalho. Também parte deste grupo, o artigo \citet{anssi_2024} foi produzido por duas agências governamentais europeias, a francesa, ANSSI, e a alemã, BSI, e é um compilado de resultados de pesquisas acadêmicas referentes ao uso de assistentes de código com IA.
+Neste grupo, o artigo de \citet{elsevier}, indexado em bases reconhecidas, como a \emph{Elsevier}, foi utilizado como ponto de partida do trabalho. 
+% TODO - melhorar justificativa
+% -- Precisamos justificar melhor as escolhas/seleção. No caso, deixar claro que é a mais recente revisão de literatura que encontrarmos no momento da seleção dos trabalhos no primeiro semestre de 2025, com uma boa abrangência/cobertura de aspectos técnicos, publicada em um journal relevante na ES, com alto fator de impacto, e os autores são da indústria (jetbrains).
+% -- Fazer o mesmo e justificar melhor as demais fontes; vi que, mais à frente, você apresenta melhor, mas precisamos justificá-las melhor aqui.
+
 
 \subsection{Literatura cinzenta}
 
-Neste grupo, foram trazidos relatórios que pudessem complementar a análise. O artigo da \citet{gitclear2025} foca na análise de métricas de código em repositórios abertos e de empresas, criando um histórico dos resultados de 2020 a 2024. As pesquisas do \citeauthor{StackOverflow2023} \parencite*{StackOverflow2023,StackOverflow2024,StackOverflow2025} compilam tendências no perfil de uso de IA dos usuários da plataforma e, neste trabalho, foram organizadas de modo a criar um comparativo entre os anos. Os artigos de \citet{gartner2024agenticAI} e \citet{gartner_ai_code_assistants_2024} da \emph{Gartner Research} trazem uma visão de mercado sobre o uso de IA generativa no desenvolvimento de \emph{software}, focando em tendências, riscos e expectativas de executivos.
+Neste grupo, foram reunidos relatórios que pudessem complementar a análise. O artigo da \citet{gitclear2025} foca na análise de métricas de código em repositórios abertos e de empresas, criando um histórico dos resultados de 2020 a 2024. As pesquisas do \citeauthor{StackOverflow2023} \parencite*{StackOverflow2023,StackOverflow2024,StackOverflow2025} compilam tendências no perfil de uso de IA dos usuários da plataforma e, neste trabalho, foram organizadas de modo a criar um comparativo entre os anos. Os artigos de \citet{gartner2024agenticAI} e \citet{gartner_ai_code_assistants_2024} da \emph{Gartner Research} trazem uma visão de mercado sobre o uso de IA generativa no desenvolvimento de \emph{software}, focando em tendências, riscos e expectativas de executivos. Também parte deste grupo, o artigo \citet{anssi_2024} foi produzido por duas agências governamentais europeias, a francesa, ANSSI, e a alemã, BSI, e é um compilado de resultados de pesquisas acadêmicas referentes ao uso de assistentes de código com IA.
+% TODO - melhorar justificativas de cada artigo
 
 % TODO - corrigir
 \section{Análises}
