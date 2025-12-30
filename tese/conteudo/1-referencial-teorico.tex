@@ -70,8 +70,9 @@ A fase de manutenção é caracterizada pelo suporte contínuo e por melhorias i
 
 \subsection{Ferramentas de desenvolvimento}
 
+As ferramentas de desenvolvimento de \emph{software} oferecem suporte às etapas do SDLC e evoluíram significativamente nas últimas décadas. Além das ferramentas tradicionais, observa-se a incorporação crescente de técnicas de inteligência artificial, em especial aprendizado de máquina e modelos de linguagem de grande escala, com o objetivo de aumentar a produtividade, reduzir erros e apoiar a tomada de decisão ao longo do processo de desenvolvimento (\cite{schmidt2024transforming,huang2024generative_se}).
 
-As ferramentas de desenvolvimento de \emph{software} oferecem suporte às etapas do SDLC. O uso combinado dessas ferramentas contribui para maior produtividade, qualidade e confiabilidade no desenvolvimento. Elas incluem:
+O uso combinado dessas ferramentas contribui para maior produtividade, qualidade e confiabilidade no desenvolvimento. Elas incluem:
 
 \begin{itemize}
     \item \textbf{Controle de Versão (como \emph{Git} e \emph{SVN}):} permitem registrar e gerenciar alterações no código-fonte ao longo do tempo, possibilitando colaboração simultânea entre desenvolvedores, recuperação de versões anteriores e rastreamento completo do histórico de mudanças;
@@ -97,20 +98,22 @@ As aplicações de IA afetam cada vez mais diversos aspectos da sociedade, inclu
 
 \subsection{Aprendizado de máquina}
 
+Aprendizado de Máquina (\emph{Machine Learning}) é um subcampo da inteligência artificial que se concentra no desenvolvimento de algoritmos capazes de aprender padrões a partir de dados e realizar previsões ou tomadas de decisão sem serem explicitamente programados para cada tarefa específica (\cite{mitchell1997machine}). Em geral, esses algoritmos utilizam grandes volumes de dados, frequentemente estruturados ou rotulados, para ajustar seus parâmetros e melhorar seu desempenho ao longo do tempo (\cite{bishop2006pattern}).
 
-Aprendizado de Máquina (\emph{Machine Learning}) é um subcampo da IA que se concentra na criação de algoritmos capazes de aprender e fazer previsões a partir de grandes volumes de dados, geralmente estruturados ou rotulados, sem serem explicitamente programados para cada tarefa. Um conceito importante para o aprendizado de máquina são as redes neurais, modelos computacionais inspirados na estrutura do cérebro humano, compostos por camadas de nós interconectados, capazes de processar informações e aprender padrões a partir de exemplos. Redes neurais são amplamente utilizadas em tarefas como classificação, reconhecimento de imagens e processamento de linguagem natural.
+Um conceito central no aprendizado de máquina são as redes neurais artificiais, modelos computacionais inspirados, de forma abstrata, na estrutura e no funcionamento do cérebro humano. Essas redes são compostas por camadas de unidades interconectadas, capazes de processar informações e aprender representações a partir de exemplos (\cite{goodfellow2016deep}). Redes neurais têm sido amplamente empregadas em tarefas como classificação, reconhecimento de imagens e processamento de linguagem natural, apresentando resultados expressivos em diferentes domínios da computação.
 
 \subsection{Aprendizado profundo}
 
+Aprendizado Profundo (\emph{Deep Learning}) é uma subárea do aprendizado de máquina que utiliza redes neurais artificiais com múltiplas camadas para aprender representações hierárquicas e abstratas dos dados. Esse tipo de abordagem permite capturar relações complexas em grandes volumes de informação, sendo fundamental para avanços recentes em visão computacional, reconhecimento de fala e processamento de linguagem natural (\cite{goodfellow2016deep}).
 
-Aprendizado Profundo (\emph{Deep Learning}) é uma área do aprendizado de máquina que utiliza redes neurais com múltiplas camadas para aprender representações cada vez mais abstratas dos dados. Conforme o número de camadas aumenta, essas redes se tornam capazes de extrair padrões complexos e hierárquicos, permitindo avanços significativos em tarefas cognitivas tradicionalmente difíceis para sistemas computacionais.
-
-O avanço do aprendizado profundo está diretamente relacionado à disponibilidade de grandes volumes de dados, ao aumento da capacidade computacional e ao desenvolvimento de novas técnicas. Graças ao aprendizado profundo, problemas antes considerados inviáveis passaram a ter soluções com desempenho igual ou superior ao humano em diversos contextos.
+O progresso do aprendizado profundo está diretamente associado ao aumento da capacidade computacional, à disponibilidade de grandes volumes de dados e ao desenvolvimento de arquiteturas de redes neurais mais profundas e expressivas. Esses fatores foram determinantes para os avanços recentes em diversas áreas da inteligência artificial, especialmente em tarefas relacionadas ao processamento de linguagem natural (\cite{lecun2015deep}).
 
 \subsection{IA generativa}
 
-A IA generativa é um ramo da inteligência artificial focado na criação de novos conteúdos, como textos, imagens, códigos, áudios ou vídeos, a partir de padrões aprendidos em grandes conjuntos de dados. Diferentemente dos modelos tradicionais, que apenas classificam ou predizem valores específicos, os modelos generativos aprendem distribuições complexas e conseguem produzir saídas originais e coerentes com o contexto. Essa capacidade permitiu o desenvolvimento de aplicações como sistemas de criação de imagens, ferramentas de escrita automatizada, assistentes virtuais avançados e modelos de geração de código.
+A IA generativa é um ramo da inteligência artificial voltado à criação automática de novos conteúdos, como textos, imagens, códigos, áudios e vídeos, a partir de padrões aprendidos em grandes conjuntos de dados. Diferentemente de modelos que se concentram em classificação ou predição, modelos generativos aprendem distribuições complexas e são capazes de produzir saídas originais e contextualmente coerentes (\cite{brown2020language}). No contexto da engenharia de \emph{software}, a IA generativa tem sido aplicada em atividades como geração de código, documentação automática, criação de casos de teste e apoio à revisão de código (\cite{huang2024generative_se}), levantando discussões sobre produtividade, qualidade e riscos associados ao seu uso.
 
 \subsection{Modelos de linguagem de grande escala (LLMs)}
 
-Entre as principais tecnologias associadas à IA generativa estão os Modelos de Linguagem de Grande Escala (\emph{Large Language Models}, ou LLMs). Esses modelos utilizam a arquitetura de \emph{transformers}, baseada em mecanismos de atenção para capturar relações de longo alcance entre elementos de uma sequência. Treinados com bilhões de palavras, códigos e documentos, os LLMs podem realizar uma grande variedade de tarefas, incluindo resumo, tradução, classificação, análise semântica, escrita de textos e geração de código.
+Entre as principais tecnologias associadas à IA generativa estão os Modelos de Linguagem de Grande Escala (\emph{Large Language Models}, ou LLMs). Esses modelos são baseados na arquitetura de \emph{transformers}, proposta por \citet{vaswani2017attention}, que emprega mecanismos de atenção para capturar dependências de longo alcance em sequências, especialmente textuais, possibilitando a modelagem mais eficaz do contexto ao longo da geração de conteúdo.
+
+Treinados com grandes volumes de textos, códigos-fonte e documentos, os LLMs demonstram capacidade de realizar uma ampla variedade de tarefas, incluindo sumarização, tradução, classificação, análise semântica, escrita de textos e geração de código. Modelos de linguagem de grande escala são capazes de aprender distribuições complexas da linguagem natural e gerar textos novos que preservam coerência semântica e contextual ao longo de sequências extensas, mesmo sem ajuste supervisionado específico para cada tarefa (\cite{brown2020language}).
